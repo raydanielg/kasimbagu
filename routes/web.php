@@ -47,10 +47,13 @@ Route::get('/redirecting', function (\Illuminate\Http\Request $request) {
 
 // Lightweight inquiry handler
 Route::post('/inquiry', function (\Illuminate\Http\Request $request) {
-    $data = $request->validate([
-        'name' => ['required','string','max:255'],
-        'email' => ['required','email'],
-        'message' => ['required','string','max:2000'],
+    $request->validate([
+        'name'        => ['required','string','max:255'],
+        'email'       => ['required','email'],
+        'message'     => ['required','string','max:2000'],
+        'phone'       => ['nullable','string','max:30'],
+        'service'     => ['nullable','string','max:100'],
+        'destination' => ['nullable','string','max:100'],
     ]);
     return back()->with('status', 'Thanks, we received your inquiry. We will get back to you shortly.');
 })->name('inquiry.submit');
