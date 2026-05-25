@@ -429,6 +429,18 @@
                 </a>
             </div>
             <div class="nav-item">
+                <a href="{{ route('admin.bookings') }}" class="nav-link {{ request()->is('admin/bookings*') ? 'active' : '' }}">
+                    <i class="bi bi-calendar2-check-fill"></i>
+                    <span>Travel Bookings</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ route('admin.destinations') }}" class="nav-link {{ request()->is('admin/destinations*') ? 'active' : '' }}">
+                    <i class="bi bi-pin-map-fill"></i>
+                    <span>Travel Destinations</span>
+                </a>
+            </div>
+            <div class="nav-item">
                 <a href="{{ route('admin.users') }}" class="nav-link {{ request()->is('admin/users*') ? 'active' : '' }}">
                     <i class="bi bi-people-fill"></i>
                     <span>Users</span>

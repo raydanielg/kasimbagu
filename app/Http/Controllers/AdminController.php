@@ -6,6 +6,8 @@ use App\Models\Inquiry;
 use App\Models\Newsletter;
 use App\Models\Service;
 use App\Models\User;
+use App\Models\Booking;
+use App\Models\Destination;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -163,5 +165,118 @@ class AdminController extends Controller
         $newsletter->delete();
 
         return redirect()->route('admin.newsletters')->with('success', 'Subscriber deleted successfully.');
+    }
+
+    // Bookings Management
+    public function bookingsIndex()
+    {
+        $bookings = Booking::latest()->paginate(10);
+        return view('admin.bookings.index', compact('bookings'));
+    }
+
+    public function bookingsUpdateStatus(Request $request, $id)
+    {
+        $booking = Booking::findOrFail($id);
+        $request->validate([
+            'status' => 'required|string|in:pending,confirmed,cancelled',
+        ]);
+        $booking->status = $request->status;
+        $booking->save();
+
+        return redirect()->route('admin.bookings')->with('success', 'Booking status updated successfully.');
+    }
+
+    public function bookingsDestroy($id)
+    {
+        $booking = Booking::findOrFail($id);
+        $booking->delete();
+
+        return redirect()->route('admin.bookings')->with('success', 'Booking deleted successfully.');
+    }
+
+    // Destinations Management
+    public function destinationsIndex()
+    {
+        $destinations = Destination::orderBy('sort_order')->paginate(10);
+        return view('admin.destinations.index', compact('destinations'));
+    }
+
+    public function destinationsCreate()
+    {
+        return view('admin.destinations.create');
+    }
+
+    public function destinationsStore(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'region' => 'required|string|max:100',
+            'description' => 'required|string',
+            'image_url' => 'nullable|url|max:500',
+            'visa_required' => 'boolean',
+            'visa_type' => 'nullable|string|max:100',
+            'flight_duration' => 'nullable|string|max:100',
+            'best_season' => 'nullable|string|max:100',
+            'highlights' => 'nullable|array',
+            'is_popular' => 'boolean',
+            'is_active' => 'boolean',
+            'sort_order' => 'integer',
+        ]);
+
+        $data['visa_required'] = $request->has('visa_required');
+        $data['is_popular'] = $request->has('is_popular');
+        $data['is_active'] = $request->has('is_active');
+        $data['slug'] = \Illuminate\Support\Str::slug($data['name']);
+        $data['highlights'] = $data['highlights'] ?? [];
+
+        Destination::create($data);
+
+        return redirect()->route('admin.destinations')->with('success', 'Destination created successfully.');
+    }
+
+    public function destinationsEdit($id)
+    {
+        $destination = Destination::findOrFail($id);
+        return view('admin.destinations.edit', compact('destination'));
+    }
+
+    public function destinationsUpdate(Request $request, $id)
+    {
+        $destination = Destination::findOrFail($id);
+
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'region' => 'required|string|max:100',
+            'description' => 'required|string',
+            'image_url' => 'nullable|url|max:500',
+            'visa_required' => 'boolean',
+            'visa_type' => 'nullable|string|max:100',
+            'flight_duration' => 'nullable|string|max:100',
+            'best_season' => 'nullable|string|max:100',
+            'highlights' => 'nullable|array',
+            'is_popular' => 'boolean',
+            'is_active' => 'boolean',
+            'sort_order' => 'integer',
+        ]);
+
+        $data['visa_required'] = $request->has('visa_required');
+        $data['is_popular'] = $request->has('is_popular');
+        $data['is_active'] = $request->has('is_active');
+        $data['slug'] = \Illuminate\Support\Str::slug($data['name']);
+        $data['highlights'] = $data['highlights'] ?? [];
+
+        $destination->update($data);
+
+        return redirect()->route('admin.destinations')->with('success', 'Destination updated successfully.');
+    }
+
+    public function destinationsDestroy($id)
+    {
+        $destination = Destination::findOrFail($id);
+        $destination->delete();
+
+        return redirect()->route('admin.destinations')->with('success', 'Destination deleted successfully.');
     }
 }

@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', 'Inquiries Management | Kasimbagu Admin')
+@section('page_title', 'Inquiries')
 
 @section('content')
 <div class="page-header">
@@ -10,9 +11,9 @@
 
 <div class="data-table">
     <div class="p-4 border-bottom d-flex justify-content-between align-items-center" style="border-color: var(--border-color);">
-        <h5 class="mb-0">All Inquiries</h5>
+        <h5 class="mb-0 fw-bold text-dark">All Inquiries</h5>
         <div class="d-flex gap-2">
-            <input type="text" class="form-control form-control-sm" placeholder="Search inquiries..." style="width: 250px; background: var(--card-bg); border: 1px solid var(--border-color); color: #e2e8f0;">
+            <input type="text" class="form-control form-control-sm" placeholder="Search inquiries..." style="width: 250px;">
         </div>
     </div>
     <div class="table-responsive">
@@ -33,13 +34,13 @@
                     @foreach($inquiries as $inquiry)
                     <tr>
                         <td>
-                            <div class="fw-bold">{{ $inquiry->name }}</div>
+                            <div class="fw-bold text-dark">{{ $inquiry->name }}</div>
                         </td>
                         <td>{{ $inquiry->email }}</td>
                         <td>{{ $inquiry->phone ?? 'N/A' }}</td>
                         <td>
                             @if($inquiry->service)
-                                <span class="badge badge-info">{{ $inquiry->service }}</span>
+                                <span class="badge" style="background: #e0f2fe; color: #0369a1;">{{ $inquiry->service }}</span>
                             @else
                                 <span class="text-muted">N/A</span>
                             @endif
@@ -48,13 +49,13 @@
                         <td>{{ $inquiry->created_at->format('M d, Y') }}</td>
                         <td>
                             <div class="d-flex gap-2">
-                                <a href="{{ route('admin.inquiries.show', $inquiry->id) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('admin.inquiries.show', $inquiry->id) }}" class="btn btn-sm btn-light border">
                                     <i class="bi bi-eye"></i>
                                 </a>
                                 <form action="{{ route('admin.inquiries.destroy', $inquiry->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this inquiry?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                                    <button type="submit" class="btn btn-sm border" style="background: #fef2f2; color: #ef4444; border-color: #fecaca !important;">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </form>

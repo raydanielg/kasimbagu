@@ -27,7 +27,7 @@
                     <h1 class="display-2 fw-bold text-white mb-4 animate__animated animate__fadeInUp" style="line-height:1.1;">Your Journey <span style="background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Starts Here</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Same-day flight tickets, competitive fares, and full booking support for 50+ global destinations.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Book a Flight</a>
+                        <a href="javascript:void(0)" onclick="openBookingModal('', 'flight')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Book a Flight</a>
                         <a href="#destinations" class="btn btn-outline-light btn-lg px-5 rounded-pill">View Destinations</a>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <span class="k2-hero-badge"><i class="bi bi-globe2 me-2"></i>Visa Assistance</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;">Visa Approved. <span style="color:#38bdf8;">Stress-Free.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Expert visa processing for UAE, UK, USA, Schengen, China, India, Turkey and more — fast, accurate, and hassle-free.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Apply for Visa</a>
+                    <a href="javascript:void(0)" onclick="openBookingModal('', 'visa')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Apply for Visa</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <span class="k2-hero-badge"><i class="bi bi-map-fill me-2"></i>Tour Packages</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;">Explore the <span style="color:#38bdf8;">World</span> With Us</h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Curated international tour packages with hotel, transport, and guide — tailored to your budget and interests.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Get a Package Quote</a>
+                    <a href="javascript:void(0)" onclick="openBookingModal('', 'tour')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Get a Package Quote</a>
                 </div>
             </div>
         </div>
@@ -93,34 +93,61 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
-            $dests = [
-                ['flag'=>'🇦🇪','city'=>'Dubai','country'=>'United Arab Emirates','img'=>'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80','visa'=>'Visa on Arrival'],
-                ['flag'=>'🇹🇷','city'=>'Istanbul','country'=>'Turkey','img'=>'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80','visa'=>'E-Visa'],
-                ['flag'=>'🇬🇧','city'=>'London','country'=>'United Kingdom','img'=>'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80','visa'=>'UK Visa Required'],
-                ['flag'=>'🇺🇸','city'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
-                ['flag'=>'🇨🇳','city'=>'Beijing','country'=>'China','img'=>'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80','visa'=>'China Visa'],
-                ['flag'=>'🇮🇳','city'=>'New Delhi','country'=>'India','img'=>'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80','visa'=>'E-Visa'],
-            ];
-            @endphp
-            @foreach($dests as $d)
-            <div class="col-lg-4 col-md-6">
-                <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
-                    <img src="{{ $d['img'] }}" alt="{{ $d['city'] }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
-                    <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(1,12,28,0.85) 0%,rgba(1,12,28,0.1) 60%);"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 w-100">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div>
-                                <div style="font-size:1.8rem;line-height:1;margin-bottom:4px;">{{ $d['flag'] }}</div>
-                                <h5 class="text-white fw-bold mb-0">{{ $d['city'] }}</h5>
-                                <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
+            @if(isset($destinations) && $destinations->count() > 0)
+                @foreach($destinations as $d)
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', '{{ $d->visa_required ? 'visa' : 'flight' }}')">
+                    <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
+                        @if($d->image_url)
+                            <img src="{{ $d->image_url }}" alt="{{ $d->name }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
+                        @else
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-dark text-white"><i class="bi bi-image" style="font-size: 2rem;"></i></div>
+                        @endif
+                        <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(1,12,28,0.85) 0%,rgba(1,12,28,0.1) 60%);"></div>
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <div style="margin-bottom:8px;"><i class="bi bi-geo-alt-fill text-info" style="font-size:1.4rem;"></i></div>
+                                    <h5 class="text-white fw-bold mb-0">{{ $d->name }}</h5>
+                                    <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d->country }}</div>
+                                </div>
+                                <span class="badge rounded-pill px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">
+                                    {{ $d->visa_required ? ($d->visa_type ?? 'Visa Required') : 'No Visa Required' }}
+                                </span>
                             </div>
-                            <span class="badge rounded-pill px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            @endforeach
+                @endforeach
+            @else
+                @php
+                $dests = [
+                    ['city'=>'Dubai','country'=>'United Arab Emirates','img'=>'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80','visa'=>'Visa on Arrival'],
+                    ['city'=>'Istanbul','country'=>'Turkey','img'=>'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80','visa'=>'E-Visa'],
+                    ['city'=>'London','country'=>'United Kingdom','img'=>'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80','visa'=>'UK Visa Required'],
+                    ['city'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
+                    ['city'=>'Beijing','country'=>'China','img'=>'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80','visa'=>'China Visa'],
+                    ['city'=>'New Delhi','country'=>'India','img'=>'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80','visa'=>'E-Visa'],
+                ];
+                @endphp
+                @foreach($dests as $d)
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d['city'] }}', 'visa')">
+                    <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
+                        <img src="{{ $d['img'] }}" alt="{{ $d['city'] }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
+                        <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(1,12,28,0.85) 0%,rgba(1,12,28,0.1) 60%);"></div>
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <div style="margin-bottom:8px;"><i class="bi bi-geo-alt-fill text-info" style="font-size:1.4rem;"></i></div>
+                                    <h5 class="text-white fw-bold mb-0">{{ $d['city'] }}</h5>
+                                    <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
+                                </div>
+                                <span class="badge rounded-pill px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @endif
         </div>
     </div>
 </section>
@@ -298,43 +325,40 @@
             </div>
             <div class="col-lg-7">
                 <div class="p-4 p-md-5 rounded-4 shadow-sm" style="border:1px solid #e0f2fe;">
-                    @if(session('status'))
-                        <div class="alert alert-success rounded-3 mb-4">{{ session('status') }}</div>
-                    @endif
-                    <form action="{{ route('inquiry.submit') }}" method="POST">
+                    <form id="bottomBookingForm" action="{{ route('bookings.store') }}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label class="form-label fw-semibold small">Full Name</label>
-                                <input type="text" name="name" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="Your full name" required>
+                                <label class="form-label fw-semibold small text-dark">Full Name</label>
+                                <input type="text" name="name" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="Your full name" required>
                             </div>
                             <div class="col-sm-6">
-                                <label class="form-label fw-semibold small">Phone / WhatsApp</label>
-                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 690 075 672" required>
+                                <label class="form-label fw-semibold small text-dark">Phone / WhatsApp</label>
+                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="+255 690 075 672" required>
                             </div>
                             <div class="col-12">
-                                <label class="form-label fw-semibold small">Email Address</label>
-                                <input type="email" name="email" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="your@email.com" required>
+                                <label class="form-label fw-semibold small text-dark">Email Address</label>
+                                <input type="email" name="email" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="your@email.com" required>
                             </div>
                             <div class="col-sm-6">
-                                <label class="form-label fw-semibold small">Service Required</label>
-                                <select name="service" class="form-select rounded-3 py-3 border-0 bg-light" required>
+                                <label class="form-label fw-semibold small text-dark">Service Required</label>
+                                <select name="booking_type" class="form-select rounded-3 py-3 border-0 bg-light text-dark" required>
                                     <option value="">Select service...</option>
-                                    <option>Flight Ticket</option>
-                                    <option>Visa Assistance</option>
-                                    <option>Hotel Booking</option>
-                                    <option>Tour Package</option>
-                                    <option>Airport Pickup</option>
-                                    <option>Multiple Services</option>
+                                    <option value="flight">Flight Ticket</option>
+                                    <option value="visa">Visa Assistance</option>
+                                    <option value="hotel">Hotel Booking</option>
+                                    <option value="tour">Tour Package</option>
+                                    <option value="pickup">Airport Pickup</option>
                                 </select>
                             </div>
                             <div class="col-sm-6">
-                                <label class="form-label fw-semibold small">Destination</label>
-                                <input type="text" name="destination" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="e.g. Dubai, London...">
+                                <label class="form-label fw-semibold small text-dark">Destination</label>
+                                <input type="text" name="destination" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="e.g. Dubai, London...">
                             </div>
+                            <input type="hidden" name="passengers" value="1">
                             <div class="col-12">
-                                <label class="form-label fw-semibold small">Additional Details</label>
-                                <textarea name="message" class="form-control rounded-3 border-0 bg-light" rows="4" placeholder="Travel dates, number of passengers, any special requirements..." required></textarea>
+                                <label class="form-label fw-semibold small text-dark">Additional Details</label>
+                                <textarea name="message" class="form-control rounded-3 border-0 bg-light text-dark" rows="4" placeholder="Travel dates, number of passengers, any special requirements..." required></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-lg w-100 rounded-pill fw-bold py-3 text-white shadow-sm" style="background:#0284c7;border-color:#0284c7;">
@@ -349,7 +373,83 @@
     </div>
 </section>
 
+{{-- ══════════════════════════════════════════
+     BOOKING POP-UP MODAL (BOOTSTRAP)
+     ══════════════════════════════════════════ --}}
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+            <div class="modal-header text-white border-0 py-3" style="background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);">
+                <div class="d-flex align-items-center gap-3">
+                    <div style="width:38px;height:38px;background:rgba(255,255,255,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+                        <i class="bi bi-airplane" style="font-size: 1.25rem;"></i>
+                    </div>
+                    <div>
+                        <h5 class="modal-title fw-bold" id="bookingModalLabel">Book Your Next Journey</h5>
+                        <p class="mb-0 small text-white-50">Quick, easy, and trusted bookings across East Africa</p>
+                    </div>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 bg-light">
+                <form id="ajaxBookingForm">
+                    @csrf
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Full Name</label>
+                            <input type="text" name="name" class="form-control rounded-3 py-2 border-secondary-subtle" placeholder="Your full name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Phone / WhatsApp</label>
+                            <input type="text" name="phone" class="form-control rounded-3 py-2 border-secondary-subtle" placeholder="+255 690 075 672" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Email Address</label>
+                            <input type="email" name="email" class="form-control rounded-3 py-2 border-secondary-subtle" placeholder="your@email.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Booking Type</label>
+                            <select name="booking_type" id="modalBookingType" class="form-select rounded-3 py-2 border-secondary-subtle" required>
+                                <option value="flight">Flight Ticket Only</option>
+                                <option value="visa">Visa Assistance</option>
+                                <option value="hotel">Hotel Reservation</option>
+                                <option value="tour">Tour Package</option>
+                                <option value="pickup">Airport Pickup</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Destination</label>
+                            <input type="text" name="destination" id="modalDestination" class="form-control rounded-3 py-2 border-secondary-subtle" placeholder="e.g. Dubai, London, Turkey">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Number of Passengers</label>
+                            <input type="number" name="passengers" class="form-control rounded-3 py-2 border-secondary-subtle" value="1" min="1" max="10" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Departure Date</label>
+                            <input type="date" name="departure_date" class="form-control rounded-3 py-2 border-secondary-subtle">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold text-dark small">Return Date (Optional)</label>
+                            <input type="date" name="return_date" class="form-control rounded-3 py-2 border-secondary-subtle">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label fw-bold text-dark small">Special Requirements or Messages</label>
+                            <textarea name="message" class="form-control rounded-3 border-secondary-subtle" rows="3" placeholder="Tell us if you have any special requirements, dates, airlines preferences..."></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex justify-content-end gap-2">
+                        <button type="button" class="btn btn-secondary px-4 py-2 rounded-pill fw-bold" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn text-white px-5 py-2 rounded-pill fw-bold shadow" style="background: #0284c7;">Submit Booking Request <i class="bi bi-send ms-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     new Swiper('.k2-hero', {
         loop: true,
@@ -365,5 +465,145 @@
         spaceBetween: 24,
         breakpoints: { 768: { slidesPerView: 2 } },
     });
+
+    // Modal Operations
+    const bookingModalEl = document.getElementById('bookingModal');
+    let bsBookingModal = null;
+    if (bookingModalEl) {
+        bsBookingModal = new bootstrap.Modal(bookingModalEl);
+    }
+
+    function openBookingModal(dest = '', type = 'flight') {
+        if (document.getElementById('modalDestination')) {
+            document.getElementById('modalDestination').value = dest;
+        }
+        if (document.getElementById('modalBookingType')) {
+            document.getElementById('modalBookingType').value = type;
+        }
+        if (bsBookingModal) {
+            bsBookingModal.show();
+        }
+    }
+
+    // Ajax Form Submission
+    document.getElementById('ajaxBookingForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const origBtnText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing...';
+
+        fetch("{{ route('bookings.store') }}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            if (data.success) {
+                bsBookingModal.hide();
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Booking Received!',
+                    text: data.message,
+                    confirmButtonColor: '#0284c7'
+                });
+                document.getElementById('ajaxBookingForm').reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Booking Failed',
+                    text: 'Something went wrong, please try again.',
+                    confirmButtonColor: '#0284c7'
+                });
+            }
+        })
+        .catch(err => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            Swal.fire({
+                icon: 'error',
+                title: 'Error Submitting',
+                text: 'Please check your connection and input requirements.',
+                confirmButtonColor: '#0284c7'
+            });
+        });
+    });
+
+    // Bottom Booking Form Ajax Submission
+    document.getElementById('bottomBookingForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const origBtnText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+
+        fetch("{{ route('bookings.store') }}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Booking Received!',
+                    text: data.message,
+                    confirmButtonColor: '#0284c7'
+                });
+                document.getElementById('bottomBookingForm').reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Submission Failed',
+                    text: 'Something went wrong, please try again.',
+                    confirmButtonColor: '#0284c7'
+                });
+            }
+        })
+        .catch(err => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            Swal.fire({
+                icon: 'error',
+                title: 'Error Submitting',
+                text: 'Please check your connection and try again.',
+                confirmButtonColor: '#0284c7'
+            });
+        });
+    });
+
+    // Fallback session success check
+    @if(session('success_booking'))
+    Swal.fire({
+        icon: 'success',
+        title: 'Booking Received!',
+        text: "{{ session('success_booking') }}",
+        confirmButtonColor: '#0284c7'
+    });
+    @endif
 </script>
 @endsection

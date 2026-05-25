@@ -58,6 +58,13 @@ class PageController extends Controller
             'ip_address' => $request->ip(),
         ]));
 
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Thank you! Your message has been received. We will respond within 24 hours.',
+            ]);
+        }
+
         return back()->with('success', 'Thank you! Your message has been received. We will respond within 24 hours.');
     }
 }

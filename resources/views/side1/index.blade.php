@@ -601,28 +601,25 @@
             </div>
             <div class="col-lg-7">
                 <div class="p-4 p-md-5 rounded-4 bg-white shadow-sm" style="border:1px solid #e8d9b8;">
-                    @if(session('status'))
-                        <div class="alert alert-success rounded-3 mb-4">{{ session('status') }}</div>
-                    @endif
                     <h5 class="fw-bold mb-4" style="font-family:'EB Garamond',serif;font-size:1.4rem;">Send Us a Message</h5>
-                    <form action="{{ route('inquiry.submit') }}" method="POST">
+                    <form id="consultancyContactForm" action="{{ route('inquiry.submit') }}" method="POST">
                         @csrf
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Full Name</label>
-                                <input type="text" name="name" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="Your full name" required>
+                                <input type="text" name="name" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="Your full name" required>
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Phone / WhatsApp</label>
-                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 690 075 672">
+                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="+255 690 075 672">
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-semibold small">Email Address</label>
-                                <input type="email" name="email" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="your@email.com" required>
+                                <input type="email" name="email" class="form-control rounded-3 py-3 border-0 bg-light text-dark" placeholder="your@email.com" required>
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Service Required</label>
-                                <select name="service" class="form-select rounded-3 py-3 border-0 bg-light" required>
+                                <select name="service" class="form-select rounded-3 py-3 border-0 bg-light text-dark" required>
                                     <option value="">Select service area...</option>
                                     <optgroup label="Legal Activities">
                                         <option>Litigation &amp; Mediation</option>
@@ -648,7 +645,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Preferred Office</label>
-                                <select name="destination" class="form-select rounded-3 py-3 border-0 bg-light">
+                                <select name="destination" class="form-select rounded-3 py-3 border-0 bg-light text-dark">
                                     <option value="">Any office</option>
                                     <option>Dar es Salaam (Head Office)</option>
                                     <option>Moshi, Kilimanjaro (Branch)</option>
@@ -657,7 +654,7 @@
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-semibold small">Your Message</label>
-                                <textarea name="message" class="form-control rounded-3 border-0 bg-light" rows="4" placeholder="Describe your case, project, or inquiry..." required></textarea>
+                                <textarea name="message" class="form-control rounded-3 border-0 bg-light text-dark" rows="4" placeholder="Describe your case, project, or inquiry..." required></textarea>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-lg w-100 rounded-pill fw-bold py-3 text-dark shadow-sm" style="background:var(--gold);border-color:var(--gold);">
@@ -673,6 +670,7 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     new Swiper('.k1-hero', {
         effect: 'fade',
@@ -688,5 +686,70 @@
         spaceBetween: 24,
         breakpoints: { 768: { slidesPerView: 2 } },
     });
+
+    // Consultancy Form Submission via AJAX
+    document.getElementById('consultancyContactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const origBtnText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending Message...';
+
+        fetch("{{ route('inquiry.submit') }}", {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not OK');
+            }
+            return response.json();
+        })
+        .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: data.message,
+                    confirmButtonColor: '#c9993a'
+                });
+                document.getElementById('consultancyContactForm').reset();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Failed to Send',
+                    text: 'Something went wrong. Please try again.',
+                    confirmButtonColor: '#c9993a'
+                });
+            }
+        })
+        .catch(err => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = origBtnText;
+            Swal.fire({
+                icon: 'error',
+                title: 'Error Occurred',
+                text: 'Please check your connection and try again.',
+                confirmButtonColor: '#c9993a'
+            });
+        });
+    });
+
+    // Fallback traditional session success check
+    @if(session('success'))
+    Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: "{{ session('success') }}",
+        confirmButtonColor: '#c9993a'
+    });
+    @endif
 </script>
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', 'Newsletter Subscribers | Kasimbagu Admin')
+@section('page_title', 'Newsletter Subscribers')
 
 @section('content')
 <div class="page-header">
@@ -10,9 +11,9 @@
 
 <div class="data-table">
     <div class="p-4 border-bottom d-flex justify-content-between align-items-center" style="border-color: var(--border-color);">
-        <h5 class="mb-0">All Subscribers</h5>
+        <h5 class="mb-0 fw-bold text-dark">All Subscribers</h5>
         <div class="d-flex gap-2">
-            <input type="text" class="form-control form-control-sm" placeholder="Search subscribers..." style="width: 250px; background: var(--card-bg); border: 1px solid var(--border-color); color: #e2e8f0;">
+            <input type="text" class="form-control form-control-sm" placeholder="Search subscribers..." style="width: 250px;">
         </div>
     </div>
     <div class="table-responsive">
@@ -31,7 +32,7 @@
                     @foreach($newsletters as $newsletter)
                     <tr>
                         <td>
-                            <div class="fw-bold">{{ $newsletter->email }}</div>
+                            <div class="fw-bold text-dark">{{ $newsletter->email }}</div>
                         </td>
                         <td>
                             @if($newsletter->is_active)
@@ -44,14 +45,14 @@
                         <td>{{ $newsletter->subscribed_at->format('M d, Y') }}</td>
                         <td>
                             <div class="d-flex gap-2">
-                                <a href="mailto:{{ $newsletter->email }}" class="btn btn-sm btn-primary">
+                                <a href="mailto:{{ $newsletter->email }}" class="btn btn-sm btn-light border">
                                     <i class="bi bi-envelope"></i>
                                 </a>
                                 @if($newsletter->is_active)
                                 <form action="{{ route('admin.newsletters.toggle', $newsletter->id) }}" method="POST">
                                     @csrf
                                     @method('PUT')
-                                    <button type="submit" class="btn btn-sm" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);" title="Deactivate">
+                                    <button type="submit" class="btn btn-sm border" style="background: #fef3c7; color: #d97706; border-color: #fde68a !important;" title="Deactivate">
                                         <i class="bi bi-pause"></i>
                                     </button>
                                 </form>
@@ -59,7 +60,7 @@
                                 <form action="{{ route('admin.newsletters.toggle', $newsletter->id) }}" method="POST">
                                     @csrf
                                     @method('PUT')
-                                    <button type="submit" class="btn btn-sm" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);" title="Activate">
+                                    <button type="submit" class="btn btn-sm border" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd !important;" title="Activate">
                                         <i class="bi bi-play"></i>
                                     </button>
                                 </form>
@@ -67,7 +68,7 @@
                                 <form action="{{ route('admin.newsletters.destroy', $newsletter->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this subscriber?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                                    <button type="submit" class="btn btn-sm border" style="background: #fef2f2; color: #ef4444; border-color: #fecaca !important;">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </form>

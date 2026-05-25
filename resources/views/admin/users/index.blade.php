@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('title', 'Users Management | Kasimbagu Admin')
+@section('page_title', 'Users')
 
 @section('content')
 <div class="page-header">
@@ -10,9 +11,9 @@
 
 <div class="data-table">
     <div class="p-4 border-bottom d-flex justify-content-between align-items-center" style="border-color: var(--border-color);">
-        <h5 class="mb-0">All Users</h5>
+        <h5 class="mb-0 fw-bold text-dark">All Users</h5>
         <div class="d-flex gap-2">
-            <input type="text" class="form-control form-control-sm" placeholder="Search users..." style="width: 250px; background: var(--card-bg); border: 1px solid var(--border-color); color: #e2e8f0;">
+            <input type="text" class="form-control form-control-sm" placeholder="Search users..." style="width: 250px;">
         </div>
     </div>
     <div class="table-responsive">
@@ -31,12 +32,12 @@
                     @foreach($users as $user)
                     <tr>
                         <td>
-                            <div class="fw-bold">{{ $user->first_name }} {{ $user->last_name }}</div>
+                            <div class="fw-bold text-dark">{{ $user->first_name }} {{ $user->last_name }}</div>
                         </td>
                         <td>{{ $user->email }}</td>
                         <td>
                             @if($user->role === 'admin')
-                                <span class="badge badge-danger">Admin</span>
+                                <span class="badge" style="background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">Admin</span>
                             @else
                                 <span class="badge badge-success">User</span>
                             @endif
@@ -44,14 +45,14 @@
                         <td>{{ $user->created_at->format('M d, Y') }}</td>
                         <td>
                             <div class="d-flex gap-2">
-                                <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-sm btn-light border">
                                     <i class="bi bi-eye"></i>
                                 </a>
                                 @if($user->role !== 'admin')
                                 <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                                    <button type="submit" class="btn btn-sm border" style="background: #fef2f2; color: #ef4444; border-color: #fecaca !important;">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </form>

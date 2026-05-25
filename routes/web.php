@@ -28,7 +28,8 @@ Route::get('/consultacy', function () {
 
 // Site 2: Kasimbagu Travelling Agency
 Route::get('/travel', function () {
-    return view('side2.index');
+    $destinations = \App\Models\Destination::where('is_active', true)->orderBy('sort_order')->get();
+    return view('side2.index', compact('destinations'));
 })->name('travel');
 
 // Google OAuth (placeholder handlers)
@@ -58,6 +59,9 @@ Route::post('/inquiry', [App\Http\Controllers\PageController::class, 'submitCont
 // ─── Newsletter subscription (AJAX) ──────────────────────
 Route::post('/newsletter/subscribe', [App\Http\Controllers\NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 
+// ─── Travel Bookings (AJAX) ──────────────────────────────
+Route::post('/bookings/store', [App\Http\Controllers\BookingController::class, 'store'])->name('bookings.store');
+
 // ─── Admin Dashboard ────────────────────────────────────
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -85,4 +89,17 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/newsletters', [App\Http\Controllers\AdminController::class, 'newslettersIndex'])->name('admin.newsletters');
     Route::put('/admin/newsletters/{id}/toggle', [App\Http\Controllers\AdminController::class, 'newslettersToggle'])->name('admin.newsletters.toggle');
     Route::delete('/admin/newsletters/{id}', [App\Http\Controllers\AdminController::class, 'newslettersDestroy'])->name('admin.newsletters.destroy');
+
+    // Travel Bookings Management
+    Route::get('/admin/bookings', [App\Http\Controllers\AdminController::class, 'bookingsIndex'])->name('admin.bookings');
+    Route::put('/admin/bookings/{id}/status', [App\Http\Controllers\AdminController::class, 'bookingsUpdateStatus'])->name('admin.bookings.status');
+    Route::delete('/admin/bookings/{id}', [App\Http\Controllers\AdminController::class, 'bookingsDestroy'])->name('admin.bookings.destroy');
+
+    // Destinations Management
+    Route::get('/admin/destinations', [App\Http\Controllers\AdminController::class, 'destinationsIndex'])->name('admin.destinations');
+    Route::get('/admin/destinations/create', [App\Http\Controllers\AdminController::class, 'destinationsCreate'])->name('admin.destinations.create');
+    Route::post('/admin/destinations', [App\Http\Controllers\AdminController::class, 'destinationsStore'])->name('admin.destinations.store');
+    Route::get('/admin/destinations/{id}/edit', [App\Http\Controllers\AdminController::class, 'destinationsEdit'])->name('admin.destinations.edit');
+    Route::put('/admin/destinations/{id}', [App\Http\Controllers\AdminController::class, 'destinationsUpdate'])->name('admin.destinations.update');
+    Route::delete('/admin/destinations/{id}', [App\Http\Controllers\AdminController::class, 'destinationsDestroy'])->name('admin.destinations.destroy');
 });
