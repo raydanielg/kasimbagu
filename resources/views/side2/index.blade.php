@@ -284,7 +284,7 @@
                         <div style="width:46px;height:46px;background:#25d366;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-whatsapp text-white"></i></div>
                         <div>
                             <div class="small fw-bold text-uppercase" style="color:#94a3b8;letter-spacing:1px;">WhatsApp</div>
-                            <a href="https://wa.me/255700000000" class="text-dark fw-semibold text-decoration-none">+255 700 000 000</a>
+                            <a href="https://wa.me/255653291058" class="text-dark fw-semibold text-decoration-none">+255 653 291 058</a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-3">
@@ -310,7 +310,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Phone / WhatsApp</label>
-                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 700 000 000" required>
+                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 690 075 672" required>
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-semibold small">Email Address</label>

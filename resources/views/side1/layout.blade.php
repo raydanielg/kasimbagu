@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Kasimbagu Consultancy Agency — Ora et Labora</title>
+    <title>Kasimbagu Consultancy Agency | Legal, Research & Company Management — Tanzania</title>
+    <meta name="description" content="Kasimbagu Consultancy Agency — expert legal activities, research & consultancy, and company registration services (BRELA, NGO/CSO, CRB) in Tanzania. Dar es Salaam & Moshi offices. Ora et Labora.">
+    <meta name="keywords" content="kasimbagu consultancy, legal services Tanzania, company registration BRELA, NGO registration Tanzania, research consultancy Tanzania, litigation Tanzania, contract review, immigration law Tanzania, Dar es Salaam lawyer, Moshi legal services">
+    <meta name="author" content="Kasimbagu Consultancy Agency">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta name="geo.region" content="TZ">
+    <meta name="geo.placename" content="Dar es Salaam, Tanzania">
+    <link rel="icon" type="image/png" href="{{ asset('logo_kasimbagu_agency-removebg-preview.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('logo_kasimbagu_agency-removebg-preview.png') }}">
+    <meta name="theme-color" content="#c9993a">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kasimbagu Consultancy Agency">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Kasimbagu Consultancy Agency | Legal, Research & Company Management — Tanzania">
+    <meta property="og:description" content="Expert legal services, research & consultancy, and company registration in Tanzania. Approachable, client-centred, results-driven. Offices in Dar es Salaam and Moshi.">
+    <meta property="og:image" content="{{ asset('og-cover.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kasimbagu Consultancy Agency — Tanzania">
+    <meta property="og:locale" content="en_TZ">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kasimbagu Consultancy Agency | Tanzania">
+    <meta name="twitter:description" content="Expert legal, research & company registration services in Tanzania. Dar es Salaam & Moshi offices.">
+    <meta name="twitter:image" content="{{ asset('og-cover.jpg') }}">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Kasimbagu Consultancy Agency",
+        "url": "{{ url('/consultacy') }}",
+        "logo": "{{ asset('logo_kasimbagu_agency-removebg-preview.png') }}",
+        "description": "Expert legal activities, research & consultancy, and company registration services in Tanzania.",
+        "slogan": "Ora et Labora",
+        "email": "info@kasimbagu.com",
+        "telephone": "+255700000000",
+        "areaServed": {"@type":"Country","name":"Tanzania"},
+        "address": [
+            {"@type":"PostalAddress","addressLocality":"Dar es Salaam","addressCountry":"TZ"},
+            {"@type":"PostalAddress","addressLocality":"Moshi","addressRegion":"Kilimanjaro","addressCountry":"TZ"}
+        ],
+        "openingHoursSpecification": [
+            {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
+            {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -76,7 +122,7 @@
             <span><i class="bi bi-envelope-fill me-1 text-gold"></i><a href="mailto:info@kasimbagu.com">info@kasimbagu.com</a></span>
         </div>
         <div class="d-flex gap-4">
-            <span><i class="bi bi-telephone-fill me-1 text-gold"></i><a href="tel:+255700000000">+255 700 000 000</a></span>
+            <span><i class="bi bi-telephone-fill me-1 text-gold"></i><a href="tel:+255690075672">+255 690 075 672</a></span>
             <a href="{{ route('travel') }}" class="text-gold"><i class="bi bi-airplane me-1"></i>Travel Agency</a>
         </div>
     </div>
@@ -168,7 +214,7 @@
                     <a href="#" class="k1f-social"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="k1f-social"><i class="bi bi-linkedin"></i></a>
                     <a href="#" class="k1f-social"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://wa.me/255700000000" class="k1f-social"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/255653291058" class="k1f-social"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-6">
@@ -207,7 +253,7 @@
     </div>
 </footer>
 
-<a href="https://wa.me/255700000000" target="_blank" class="kasb-wa-btn" title="Chat on WhatsApp">
+<a href="https://wa.me/255653291058" target="_blank" class="kasb-wa-btn" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 

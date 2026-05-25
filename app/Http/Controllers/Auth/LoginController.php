@@ -42,10 +42,15 @@ class LoginController extends Controller
 
     /**
      * The user has been authenticated.
-     * Redirect to an interstitial "Redirecting" page first.
+     * Check role and redirect accordingly.
      */
     protected function authenticated(Request $request, $user)
     {
+        if ($user->role === 'admin') {
+            session(['admin_welcome' => true]);
+            return redirect()->route('admin.dashboard');
+        }
+
         $intended = redirect()->intended($this->redirectTo)->getTargetUrl();
         return redirect()->route('redirecting', ['to' => $intended]);
     }

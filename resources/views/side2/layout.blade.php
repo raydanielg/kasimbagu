@@ -128,7 +128,7 @@
                     <a href="#" class="k2f-social"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="k2f-social"><i class="bi bi-instagram"></i></a>
                     <a href="#" class="k2f-social"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://wa.me/255700000000" class="k2f-social" style="background:#25d366;color:white;"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/255653291058" class="k2f-social" style="background:#25d366;color:white;"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-6">
@@ -156,7 +156,7 @@
                 <div class="k2f-contact">
                     <p><i class="bi bi-geo-alt-fill me-2" style="color:#38bdf8;"></i>Dar es Salaam, Tanzania</p>
                     <p><i class="bi bi-envelope-fill me-2" style="color:#38bdf8;"></i><a href="mailto:travel@kasimbagu.com">travel@kasimbagu.com</a></p>
-                    <p class="mb-0"><i class="bi bi-telephone-fill me-2" style="color:#38bdf8;"></i><a href="tel:+255700000000">+255 700 000 000</a></p>
+                    <p class="mb-0"><i class="bi bi-telephone-fill me-2" style="color:#38bdf8;"></i><a href="tel:+255690075672">+255 690 075 672</a></p>
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/255700000000" target="_blank" class="kasb-wa-btn" title="Chat on WhatsApp">
+<a href="https://wa.me/255653291058" target="blank" class="kasb-wa-btn" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 

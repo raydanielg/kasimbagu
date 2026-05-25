@@ -6,9 +6,9 @@
                 <i class="bi bi-envelope-fill text-warning me-1 me-md-2"></i>
                 <span class="d-none d-sm-inline small">info@kasimbagu.com</span>
             </a>
-            <a href="tel:+255700000000" class="text-white text-decoration-none d-flex align-items-center hover-opacity">
+            <a href="tel:+255690075672" class="text-white text-decoration-none d-flex align-items-center hover-opacity">
                 <i class="bi bi-telephone-fill text-warning me-1 me-md-2"></i>
-                <span class="small">+255 700 000 000</span>
+                <span class="small">+255 690 075 672</span>
             </a>
         </div>
         <div class="d-flex align-items-center gap-2 gap-md-3">
@@ -38,107 +38,57 @@
                     <a class="nav-link px-3 py-4 fw-bold {{ request()->is('/') ? 'active text-primary' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>
 
-                <!-- Services Mega Menu -->
-                <li class="nav-item dropdown kasb-has-megamenu">
-                    <a class="nav-link dropdown-toggle px-3 py-4 fw-bold" href="#" data-bs-toggle="dropdown">Services</a>
-                    <div class="dropdown-menu kasb-megamenu border-0 shadow-lg p-4" role="menu">
-                        <div class="row g-4">
-                            <div class="col-md-4 border-end">
-                                <h6 class="fw-bold text-primary mb-3">Consultancy</h6>
-                                <ul class="list-unstyled kasb-mega-list">
-                                    <li><a href="/consultacy">Business Strategy</a></li>
-                                    <li><a href="/consultacy">Operations Advisory</a></li>
-                                    <li><a href="/consultacy">ICT Solutions</a></li>
-                                    <li><a href="/consultacy">Training & Capacity</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 border-end">
-                                <h6 class="fw-bold text-primary mb-3">Travel & Visa</h6>
-                                <ul class="list-unstyled kasb-mega-list">
-                                    <li><a href="/travel">Flight Ticketing</a></li>
-                                    <li><a href="/travel">Visa Assistance</a></li>
-                                    <li><a href="/travel">Hotel Booking</a></li>
-                                    <li><a href="/travel">Airport Transfers</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h6 class="fw-bold text-primary mb-3">Quick Actions</h6>
-                                <ul class="list-unstyled kasb-mega-list">
-                                    <li><a href="#cta">Book a Flight</a></li>
-                                    <li><a href="#cta">Apply for Visa</a></li>
-                                    <li><a href="#cta">Send Inquiry</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Services -->
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-4 fw-bold {{ request()->is('services') ? 'active text-primary' : '' }}" href="{{ route('services') }}">Services</a>
                 </li>
 
                 <!-- Destinations -->
                 <li class="nav-item">
-                    <a class="nav-link px-3 py-4 fw-bold" href="#destinations">Destinations</a>
+                    <a class="nav-link px-3 py-4 fw-bold {{ request()->is('destinations') ? 'active text-primary' : '' }}" href="{{ route('destinations') }}">Destinations</a>
                 </li>
 
                 <!-- About -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-3 py-4 fw-bold" href="#" data-bs-toggle="dropdown">About</a>
-                    <div class="dropdown-menu border-0 shadow-lg rounded-4 p-3">
-                        <div class="d-flex flex-column gap-1" style="min-width:220px;">
-                            <a class="dropdown-item rounded-3 d-flex align-items-center p-2" href="#">
-                                <i class="bi bi-building text-primary me-3 fs-5"></i>
-                                <div><span class="fw-bold d-block">Who We Are</span><small class="text-muted">Our story & mission</small></div>
-                            </a>
-                            <a class="dropdown-item rounded-3 d-flex align-items-center p-2" href="#">
-                                <i class="bi bi-people text-success me-3 fs-5"></i>
-                                <div><span class="fw-bold d-block">Our Team</span><small class="text-muted">Meet the experts</small></div>
-                            </a>
-                            <a class="dropdown-item rounded-3 d-flex align-items-center p-2" href="#why">
-                                <i class="bi bi-shield-check text-warning me-3 fs-5"></i>
-                                <div><span class="fw-bold d-block">Why Choose Us</span><small class="text-muted">Our promise to you</small></div>
-                            </a>
-                        </div>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-4 fw-bold {{ request()->is('about') ? 'active text-primary' : '' }}" href="{{ route('about') }}">About</a>
                 </li>
 
                 <!-- Contact -->
                 <li class="nav-item ms-lg-2">
-                    <a href="#cta" class="nav-link px-3 py-4 fw-bold">Contact</a>
+                    <a class="nav-link px-3 py-4 fw-bold {{ request()->is('contact') ? 'active text-primary' : '' }}" href="{{ route('contact') }}">Contact</a>
                 </li>
 
                 <!-- Portal / Auth -->
+                @auth
                 <li class="nav-item dropdown ms-lg-2">
-                    @auth
-                        <a class="btn btn-outline-primary px-4 rounded-pill fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-circle me-1"></i> {{ Auth::user()->first_name ?? Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 p-3 mt-2" style="min-width:220px;">
-                            <li><h6 class="dropdown-header text-uppercase small fw-bold text-muted mb-2 letter-spacing-1">My Account</h6></li>
-                            <li><a class="dropdown-item rounded-3 p-2 mb-1" href="{{ url('/home') }}"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li>
-                                <a class="dropdown-item rounded-3 p-2 text-danger fw-bold" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();document.getElementById('kasb-logout-form').submit();">
-                                    <i class="bi bi-box-arrow-right me-2"></i> Logout
-                                </a>
-                            </li>
-                        </ul>
-                        <form id="kasb-logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
-                    @else
-                        <a class="btn btn-outline-primary px-4 rounded-pill fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person-lock me-1"></i> Portal
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 p-3 mt-2" style="min-width:220px;">
-                            <li><h6 class="dropdown-header text-uppercase small fw-bold text-muted mb-2 letter-spacing-1">Access</h6></li>
-                            <li><a class="dropdown-item rounded-3 p-2 mb-1 fw-bold text-primary" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right me-2"></i> Login</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item rounded-3 p-2" href="{{ route('register') }}">Create Account</a></li>
-                        </ul>
-                    @endauth
+                    <a class="btn btn-outline-primary px-4 rounded-pill fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle me-1"></i> {{ Auth::user()->first_name ?? Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 p-3 mt-2" style="min-width:220px;">
+                        <li><h6 class="dropdown-header text-uppercase small fw-bold text-muted mb-2 letter-spacing-1">My Account</h6></li>
+                        <li><a class="dropdown-item rounded-3 p-2 mb-1" href="{{ url('/home') }}"><i class="bi bi-speedometer2 me-2"></i> Dashboard</a></li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li>
+                            <a class="dropdown-item rounded-3 p-2 text-danger fw-bold" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();document.getElementById('kasb-logout-form').submit();">
+                                <i class="bi bi-box-arrow-right me-2"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                    <form id="kasb-logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
                 </li>
+                @endauth
 
                 <li class="nav-item ms-lg-2">
-                    <a href="#cta" class="btn btn-primary px-4 rounded-pill fw-bold shadow-sm kasb-hover-lift">
+                    @auth
+                    <a href="{{ route('contact') }}" class="btn btn-primary px-4 rounded-pill fw-bold shadow-sm kasb-hover-lift">
                         Book Now
                     </a>
+                    @else
+                    <a href="{{ route('login') }}" class="btn btn-primary px-4 rounded-pill fw-bold shadow-sm kasb-hover-lift">
+                        Book Now
+                    </a>
+                    @endauth
                 </li>
 
             </ul>
@@ -163,9 +113,15 @@
 
     <div class="offcanvas-body p-0 bg-light">
         <div class="p-3 bg-white border-bottom">
-            <a href="#cta" class="btn btn-warning w-100 rounded-pill fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
+            @auth
+            <a href="{{ route('contact') }}" class="btn btn-warning w-100 rounded-pill fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
                 <i class="bi bi-send-fill me-2"></i>Book / Inquire
             </a>
+            @else
+            <a href="{{ route('login') }}" class="btn btn-warning w-100 rounded-pill fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
+                <i class="bi bi-send-fill me-2"></i>Book / Inquire
+            </a>
+            @endauth
         </div>
 
         <div class="p-3">
@@ -186,7 +142,7 @@
                 </div>
             </div>
 
-            <a href="#destinations" class="kasb-mob-item" data-bs-dismiss="offcanvas">
+            <a href="{{ route('destinations') }}" class="kasb-mob-item" data-bs-dismiss="offcanvas">
                 <i class="bi bi-globe2"></i><span>Destinations</span><i class="bi bi-chevron-right ms-auto"></i>
             </a>
 
@@ -197,31 +153,24 @@
                 <div id="mob-about" class="collapse kasb-mob-sub">
                     <a href="#"><i class="bi bi-dot"></i>Who We Are</a>
                     <a href="#"><i class="bi bi-dot"></i>Our Team</a>
-                    <a href="#why"><i class="bi bi-dot"></i>Why Choose Us</a>
+                    <a href="{{ route('about') }}#why"><i class="bi bi-dot"></i>Why Choose Us</a>
                 </div>
             </div>
 
-            <a href="#cta" class="kasb-mob-item" data-bs-dismiss="offcanvas">
+            <a href="{{ route('contact') }}" class="kasb-mob-item" data-bs-dismiss="offcanvas">
                 <i class="bi bi-chat-dots"></i><span>Contact</span><i class="bi bi-chevron-right ms-auto"></i>
             </a>
         </div>
 
         <div class="mt-auto p-3 bg-white border-top">
             @auth
-                <a href="{{ url('/home') }}" class="btn btn-outline-primary w-100 mb-2 rounded-pill">
-                    <i class="bi bi-speedometer2 me-2"></i>Dashboard
-                </a>
-                <a href="{{ route('logout') }}" class="btn btn-danger w-100 rounded-pill"
-                   onclick="event.preventDefault();document.getElementById('kasb-logout-form').submit();">
-                    <i class="bi bi-box-arrow-right me-2"></i>Logout
-                </a>
-            @else
-                <a href="{{ route('login') }}" class="btn btn-outline-primary w-100 mb-2 rounded-pill">
-                    <i class="bi bi-box-arrow-in-right me-2"></i>Login
-                </a>
-                <a href="{{ route('register') }}" class="btn btn-primary w-100 rounded-pill shadow-sm">
-                    <i class="bi bi-person-plus me-2"></i>Get Started
-                </a>
+            <a href="{{ url('/home') }}" class="btn btn-outline-primary w-100 mb-2 rounded-pill">
+                <i class="bi bi-speedometer2 me-2"></i>Dashboard
+            </a>
+            <a href="{{ route('logout') }}" class="btn btn-danger w-100 rounded-pill"
+               onclick="event.preventDefault();document.getElementById('kasb-logout-form').submit();">
+                <i class="bi bi-box-arrow-right me-2"></i>Logout
+            </a>
             @endauth
         </div>
     </div>

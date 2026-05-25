@@ -412,7 +412,7 @@
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Head Office</div>
                             <div class="text-white fw-bold mb-1">Dar es Salaam</div>
                             <div style="color:#64748b;font-size:0.83rem;">Tanzania</div>
-                            <a href="tel:+255700000000" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 700 000 000</a>
+                            <a href="tel:+255690075672" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 690 075 672</a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -421,7 +421,7 @@
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Branch Office</div>
                             <div class="text-white fw-bold mb-1">Moshi, Kilimanjaro</div>
                             <div style="color:#64748b;font-size:0.83rem;">Tanzania</div>
-                            <a href="tel:+255700000001" class="d-block mt-2 text-decoration-none" style="color:#60a5fa;font-size:0.83rem;">+255 700 000 001</a>
+                            <a href="tel:+255653291058" class="d-block mt-2 text-decoration-none" style="color:#60a5fa;font-size:0.83rem;">+255 653 291 058</a>
                         </div>
                     </div>
                     <div class="col-12">
@@ -579,7 +579,7 @@
                             <div><div class="fw-bold" style="color:#1a202c;">Head Office</div><div class="text-secondary small">Dar es Salaam, Tanzania</div></div>
                         </div>
                         <div class="d-flex flex-column gap-2 ms-1" style="font-size:0.88rem;">
-                            <a href="tel:+255700000000" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill text-gold"></i>+255 700 000 000</a>
+                            <a href="tel:+255690075672" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill text-gold"></i>+255 690 075 672</a>
                             <a href="mailto:info@kasimbagu.com" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-envelope-fill text-gold"></i>info@kasimbagu.com</a>
                         </div>
                     </div>
@@ -589,13 +589,13 @@
                             <div><div class="fw-bold" style="color:#1a202c;">Branch Office</div><div class="text-secondary small">Moshi, Kilimanjaro, Tanzania</div></div>
                         </div>
                         <div class="d-flex flex-column gap-2 ms-1" style="font-size:0.88rem;">
-                            <a href="tel:+255700000001" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill" style="color:#1d4ed8;"></i>+255 700 000 001</a>
+                            <a href="tel:+255653291058" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill" style="color:#1d4ed8;"></i>+255 653 291 058</a>
                             <a href="mailto:moshi@kasimbagu.com" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-envelope-fill" style="color:#1d4ed8;"></i>moshi@kasimbagu.com</a>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex gap-3">
-                    <a href="https://wa.me/255700000000" class="btn btn-success rounded-pill px-4 fw-semibold"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
+                    <a href="https://wa.me/255653291058" class="btn btn-success rounded-pill px-4 fw-semibold"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
                     <a href="#" class="btn btn-outline-secondary rounded-pill px-4 fw-semibold"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
                 </div>
             </div>
@@ -614,7 +614,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Phone / WhatsApp</label>
-                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 700 000 000">
+                                <input type="text" name="phone" class="form-control rounded-3 py-3 border-0 bg-light" placeholder="+255 690 075 672">
                             </div>
                             <div class="col-12">
                                 <label class="form-label fw-semibold small">Email Address</label>

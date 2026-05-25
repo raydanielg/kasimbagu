@@ -2,7 +2,6 @@
 
 @section('content')
 @include('partials.home.hero_top')
-@include('partials.home.hero_video')
 @include('partials.home.services')
 @include('partials.home.countries')
 @include('partials.home.why')

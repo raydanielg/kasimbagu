@@ -1,5 +1,5 @@
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/255700000000" target="_blank" class="kasb-wa-btn" title="Chat on WhatsApp">
+<a href="https://wa.me/255653291058" target="_blank" class="kasb-wa-btn" title="Chat on WhatsApp">
     <i class="bi bi-whatsapp"></i>
 </a>
 
