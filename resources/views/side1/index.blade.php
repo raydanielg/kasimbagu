@@ -266,7 +266,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 k1-animate-scale k1-stagger-3">
                 <a href="#company" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Company">
@@ -285,15 +285,15 @@
 </section>
 
 {{-- ═══ INTERFACE 1: LEGAL ACTIVITIES ═══ --}}
-<section id="legal" class="py-5 position-relative overflow-hidden" style="background:linear-gradient(155deg,#0a1c38 0%,#112644 60%,#0e2040 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+<section id="legal" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#0a1c38 0%,#112644 60%,#0e2040 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-7">
+            <div class="col-lg-7 k1-animate-left k1-stagger-1">
                 <span class="k1-section-badge"><i class="bi bi-journal-richtext me-2"></i>Interface One</span>
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Legal <span style="color:var(--gold);">Activities</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:560px;">Our legal team combines deep expertise with an approachable, client-centred philosophy. Whether you face a courtroom dispute, need a contract reviewed, or require immigration guidance — we are your dedicated legal partner.</p>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 k1-animate-right k1-stagger-2">
                 <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80" alt="Legal" class="img-fluid rounded-4 shadow-lg">
             </div>
         </div>
@@ -310,7 +310,7 @@
             ];
             @endphp
             @foreach($legal as $i => $sv)
-            <div class="col-lg-4 col-md-6 {{ $i===6 ? 'col-lg-12' : '' }}">
+            <div class="col-lg-4 col-md-6 {{ $i===6 ? 'col-lg-12' : '' }} k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
                 <div class="k1-svc-card" style="background:rgba(201,153,58,0.05);border-color:rgba(201,153,58,0.12);">
                     <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
