@@ -7,14 +7,19 @@
 ════════════════════════════════════════════════════ --}}
 <style>
     /* ── Hero ── */
-    .k1-hero { height: 860px; }
+    .k1-hero { height: 620px; }
     .k1-hero .swiper-slide { background-size:cover; background-position:center; display:flex; align-items:center; position:relative; }
-    .k1-hero .swiper-slide::before { content:''; position:absolute; inset:0; background:linear-gradient(120deg,rgba(6,16,38,0.93) 38%,rgba(6,16,38,0.28)); z-index:1; }
+    .k1-hero .swiper-slide::before { content:''; position:absolute; inset:0; background:linear-gradient(120deg,rgba(6,16,38,0.85) 38%,rgba(6,16,38,0.4)); z-index:1; }
     .k1-hero-content { position:relative; z-index:2; }
-    .k1-hero-badge { background:rgba(201,153,58,0.18); border:1px solid rgba(201,153,58,0.4); color:#e8c97a; padding:6px 18px; border-radius:50px; display:inline-block; font-size:0.75rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px; }
-    .k1-hero .swiper-pagination-bullet { width:10px; height:10px; background:rgba(255,255,255,0.4); }
-    .k1-hero .swiper-pagination-bullet-active { width:30px; border-radius:20px; background:var(--gold); opacity:1; }
-    @media(max-width:768px){ .k1-hero { height:560px; } }
+    .k1-hero-badge { background:rgba(255,193,7,0.92); color:#1a1a1a; padding:6px 18px; border-radius:50px; display:inline-block; font-weight:700; font-size:0.85rem; margin-bottom:22px; letter-spacing:0.5px; }
+    .k1-hero .swiper-pagination-bullet { width:12px; height:12px; background:#fff; opacity:0.5; transition:all 0.3s ease; }
+    .k1-hero .swiper-pagination-bullet-active { width:32px; border-radius:20px; background:#ffc107; opacity:1; }
+    @media(max-width:768px){ 
+        .k1-hero { height: 480px; } 
+        .k1-hero-content .btn { font-size: 0.9rem !important; padding: 0.5rem 1rem !important; }
+        .k1-hero-content h1 { font-size: 1.8rem !important; }
+        .k1-hero-content p { font-size: 0.95rem !important; }
+    }
     /* ── Interface cards ── */
     .k1-iface-card { border-radius:20px; overflow:hidden; position:relative; height:360px; cursor:pointer; }
     .k1-iface-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
