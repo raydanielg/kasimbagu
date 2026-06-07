@@ -121,9 +121,28 @@ class AdminController extends Controller
     }
 
     // Inquiries Management
-    public function inquiriesIndex()
+    public function inquiriesIndex(Request $request)
     {
-        $inquiries = Inquiry::latest()->paginate(10);
+        $query = Inquiry::query();
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                  ->orWhere('email', 'like', '%' . $search . '%')
+                  ->orWhere('phone', 'like', '%' . $search . '%')
+                  ->orWhere('service', 'like', '%' . $search . '%')
+                  ->orWhere('subject', 'like', '%' . $search . '%')
+                  ->orWhere('message', 'like', '%' . $search . '%');
+            });
+        }
+
+        $inquiries = $query->latest()->paginate(10);
+
+        if ($request->ajax()) {
+            return view('admin.inquiries.partials.table', compact('inquiries'))->render();
+        }
+
         return view('admin.inquiries.index', compact('inquiries'));
     }
 
