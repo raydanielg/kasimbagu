@@ -2,7 +2,7 @@
 <section class="py-5 bg-light overflow-hidden">
     <div class="container py-5 text-center">
         <div class="mb-5">
-            <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color:rgba(0,86,179,0.1);color:#0056b3;font-size:0.75rem;letter-spacing:1px;">
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background-color:rgba(0,86,179,0.1);color:#0056b3;font-size:0.75rem;letter-spacing:1px;">
                 <i class="bi bi-quote me-1"></i> TESTIMONIALS
             </span>
             <h2 class="display-5 fw-bold mb-3" style="color:#1a202c;">What Our Clients Say</h2>

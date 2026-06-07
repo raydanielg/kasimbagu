@@ -24,10 +24,10 @@
                     From international travel and visa processing to legal representation, company registration, and cutting-edge ICT solutions — we deliver excellence across every domain.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="#services" class="btn btn-primary px-4 py-3 rounded-pill fw-bold" style="background:#3b82f6;border:none;font-size:0.95rem;flex:1;min-width:140px;">
+                    <a href="#services" class="btn btn-primary px-4 py-3 rounded-0 fw-bold" style="background:#3b82f6;border:none;font-size:0.95rem;flex:1;min-width:140px;">
                         Explore Services <i class="bi bi-arrow-down ms-2"></i>
                     </a>
-                    <a href="{{ route('contact') }}" class="btn btn-outline-light px-4 py-3 rounded-pill fw-bold" style="border:1px solid rgba(255,255,255,0.3);font-size:0.95rem;flex:1;min-width:140px;">
+                    <a href="{{ route('contact') }}" class="btn btn-outline-light px-4 py-3 rounded-0 fw-bold" style="border:1px solid rgba(255,255,255,0.3);font-size:0.95rem;flex:1;min-width:140px;">
                         Get a Quote
                     </a>
                 </div>
@@ -102,7 +102,7 @@
                         @endforeach
                     </ul>
                     @endif
-                    <a href="{{ route('contact') }}?service={{ urlencode($service->name) }}" class="btn btn-sm rounded-pill fw-bold px-4 py-2 w-100" style="background:{{ $service->icon_color }}15;border:1px solid {{ $service->icon_color }}40;color:{{ $service->icon_color }};font-size:0.85rem;transition:all 0.3s;">
+                    <a href="{{ route('contact') }}?service={{ urlencode($service->name) }}" class="btn btn-sm rounded-0 fw-bold px-4 py-2 w-100" style="background:{{ $service->icon_color }}15;border:1px solid {{ $service->icon_color }}40;color:{{ $service->icon_color }};font-size:0.85rem;transition:all 0.3s;">
                         Learn More <i class="bi bi-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -171,10 +171,10 @@
             Contact our team today and discover how we can help you achieve your goals with our comprehensive range of professional services.
         </p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="{{ route('contact') }}" class="btn btn-warning px-5 py-3 rounded-pill fw-bold" style="font-size:1rem;flex:1;min-width:140px;">
+            <a href="{{ route('contact') }}" class="btn btn-warning px-5 py-3 rounded-0 fw-bold" style="font-size:1rem;flex:1;min-width:140px;">
                 Contact Us <i class="bi bi-arrow-right ms-2"></i>
             </a>
-            <a href="https://wa.me/255653291058" target="_blank" class="btn px-5 py-3 rounded-pill fw-bold" style="background:rgba(37,211,102,0.2);border:1px solid rgba(37,211,102,0.4);color:#34d399;font-size:1rem;flex:1;min-width:140px;">
+            <a href="https://wa.me/255653291058" target="_blank" class="btn px-5 py-3 rounded-0 fw-bold" style="background:rgba(37,211,102,0.2);border:1px solid rgba(37,211,102,0.4);color:#34d399;font-size:1rem;flex:1;min-width:140px;">
                 <i class="bi bi-whatsapp me-2"></i>WhatsApp
             </a>
         </div>

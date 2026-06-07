@@ -59,7 +59,7 @@
                                 <h3 class="text-white fw-bold mb-3">Flight Ticketing</h3>
                                 <div class="kasb-pkg-details">
                                     <p class="text-white-50 small mb-4">Competitive fares on all major airlines worldwide. Economy, business class, and group travel bookings.</p>
-                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-pill fw-bold">Book Now</a>
+                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-0 fw-bold">Book Now</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                                 <h3 class="text-white fw-bold mb-3">Visa Assistance</h3>
                                 <div class="kasb-pkg-details">
                                     <p class="text-white-50 small mb-4">Professional processing for UAE, UK, USA, Schengen, China, India & more. Fast approvals guaranteed.</p>
-                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-pill fw-bold">Apply Now</a>
+                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-0 fw-bold">Apply Now</a>
                                 </div>
                             </div>
                         </div>

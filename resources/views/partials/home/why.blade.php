@@ -27,7 +27,7 @@
         </div>
 
         <div class="text-center mt-5">
-            <a href="#cta" class="btn btn-warning px-5 py-3 rounded-pill fw-bold" style="font-size:1rem;">
+            <a href="#cta" class="btn btn-warning px-5 py-3 rounded-0 fw-bold" style="font-size:1rem;">
                 Get Started <i class="bi bi-arrow-right ms-2"></i>
             </a>
         </div>

@@ -43,7 +43,7 @@
                             <div style="color:#64748b;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:2px;">{{ $label }}</div>
                             <div class="text-white fw-semibold" style="font-size:0.95rem;">{{ $val }}</div>
                         </div>
-                        <a href="{{ $href }}" target="{{ str_starts_with($href,'http') ? '_blank' : '_self' }}" class="btn btn-sm rounded-pill fw-bold flex-shrink-0" style="background:{{ $color }}22;border:1px solid {{ $color }}44;color:{{ $color }};font-size:0.78rem;white-space:nowrap;">
+                        <a href="{{ $href }}" target="{{ str_starts_with($href,'http') ? '_blank' : '_self' }}" class="btn btn-sm rounded-0 fw-bold flex-shrink-0" style="background:{{ $color }}22;border:1px solid {{ $color }}44;color:{{ $color }};font-size:0.78rem;white-space:nowrap;">
                             {{ $cta }}
                         </a>
                     </div>
@@ -182,7 +182,7 @@
                                 @error('message')<div class="kasb-error">{{ $message }}</div>@enderror
                             </div>
                             <div class="col-12 mt-2">
-                                <button type="submit" class="btn btn-warning btn-lg w-100 rounded-pill fw-bold py-3 shadow-lg" style="font-size:1rem;">
+                                <button type="submit" class="btn btn-warning btn-lg w-100 rounded-0 fw-bold py-3 shadow-lg" style="font-size:1rem;">
                                     <i class="bi bi-send-fill me-2"></i>Send Message
                                 </button>
                             </div>

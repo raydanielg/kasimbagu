@@ -194,10 +194,10 @@
         <h3 class="text-white fw-bold mb-2">Ready to work with us?</h3>
         <p style="color:#94a3b8;margin-bottom:28px;">Join hundreds of satisfied clients across Tanzania and East Africa.</p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow-lg">
+            <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow-lg">
                 <i class="bi bi-send-fill me-2"></i>Get in Touch
             </a>
-            <a href="{{ route('services') }}" class="btn btn-lg px-5 rounded-pill fw-bold" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#e2e8f0;">
+            <a href="{{ route('services') }}" class="btn btn-lg px-5 rounded-0 fw-bold" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#e2e8f0;">
                 <i class="bi bi-grid me-2"></i>View Services
             </a>
         </div>

@@ -150,7 +150,7 @@
                         </div>
                         @endif
 
-                        <a href="{{ route('contact') }}?destination={{ urlencode($d->name) }}" class="btn btn-sm w-100 rounded-pill fw-bold" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:#60a5fa;font-size:0.85rem;padding:8px;">
+                        <a href="{{ route('contact') }}?destination={{ urlencode($d->name) }}" class="btn btn-sm w-100 rounded-0 fw-bold" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);color:#60a5fa;font-size:0.85rem;padding:8px;">
                             <i class="bi bi-send-fill me-1"></i>Book / Apply Visa
                         </a>
                     </div>
@@ -160,7 +160,7 @@
             <div class="col-12 text-center py-5">
                 <i class="bi bi-globe" style="font-size:3rem;color:#1e293b;"></i>
                 <p style="color:#475569;margin-top:12px;">No destinations found for this region.</p>
-                <a href="{{ route('destinations') }}" class="btn btn-outline-secondary rounded-pill mt-2">View All</a>
+                <a href="{{ route('destinations') }}" class="btn btn-outline-secondary rounded-0 mt-2">View All</a>
             </div>
             @endforelse
         </div>
@@ -172,7 +172,7 @@
     <div class="container py-3 text-center">
         <h3 class="text-white fw-bold mb-2">Your destination is not listed?</h3>
         <p style="color:#94a3b8;margin-bottom:28px;">We serve 50+ destinations worldwide. Contact us and we will handle your travel from Tanzania.</p>
-        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow-lg">
+        <a href="{{ route('contact') }}" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow-lg">
             <i class="bi bi-chat-dots-fill me-2"></i>Ask About Any Destination
         </a>
     </div>

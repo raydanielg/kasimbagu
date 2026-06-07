@@ -22,7 +22,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&q=80" class="card-img-top" alt="Dubai" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇦🇪 UAE</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇦🇪 UAE</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">Dubai, UAE</h5>
@@ -36,7 +36,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?w=400&q=80" class="card-img-top" alt="Turkey" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇹🇷 Turkey</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇹🇷 Turkey</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">Istanbul, Turkey</h5>
@@ -50,7 +50,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=400&q=80" class="card-img-top" alt="London" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇬🇧 UK</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇬🇧 UK</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">London, UK</h5>
@@ -64,7 +64,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80" class="card-img-top" alt="USA" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇺🇸 USA</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇺🇸 USA</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">New York, USA</h5>
@@ -78,7 +78,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=400&q=80" class="card-img-top" alt="China" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇨🇳 China</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇨🇳 China</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">Beijing, China</h5>
@@ -92,7 +92,7 @@
                     <div class="card border-0 shadow-sm rounded-4 overflow-hidden hover-lift">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&q=80" class="card-img-top" alt="India" style="height:210px;object-fit:cover;">
-                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-pill fw-bold">🇮🇳 India</span>
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 rounded-0 fw-bold">🇮🇳 India</span>
                         </div>
                         <div class="card-body p-3">
                             <h5 class="fw-bold mb-1">Delhi, India</h5>
