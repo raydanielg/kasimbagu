@@ -329,13 +329,13 @@
 </section>
 
 {{-- ═══ INTERFACE 2: RESEARCH & CONSULTANCY ═══ --}}
-<section id="research" class="py-5" style="background:#f8f5ef;">
+<section id="research" class="py-5 k1-animate-on-scroll" style="background:#f8f5ef;">
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-5">
+            <div class="col-lg-5 k1-animate-left k1-stagger-1">
                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80" alt="Research" class="img-fluid rounded-4 shadow-lg">
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 k1-animate-right k1-stagger-2">
                 <span class="k1-section-badge" style="background:rgba(13,148,136,0.1);border-color:rgba(13,148,136,0.3);color:#0d9488;"><i class="bi bi-search me-2"></i>Interface Two</span>
                 <h2 class="display-4 fw-bold mt-2 mb-3" style="font-family:'EB Garamond',serif;">Research &amp; <span style="color:#0d9488;">Consultancy</span></h2>
                 <p class="text-secondary" style="font-size:1.05rem;line-height:1.85;max-width:560px;">We bridge the gap between academic knowledge and real-world impact. From graduate researchers to international NGOs, we craft compelling, rigorous research documents that open doors and drive change.</p>
@@ -356,8 +356,8 @@
                 ['icon'=>'bi-graph-up-arrow','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Business Plans','desc'=>'Comprehensive, investment-ready business plans for startups, SMEs, and organizations seeking financing.'],
             ];
             @endphp
-            @foreach($research as $sv)
-            <div class="col-lg-4 col-md-6">
+            @foreach($research as $i => $sv)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -376,10 +376,10 @@
 </section>
 
 {{-- ═══ INTERFACE 3: COMPANY & ORG MANAGEMENT ═══ --}}
-<section id="company" class="py-5 position-relative overflow-hidden" style="background:linear-gradient(135deg,#0f2248 0%,#1a3268 60%,#122050 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+<section id="company" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(135deg,#0f2248 0%,#1a3268 60%,#122050 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-7">
+            <div class="col-lg-7 k1-animate-left k1-stagger-1">
                 <span class="k1-section-badge" style="background:rgba(29,78,216,0.15);border-color:rgba(29,78,216,0.3);color:#60a5fa;"><i class="bi bi-building-fill me-2"></i>Interface Three</span>
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Company &amp; Organization <span style="color:#60a5fa;">Management</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We are your trusted partner for building compliant, well-structured organizations. From the first registration to full operational compliance — we handle the complexity so you can focus on growth.</p>
@@ -389,7 +389,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-5 k1-animate-right k1-stagger-2">
                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="Company" class="img-fluid rounded-4 shadow-lg">
             </div>
         </div>
@@ -404,8 +404,8 @@
                 ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
             ];
             @endphp
-            @foreach($company as $sv)
-            <div class="col-lg-4 col-md-6">
+            @foreach($company as $i => $sv)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
                 <div class="k1-svc-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
