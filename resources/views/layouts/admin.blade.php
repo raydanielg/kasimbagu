@@ -513,7 +513,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content animate__animated animate__fadeIn animate__faster">
         @yield('content')
     </main>
 
