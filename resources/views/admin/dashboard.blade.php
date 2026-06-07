@@ -4,9 +4,9 @@
 @section('page_title', 'Dashboard')
 
 @section('content')
-<!-- First Row of Stats -->
-<div class="row g-4 mb-4">
-    <div class="col-xl-3 col-sm-6">
+<!-- Dynamic Database KPI Stats (Single Row) -->
+<div class="row g-3 mb-5">
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
         <div class="dashboard-stat-card">
             <div class="dashboard-stat-icon-wrapper" style="background: #e0f2fe; color: #0284c7;">
                 <i class="bi bi-people-fill"></i>
@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6">
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
         <div class="dashboard-stat-card">
             <div class="dashboard-stat-icon-wrapper" style="background: #fef3c7; color: #d97706;">
                 <i class="bi bi-envelope-open-fill"></i>
@@ -28,7 +28,29 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6">
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+        <div class="dashboard-stat-card">
+            <div class="dashboard-stat-icon-wrapper" style="background: #e0e7ff; color: #4f46e5;">
+                <i class="bi bi-calendar2-check-fill"></i>
+            </div>
+            <div>
+                <div class="dashboard-stat-value">{{ App\Models\Booking::count() }}</div>
+                <div class="dashboard-stat-label">Bookings</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+        <div class="dashboard-stat-card">
+            <div class="dashboard-stat-icon-wrapper" style="background: #ecfdf5; color: #059669;">
+                <i class="bi bi-pin-map-fill"></i>
+            </div>
+            <div>
+                <div class="dashboard-stat-value">{{ App\Models\Destination::count() }}</div>
+                <div class="dashboard-stat-label">Destinations</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
         <div class="dashboard-stat-card">
             <div class="dashboard-stat-icon-wrapper" style="background: #fce7f3; color: #db2777;">
                 <i class="bi bi-newspaper"></i>
@@ -39,62 +61,14 @@
             </div>
         </div>
     </div>
-    <div class="col-xl-3 col-sm-6">
+    <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
         <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #e0e7ff; color: #4f46e5;">
+            <div class="dashboard-stat-icon-wrapper" style="background: #f3e8ff; color: #7c3aed;">
                 <i class="bi bi-gear-fill"></i>
             </div>
             <div>
                 <div class="dashboard-stat-value">{{ App\Models\Service::count() }}</div>
                 <div class="dashboard-stat-label">Active Services</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Second Row of Stats -->
-<div class="row g-4 mb-5">
-    <div class="col-xl-3 col-sm-6">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #ecfdf5; color: #059669;">
-                <i class="bi bi-telephone-fill"></i>
-            </div>
-            <div>
-                <div class="dashboard-stat-value">+255 690</div>
-                <div class="dashboard-stat-label">Support Number</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-sm-6">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #f5f5f4; color: #737373;">
-                <i class="bi bi-shield-fill-check"></i>
-            </div>
-            <div>
-                <div class="dashboard-stat-value">Active</div>
-                <div class="dashboard-stat-label">System Security</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-sm-6">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #fff1f2; color: #e11d48;">
-                <i class="bi bi-activity"></i>
-            </div>
-            <div>
-                <div class="dashboard-stat-value">99.9%</div>
-                <div class="dashboard-stat-label">Server Uptime</div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-sm-6">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #f0fdf4; color: #16a34a;">
-                <i class="bi bi-whatsapp"></i>
-            </div>
-            <div>
-                <div class="dashboard-stat-value">+255 653</div>
-                <div class="dashboard-stat-label">WhatsApp Channel</div>
             </div>
         </div>
     </div>
@@ -241,18 +215,24 @@
     const inquiryCount = {{ App\Models\Inquiry::count() }};
     const newsletterCount = {{ App\Models\Newsletter::count() }};
     const userCount = {{ App\Models\User::count() }};
+    const bookingCount = {{ App\Models\Booking::count() }};
+    const destinationCount = {{ App\Models\Destination::count() }};
+    const serviceCount = {{ App\Models\Service::count() }};
 
     new Chart(ctxDist, {
         type: 'doughnut',
         data: {
-            labels: ['Inquiries', 'Subscribers', 'Users'],
+            labels: ['Inquiries', 'Subscribers', 'Users', 'Bookings', 'Destinations', 'Services'],
             datasets: [{
                 data: [
                     inquiryCount || 1, 
                     newsletterCount || 1, 
-                    userCount || 1
+                    userCount || 1,
+                    bookingCount || 1,
+                    destinationCount || 1,
+                    serviceCount || 1
                 ],
-                backgroundColor: ['#3b82f6', '#db2777', '#fbbf24'],
+                backgroundColor: ['#3b82f6', '#db2777', '#fbbf24', '#4f46e5', '#059669', '#7c3aed'],
                 borderWidth: 0
             }]
         },
