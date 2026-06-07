@@ -424,7 +424,7 @@
 </section>
 
 {{-- ═══ COMPANY PROFILE VISUAL ═══ --}}
-<section class="py-5 overflow-hidden position-relative" style="background:linear-gradient(140deg,#1e1300 0%,#2e1e06 45%,#1a1102 100%);">
+<section class="py-5 overflow-hidden position-relative k1-animate-on-scroll" style="background:linear-gradient(140deg,#1e1300 0%,#2e1e06 45%,#1a1102 100%);">
     <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(201,153,58,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(201,153,58,0.07) 1px,transparent 1px);background-size:38px 38px;pointer-events:none;"></div>
     <div style="position:absolute;top:-100px;right:-100px;width:460px;height:460px;background:radial-gradient(circle,rgba(201,153,58,0.28),transparent);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
     <div class="container py-4 position-relative" style="z-index:1;">
@@ -433,7 +433,7 @@
             <h2 class="display-4 fw-bold text-white mt-2">Company <span style="color:var(--gold);">Profile</span></h2>
         </div>
         <div class="row g-4 align-items-stretch">
-            <div class="col-lg-5">
+            <div class="col-lg-5 k1-animate-left k1-stagger-1">
                 <div class="p-4 p-lg-5 rounded-4 h-100 d-flex flex-column justify-content-center" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
                     <div class="mb-4">
                         <div style="font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1.1;">Kasimbagu</div>
@@ -461,9 +461,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 k1-animate-right k1-stagger-2">
                 <div class="row g-3 h-100">
-                    <div class="col-6">
+                    <div class="col-6 k1-animate-scale k1-stagger-3">
                         <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
                             <div style="color:var(--gold);font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building-fill"></i></div>
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Head Office</div>
@@ -472,7 +472,7 @@
                             <a href="tel:+255690075672" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 690 075 672</a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 k1-animate-scale k1-stagger-4">
                         <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
                             <div style="color:#60a5fa;font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building"></i></div>
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Branch Office</div>
@@ -808,5 +808,25 @@
         confirmButtonColor: '#c9993a'
     });
     @endif
+
+    // Scroll Animation Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('k1-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.k1-animate-on-scroll, .k1-animate-left, .k1-animate-right, .k1-animate-scale').forEach(el => {
+        observer.observe(el);
+    });
 </script>
 @endsection
