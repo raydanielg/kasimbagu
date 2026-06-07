@@ -212,9 +212,10 @@
         .data-table {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             overflow: hidden;
+            transition: all 0.3s ease;
         }
         .data-table .table {
             margin: 0;
@@ -281,24 +282,34 @@
         /* Elements from Screenshot */
         .dashboard-stat-card {
             background: var(--card-bg);
-            border: none;
+            border: 1px solid var(--border-color);
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border-radius: 16px;
+            border-radius: 8px;
             padding: 20px;
             display: flex;
             align-items: center;
             gap: 16px;
             height: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dashboard-stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border-color: rgba(219, 39, 119, 0.3);
         }
         .dashboard-stat-icon-wrapper {
             width: 48px;
             height: 48px;
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.3rem;
             flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .dashboard-stat-card:hover .dashboard-stat-icon-wrapper {
+            transform: scale(1.1);
         }
         .dashboard-stat-value {
             font-size: 1.4rem;
@@ -315,11 +326,15 @@
 
         .dashboard-panel-card {
             background: var(--card-bg);
-            border: none;
+            border: 1px solid var(--border-color);
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border-radius: 16px;
+            border-radius: 8px;
             padding: 24px;
             height: 100%;
+            transition: all 0.3s ease;
+        }
+        .dashboard-panel-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
         }
         .dashboard-panel-title {
             font-size: 1rem;
@@ -331,10 +346,12 @@
         /* Table */
         .dashboard-table-container {
             background: var(--card-bg);
-            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             overflow: hidden;
             margin-top: 24px;
+            transition: all 0.3s ease;
         }
         .dashboard-table-header {
             padding: 20px 24px;
