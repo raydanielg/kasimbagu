@@ -60,9 +60,9 @@
                     <span class="k1-hero-badge"><i class="bi bi-journal-richtext me-2"></i>Legal Activities</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Justice. Clarity. <span style="color:var(--gold);">Results.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Litigation, arbitration, contract review, immigration law, and full legal representation — approachable, client-centred, and results-driven.</p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark shadow" style="background:var(--gold);">Get a Free Consultation</a>
-                        <a href="#legal" class="btn btn-outline-light btn-lg px-5 rounded-0">Explore Services</a>
+                    <div class="d-flex gap-3 gap-3lex-
+                        <a href="#contact" class="btn btn-lg px-d-0 fw-bold text-dark shadow" style=ound:var(--gold);">Get a Free Consultation</a>
+                        <a href="#legal" class="btn btn-outline-light btn-lg roed-0">Explorces</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                     <span class="k1-hero-badge"><i class="bi bi-search me-2"></i>Research &amp; Consultancy</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Research That <span style="color:var(--gold);">Creates Impact.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Research writing, proposal development, concept notes, business plans — bridging academic knowledge with real-world results for NGOs, institutions, and researchers.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark" style="background:var(--gold);">Submit a Research Request</a>
+                    <a href="#contact" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Submit a Research Request</a>
                 </div>
             </div>
         </div>
@@ -83,7 +83,7 @@
                     <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">BRELA, TIN, NGO/CSO, CRB, microfinance registration, tax compliance and full organizational structuring — all handled expertly from start to finish.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark" style="background:var(--gold);">Start Registration Journey</a>
+                    <a href="#contact" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Start Registration Journey</a>
                 </div>
             </div>
         </div>
