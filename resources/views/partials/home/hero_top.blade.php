@@ -7,7 +7,12 @@
     .hero-pagination { bottom: 24px !important; }
     .hero-pagination .swiper-pagination-bullet { width: 12px; height: 12px; background: #fff; opacity: 0.5; transition: all 0.3s ease; }
     .hero-pagination .swiper-pagination-bullet-active { width: 32px; border-radius: 20px; background: #ffc107; opacity: 1; }
-    @media (max-width: 768px) { .hero-slider { height: 480px; } }
+    @media (max-width: 768px) { 
+        .hero-slider { height: 480px; } 
+        .hero-content .btn { font-size: 0.9rem !important; padding: 0.5rem 1rem !important; }
+        .hero-content h1 { font-size: 1.8rem !important; }
+        .hero-content p { font-size: 0.95rem !important; }
+    }
 </style>
 
 <div class="swiper hero-slider">
@@ -25,9 +30,9 @@
                         <p class="lead mb-5 animate__animated animate__fadeInUp" style="animation-delay:0.4s;opacity:0.9;">
                             We partner with organizations to deliver strategic consulting, ICT solutions, and operational excellence across East Africa.
                         </p>
-                        <div class="d-flex flex-wrap gap-3 animate__animated animate__fadeInUp" style="animation-delay:0.6s;">
-                            <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow">Get a Consultation</a>
-                            <a href="#services" class="btn btn-outline-light btn-lg px-5 rounded-0">Our Services</a>
+                        <div class="d-flex flex-nowrap gap-2 gap-md-3 animate__animated animate__fadeInUp" style="animation-delay:0.6s;">
+                            <a href="#cta" class="btn btn-warning btn-lg px-4 px-md-5 rounded-0 fw-bold shadow flex-1">Get a Consultation</a>
+                            <a href="#services" class="btn btn-outline-light btn-lg px-4 px-md-5 rounded-0 flex-1">Our Services</a>
                         </div>
                     </div>
                 </div>
