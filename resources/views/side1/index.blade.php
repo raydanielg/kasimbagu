@@ -166,14 +166,14 @@
 </div>
 
 {{-- ═══ VISION & MISSION ═══ --}}
-<section class="py-5 position-relative overflow-hidden" style="background:linear-gradient(160deg,#091730 0%,#0f2246 60%,#152a52 100%);">
+<section class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(160deg,#091730 0%,#0f2246 60%,#152a52 100%);">
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="k1-section-badge"><i class="bi bi-eye me-2"></i>Our Purpose</span>
             <h2 class="display-4 fw-bold text-white mt-2">Vision &amp; Mission</h2>
         </div>
         <div class="row g-4">
-            <div class="col-lg-6">
+            <div class="col-lg-6 k1-animate-left k1-stagger-1">
                 <div class="p-4 p-lg-5 rounded-4 h-100" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
                     <div style="width:56px;height:56px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:20px;">
                         <i class="bi bi-eye-fill"></i>
@@ -182,7 +182,7 @@
                     <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;font-family:'EB Garamond',serif;">To be the most trusted and impactful consultancy firm in East Africa, known for transforming individuals, organizations, and communities through excellence in legal services, research, and corporate governance.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 k1-animate-right k1-stagger-2">
                 <div class="p-4 p-lg-5 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
                     <div style="width:56px;height:56px;background:linear-gradient(135deg,#1d4ed8,#3b82f6);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:20px;">
                         <i class="bi bi-bullseye"></i>
@@ -230,7 +230,7 @@
 </section>
 
 {{-- ═══ 3 INTERFACE OVERVIEW CARDS ═══ --}}
-<section class="py-5 bg-white">
+<section class="py-5 bg-white k1-animate-on-scroll">
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="k1-section-badge"><i class="bi bi-grid-fill me-2"></i>Our Expertise</span>
@@ -238,7 +238,7 @@
             <p class="text-secondary mx-auto mt-3" style="max-width:580px;">Click to explore each area of specialisation in depth.</p>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4">
+            <div class="col-lg-4 k1-animate-scale k1-stagger-1">
                 <a href="#legal" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt="Legal">
@@ -252,7 +252,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 k1-animate-scale k1-stagger-2">
                 <a href="#research" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80" alt="Research">
