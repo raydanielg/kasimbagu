@@ -393,6 +393,37 @@
             background-color: #f8fafc;
         }
 
+        /* Modern Sleek Badges styling */
+        .badge {
+            padding: 6px 12px !important;
+            font-weight: 600 !important;
+            font-size: 0.75rem !important;
+            border-radius: 6px !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .badge-success {
+            background-color: #ecfdf5 !important;
+            color: #059669 !important;
+            border: 1px solid #a7f3d0 !important;
+        }
+        .badge-warning {
+            background-color: #fffbeb !important;
+            color: #d97706 !important;
+            border: 1px solid #fde68a !important;
+        }
+        .badge-danger {
+            background-color: #fef2f2 !important;
+            color: #dc2626 !important;
+            border: 1px solid #fecaca !important;
+        }
+        .badge-info {
+            background-color: #eff6ff !important;
+            color: #2563eb !important;
+            border: 1px solid #bfdbfe !important;
+        }
+
         @media (max-width: 991.98px) {
             .sidebar {
                 transform: translateX(-100%);
