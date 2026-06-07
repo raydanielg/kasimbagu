@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="d-flex align-items-center gap-2 gap-md-3">
-            <a href="#cta" class="btn btn-warning btn-sm px-3 rounded-pill fw-bold text-dark shadow-sm">
+            <a href="#cta" class="btn btn-warning btn-sm px-3 rounded-0 fw-bold text-dark shadow-sm">
                 <i class="bi bi-send-fill me-1"></i> Book / Inquire
             </a>
         </div>
@@ -61,7 +61,7 @@
                 <!-- Portal / Auth -->
                 @auth
                 <li class="nav-item dropdown ms-lg-2">
-                    <a class="btn btn-outline-primary px-4 rounded-pill fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn btn-outline-primary px-4 rounded-0 fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle me-1"></i> {{ Auth::user()->first_name ?? Auth::user()->name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 p-3 mt-2" style="min-width:220px;">
@@ -81,11 +81,11 @@
 
                 <li class="nav-item ms-lg-2">
                     @auth
-                    <a href="{{ route('contact') }}" class="btn btn-primary px-4 rounded-pill fw-bold shadow-sm kasb-hover-lift">
+                    <a href="{{ route('contact') }}" class="btn btn-primary px-4 rounded-0 fw-bold shadow-sm kasb-hover-lift">
                         Book Now
                     </a>
                     @else
-                    <a href="{{ route('login') }}" class="btn btn-primary px-4 rounded-pill fw-bold shadow-sm kasb-hover-lift">
+                    <a href="{{ route('login') }}" class="btn btn-primary px-4 rounded-0 fw-bold shadow-sm kasb-hover-lift">
                         Book Now
                     </a>
                     @endauth
@@ -114,11 +114,11 @@
     <div class="offcanvas-body p-0 bg-light">
         <div class="p-3 bg-white border-bottom">
             @auth
-            <a href="{{ route('contact') }}" class="btn btn-warning w-100 rounded-pill fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
+            <a href="{{ route('contact') }}" class="btn btn-warning w-100 rounded-0 fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
                 <i class="bi bi-send-fill me-2"></i>Book / Inquire
             </a>
             @else
-            <a href="{{ route('login') }}" class="btn btn-warning w-100 rounded-pill fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
+            <a href="{{ route('login') }}" class="btn btn-warning w-100 rounded-0 fw-bold shadow-sm mb-2" data-bs-dismiss="offcanvas">
                 <i class="bi bi-send-fill me-2"></i>Book / Inquire
             </a>
             @endauth
@@ -164,10 +164,10 @@
 
         <div class="mt-auto p-3 bg-white border-top">
             @auth
-            <a href="{{ url('/home') }}" class="btn btn-outline-primary w-100 mb-2 rounded-pill">
+            <a href="{{ url('/home') }}" class="btn btn-outline-primary w-100 mb-2 rounded-0">
                 <i class="bi bi-speedometer2 me-2"></i>Dashboard
             </a>
-            <a href="{{ route('logout') }}" class="btn btn-danger w-100 rounded-pill"
+            <a href="{{ route('logout') }}" class="btn btn-danger w-100 rounded-0"
                onclick="event.preventDefault();document.getElementById('kasb-logout-form').submit();">
                 <i class="bi bi-box-arrow-right me-2"></i>Logout
             </a>

@@ -26,8 +26,8 @@
                             We partner with organizations to deliver strategic consulting, ICT solutions, and operational excellence across East Africa.
                         </p>
                         <div class="d-flex flex-wrap gap-3 animate__animated animate__fadeInUp" style="animation-delay:0.6s;">
-                            <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow">Get a Consultation</a>
-                            <a href="#services" class="btn btn-outline-light btn-lg px-5 rounded-pill">Our Services</a>
+                            <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow">Get a Consultation</a>
+                            <a href="#services" class="btn btn-outline-light btn-lg px-5 rounded-0">Our Services</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <p class="lead mb-5 animate__animated animate__fadeInUp" style="animation-delay:0.4s;opacity:0.9;">
                             Competitive fares on all major airlines. Business, economy, and group travel booking to 50+ worldwide destinations.
                         </p>
-                        <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow animate__animated animate__fadeInUp" style="animation-delay:0.6s;">Book a Flight</a>
+                        <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow animate__animated animate__fadeInUp" style="animation-delay:0.6s;">Book a Flight</a>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                         <p class="lead mb-5 animate__animated animate__fadeInUp" style="animation-delay:0.4s;opacity:0.9;">
                             Professional processing for UAE, UK, USA, Schengen, China, India & more. We handle the paperwork — you focus on your journey.
                         </p>
-                        <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-pill fw-bold shadow animate__animated animate__fadeInUp" style="animation-delay:0.6s;">Apply for Visa</a>
+                        <a href="#cta" class="btn btn-warning btn-lg px-5 rounded-0 fw-bold shadow animate__animated animate__fadeInUp" style="animation-delay:0.6s;">Apply for Visa</a>
                     </div>
                 </div>
             </div>

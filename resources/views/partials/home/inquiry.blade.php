@@ -69,7 +69,7 @@
                                 <textarea name="message" class="form-control rounded-3" rows="4" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#e2e8f0;" placeholder="Your message..." required></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold py-2">Send Message</button>
+                                <button type="submit" class="btn btn-warning w-100 rounded-0 fw-bold py-2">Send Message</button>
                             </div>
                         </div>
                     </form>
