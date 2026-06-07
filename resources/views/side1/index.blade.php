@@ -20,36 +20,88 @@
         .k1-hero-content h1 { font-size: 1.8rem !important; }
         .k1-hero-content p { font-size: 0.95rem !important; }
     }
+    
+    /* ── Scroll Animations ── */
+    .k1-animate-on-scroll { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-animate-on-scroll.k1-visible { opacity: 1; transform: translateY(0); }
+    .k1-animate-left { opacity: 0; transform: translateX(-50px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-animate-left.k1-visible { opacity: 1; transform: translateX(0); }
+    .k1-animate-right { opacity: 0; transform: translateX(50px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-animate-right.k1-visible { opacity: 1; transform: translateX(0); }
+    .k1-animate-scale { opacity: 0; transform: scale(0.9); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-animate-scale.k1-visible { opacity: 1; transform: scale(1); }
+    
+    /* ── Stagger animations ── */
+    .k1-stagger-1 { transition-delay: 0.1s; }
+    .k1-stagger-2 { transition-delay: 0.2s; }
+    .k1-stagger-3 { transition-delay: 0.3s; }
+    .k1-stagger-4 { transition-delay: 0.4s; }
+    .k1-stagger-5 { transition-delay: 0.5s; }
+    .k1-stagger-6 { transition-delay: 0.6s; }
+    
     /* ── Interface cards ── */
-    .k1-iface-card { border-radius:20px; overflow:hidden; position:relative; height:360px; cursor:pointer; }
-    .k1-iface-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
-    .k1-iface-card:hover img { transform:scale(1.06); }
-    .k1-iface-card .overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(4,10,26,0.97) 0%,rgba(4,10,26,0.42) 55%,transparent 100%); transition:all 0.4s; }
-    .k1-iface-card:hover .overlay { background:linear-gradient(to top,rgba(4,10,26,0.98) 0%,rgba(4,10,26,0.65) 70%,rgba(4,10,26,0.1) 100%); }
-    .k1-iface-card .card-content { position:absolute; bottom:0; left:0; right:0; padding:28px; }
-    .k1-iface-card .card-icon { width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; margin-bottom:14px; }
+    .k1-iface-card { border-radius:20px; overflow:hidden; position:relative; height:360px; cursor:pointer; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-iface-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-iface-card:hover img { transform:scale(1.1); }
+    .k1-iface-card .overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(4,10,26,0.97) 0%,rgba(4,10,26,0.42) 55%,transparent 100%); transition:all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-iface-card:hover .overlay { background:linear-gradient(to top,rgba(4,10,26,0.98) 0%,rgba(4,10,26,0.75) 70%,rgba(4,10,26,0.2) 100%); }
+    .k1-iface-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
+    .k1-iface-card .card-content { position:absolute; bottom:0; left:0; right:0; padding:28px; transition: all 0.4s ease; }
+    .k1-iface-card:hover .card-content { transform: translateY(-8px); }
+    .k1-iface-card .card-icon { width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; margin-bottom:14px; transition: all 0.4s ease; }
+    .k1-iface-card:hover .card-icon { transform: scale(1.15) rotate(5deg); }
+    
     /* ── Service cards ── */
-    .k1-svc-card { background:#fff; border:1px solid #f1f5f9; border-radius:16px; padding:24px; transition:all 0.3s ease; height:100%; }
-    .k1-svc-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,0.1); border-color:var(--gold); }
-    .k1-svc-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.25rem; }
+    .k1-svc-card { background:#fff; border:1px solid #f1f5f9; border-radius:16px; padding:24px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); height:100%; position: relative; overflow: hidden; }
+    .k1-svc-card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), #e8b84b); transform: scaleX(0); transition: transform 0.4s ease; }
+    .k1-svc-card:hover::before { transform: scaleX(1); }
+    .k1-svc-card:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(201,153,58,0.2); border-color:var(--gold); }
+    .k1-svc-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.25rem; transition: all 0.4s ease; }
+    .k1-svc-card:hover .k1-svc-icon { transform: scale(1.1) rotate(-5deg); }
+    
     /* ── Section divider ── */
     .k1-section-divider { height:4px; background:linear-gradient(90deg,var(--gold),transparent); border-radius:2px; width:60px; margin:16px auto 0; }
+    
     /* ── Why cards ── */
-    .k1-why-card { background:rgba(255,255,255,0.04); border:1px solid rgba(201,153,58,0.12); border-radius:18px; padding:28px; transition:all 0.3s; }
-    .k1-why-card:hover { background:rgba(201,153,58,0.06); border-color:rgba(201,153,58,0.3); transform:translateY(-5px); }
+    .k1-why-card { background:rgba(255,255,255,0.04); border:1px solid rgba(201,153,58,0.12); border-radius:18px; padding:28px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+    .k1-why-card::before { content:''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(201,153,58,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.5s ease; }
+    .k1-why-card:hover::before { opacity: 1; }
+    .k1-why-card:hover { background:rgba(201,153,58,0.08); border-color:rgba(201,153,58,0.4); transform:translateY(-8px); box-shadow: 0 20px 50px rgba(201,153,58,0.15); }
+    
     /* ── Blog cards ── */
-    .k1-blog-card { border-radius:16px; overflow:hidden; border:1px solid #f1f5f9; transition:all 0.3s; }
-    .k1-blog-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,0.1); }
-    .k1-blog-card img { height:200px; object-fit:cover; width:100%; transition:transform 0.5s; }
-    .k1-blog-card:hover img { transform:scale(1.04); }
+    .k1-blog-card { border-radius:16px; overflow:hidden; border:1px solid #f1f5f9; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-blog-card:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(0,0,0,0.12); }
+    .k1-blog-card img { height:200px; object-fit:cover; width:100%; transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+    .k1-blog-card:hover img { transform:scale(1.08); }
+    
     /* ── Value cards ── */
-    .k1-value-card { background:#fff; border:1px solid #f1f5f9; border-radius:16px; padding:28px 20px; text-align:center; transition:all 0.3s; }
-    .k1-value-card:hover { transform:translateY(-5px); box-shadow:0 15px 40px rgba(0,0,0,0.08); border-color:var(--gold); }
+    .k1-value-card { background:#fff; border:1px solid #f1f5f9; border-radius:16px; padding:28px 20px; text-align:center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+    .k1-value-card::after { content:''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), #e8b84b); transform: scaleX(0); transition: transform 0.4s ease; }
+    .k1-value-card:hover::after { transform: scaleX(1); }
+    .k1-value-card:hover { transform:translateY(-8px); box-shadow:0 20px 50px rgba(201,153,58,0.15); border-color:var(--gold); }
+    
     /* ── Teal section overrides ── */
     #why-us .k1-why-card { background:rgba(255,255,255,0.04); border:1px solid rgba(45,212,191,0.14); }
-    #why-us .k1-why-card:hover { background:rgba(45,212,191,0.07); border-color:rgba(45,212,191,0.32); transform:translateY(-5px); }
+    #why-us .k1-why-card::before { background: radial-gradient(circle, rgba(45,212,191,0.1) 0%, transparent 70%); }
+    #why-us .k1-why-card:hover { background:rgba(45,212,191,0.08); border-color:rgba(45,212,191,0.4); transform:translateY(-8px); box-shadow: 0 20px 50px rgba(45,212,191,0.15); }
+    
     /* ── Section accent line ── */
     .k1-accent-line { height:3px; background:linear-gradient(90deg,var(--gold),rgba(201,153,58,0)); border-radius:2px; width:48px; margin-top:10px; }
+    
+    /* ── Hero content animations ── */
+    .k1-hero-badge { animation: fadeInDown 0.8s ease-out; }
+    .k1-hero h1 { animation: fadeInUp 0.8s ease-out 0.2s both; }
+    .k1-hero p { animation: fadeInUp 0.8s ease-out 0.4s both; }
+    .k1-hero .btn { animation: fadeInUp 0.8s ease-out 0.6s both; }
+    
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 </style>
 {{-- ═══ HERO ═══ --}}
 <div class="swiper k1-hero">
@@ -60,9 +112,9 @@
                     <span class="k1-hero-badge"><i class="bi bi-journal-richtext me-2"></i>Legal Activities</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Justice. Clarity. <span style="color:var(--gold);">Results.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Litigation, arbitration, contract review, immigration law, and full legal representation — approachable, client-centred, and results-driven.</p>
-                    <div class="d-flex gap-3 gap-3lex-
-                        <a href="#contact" class="btn btn-lg px-d-0 fw-bold text-dark shadow" style=ound:var(--gold);">Get a Free Consultation</a>
-                        <a href="#legal" class="btn btn-outline-light btn-lg roed-0">Explorces</a>
+                    <div class="d-flex flex-nowrap gap-2 gap-md-3">
+                        <a href="#contact" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Get a Free Consultation</a>
+                        <a href="#legal" class="btn btn-outline-light btn-lg px-4 px-md-5 rounded-0 flex-1">Explore Services</a>
                     </div>
                 </div>
             </div>
