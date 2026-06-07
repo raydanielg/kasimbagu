@@ -5,7 +5,7 @@
             <!-- Brand Column -->
             <div class="col-lg-4 col-md-6">
                 <div class="mb-4">
-                    <span class="badge rounded-pill px-3 py-2 mb-3 shadow-sm" style="background-color:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);font-size:0.7rem;letter-spacing:0.5px;">
+                    <span class="badge rounded-0 px-3 py-2 mb-3 shadow-sm" style="background-color:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);font-size:0.7rem;letter-spacing:0.5px;">
                         <i class="bi bi-globe2 text-warning me-1"></i> CONSULTANCY &amp; TRAVEL
                     </span>
                     <h3 class="fw-bold mb-3">
