@@ -74,7 +74,7 @@
     </div>
     @if($users->hasPages())
     <div class="p-4 border-top" style="border-color: var(--border-color);">
-        {{ $users->links() }}
+        {{ $users->links('pagination::bootstrap-5') }}
     </div>
     @endif
 </div>
