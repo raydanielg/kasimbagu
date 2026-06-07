@@ -15,81 +15,104 @@
 </div>
 
 <div class="data-table">
-    <div class="p-4 border-bottom d-flex justify-content-between align-items-center" style="border-color: var(--border-color);">
-        <h5 class="mb-0 fw-bold">All Services</h5>
-        <div class="d-flex gap-2">
-            <input type="text" class="form-control form-control-sm" placeholder="Search services..." style="width: 250px;">
+    <div class="p-4 border-bottom d-flex flex-wrap gap-3 justify-content-between align-items-center" style="border-color: var(--border-color);">
+        <h5 class="mb-0 fw-bold text-dark"><i class="bi bi-gear-fill me-2 text-primary"></i>All Services</h5>
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            <input type="text" id="searchFilter" class="form-control form-control-sm" placeholder="Search services..." style="width: 200px;">
+            <select id="categoryFilter" class="form-select form-select-sm" style="width: 160px;">
+                <option value="">All Categories</option>
+                <option value="legal">Legal</option>
+                <option value="research">Research</option>
+                <option value="company management">Company Management</option>
+            </select>
+            <select id="featuredFilter" class="form-select form-select-sm" style="width: 140px;">
+                <option value="">All Featured</option>
+                <option value="yes">Featured</option>
+                <option value="no">Not Featured</option>
+            </select>
+            <button id="resetFilters" class="btn btn-sm btn-light border py-2 px-3" title="Reset Filters">
+                <i class="bi bi-arrow-counterclockwise"></i>
+            </button>
         </div>
     </div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Service</th>
-                    <th>Category</th>
-                    <th>Icon</th>
-                    <th>Featured</th>
-                    <th>Created</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if($services->count() > 0)
-                    @foreach($services as $service)
-                    <tr>
-                        <td>
-                            <div class="fw-bold text-dark">{{ $service->name }}</div>
-                            <div class="text-muted small">{{ Str::limit($service->short_description, 50) }}</div>
-                        </td>
-                        <td>
-                            <span class="badge" style="background: #e0f2fe; color: #0369a1;">{{ ucfirst($service->category) }}</span>
-                        </td>
-                        <td>
-                            <i class="bi {{ $service->icon }} text-primary" style="color: {{ $service->icon_color }} !important;"></i>
-                        </td>
-                        <td>
-                            @if($service->is_featured)
-                                <span class="badge badge-success">Yes</span>
-                            @else
-                                <span class="badge badge-warning">No</span>
-                            @endif
-                        </td>
-                        <td>{{ $service->created_at->format('M d, Y') }}</td>
-                        <td>
-                            <div class="d-flex gap-2">
-                                <a href="{{ route('admin.services.show', $service->id) }}" class="btn btn-sm btn-light border">
-                                    <i class="bi bi-eye"></i>
-                                </a>
-                                <a href="{{ route('admin.services.edit', $service->id) }}" class="btn btn-sm border" style="background: #fef3c7; color: #d97706; border-color: #fde68a !important;">
-                                    <i class="bi bi-pencil"></i>
-                                </a>
-                                <form action="{{ route('admin.services.destroy', $service->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this service?');">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-sm border" style="background: #fef2f2; color: #ef4444; border-color: #fecaca !important;">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    @endforeach
-                @else
-                    <tr>
-                        <td colspan="6" class="text-center text-muted py-5">
-                            <i class="bi bi-inbox" style="font-size: 3rem; opacity: 0.5;"></i>
-                            <p class="mt-3 mb-0">No services found.</p>
-                            <a href="{{ route('admin.services.create') }}" class="btn btn-primary mt-3" style="background: var(--primary); border: none;">Add Your First Service</a>
-                        </td>
-                    </tr>
-                @endif
-            </tbody>
-        </table>
+    
+    <div id="servicesTableContainer">
+        @include('admin.services.partials.table')
     </div>
-    @if($services->hasPages())
-    <div class="p-4 border-top" style="border-color: var(--border-color);">
-        {{ $services->links() }}
-    </div>
-    @endif
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchFilter');
+        const categorySelect = document.getElementById('categoryFilter');
+        const featuredSelect = document.getElementById('featuredFilter');
+        const resetButton = document.getElementById('resetFilters');
+        const container = document.getElementById('servicesTableContainer');
+
+        let timeout = null;
+
+        function fetchServices(page = 1) {
+            container.style.opacity = '0.5';
+            
+            const params = new URLSearchParams({
+                page: page,
+                search: searchInput.value,
+                category: categorySelect.value,
+                is_featured: featuredSelect.value
+            });
+
+            fetch(`{{ route('admin.services') }}?${params.toString()}`, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Failed to fetch services');
+                return res.text();
+            })
+            .then(html => {
+                container.innerHTML = html;
+                container.style.opacity = '1';
+                bindPagination();
+            })
+            .catch(err => {
+                console.error(err);
+                container.style.opacity = '1';
+            });
+        }
+
+        function bindPagination() {
+            container.querySelectorAll('.pagination a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = new URL(this.href);
+                    const page = url.searchParams.get('page') || 1;
+                    fetchServices(page);
+                });
+            });
+        }
+
+        searchInput.addEventListener('keyup', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                fetchServices(1);
+            }, 300);
+        });
+
+        categorySelect.addEventListener('change', () => fetchServices(1));
+        featuredSelect.addEventListener('change', () => fetchServices(1));
+
+        resetButton.addEventListener('click', function() {
+            searchInput.value = '';
+            categorySelect.value = '';
+            featuredSelect.value = '';
+            fetchServices(1);
+        });
+
+        // Initial bind for page-load pagination links
+        bindPagination();
+    });
+</script>
+@endpush
