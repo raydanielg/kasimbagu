@@ -19,9 +19,33 @@ class AdminController extends Controller
     }
 
     // Services Management
-    public function servicesIndex()
+    public function servicesIndex(Request $request)
     {
-        $services = Service::latest()->paginate(10);
+        $query = Service::query();
+
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                  ->orWhere('short_description', 'like', '%' . $search . '%')
+                  ->orWhere('description', 'like', '%' . $search . '%');
+            });
+        }
+
+        if ($request->filled('category')) {
+            $query->where('category', $request->category);
+        }
+
+        if ($request->filled('is_featured')) {
+            $query->where('is_featured', $request->is_featured === 'yes' ? 1 : 0);
+        }
+
+        $services = $query->latest()->paginate(10);
+
+        if ($request->ajax()) {
+            return view('admin.services.partials.table', compact('services'))->render();
+        }
+
         return view('admin.services.index', compact('services'));
     }
 
