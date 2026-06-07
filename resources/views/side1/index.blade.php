@@ -56,8 +56,8 @@
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Justice. Clarity. <span style="color:var(--gold);">Results.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Litigation, arbitration, contract review, immigration law, and full legal representation — approachable, client-centred, and results-driven.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold text-dark shadow" style="background:var(--gold);">Get a Free Consultation</a>
-                        <a href="#legal" class="btn btn-outline-light btn-lg px-5 rounded-pill">Explore Services</a>
+                        <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark shadow" style="background:var(--gold);">Get a Free Consultation</a>
+                        <a href="#legal" class="btn btn-outline-light btn-lg px-5 rounded-0">Explore Services</a>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                     <span class="k1-hero-badge"><i class="bi bi-search me-2"></i>Research &amp; Consultancy</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Research That <span style="color:var(--gold);">Creates Impact.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Research writing, proposal development, concept notes, business plans — bridging academic knowledge with real-world results for NGOs, institutions, and researchers.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold text-dark" style="background:var(--gold);">Submit a Research Request</a>
+                    <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark" style="background:var(--gold);">Submit a Research Request</a>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                     <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">BRELA, TIN, NGO/CSO, CRB, microfinance registration, tax compliance and full organizational structuring — all handled expertly from start to finish.</p>
-                    <a href="#contact" class="btn btn-lg px-5 rounded-pill fw-bold text-dark" style="background:var(--gold);">Start Registration Journey</a>
+                    <a href="#contact" class="btn btn-lg px-5 rounded-0 fw-bold text-dark" style="background:var(--gold);">Start Registration Journey</a>
                 </div>
             </div>
         </div>
@@ -266,7 +266,7 @@
             @endforeach
         </div>
         <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
@@ -284,7 +284,7 @@
                 <p class="text-secondary" style="font-size:1.05rem;line-height:1.85;max-width:560px;">We bridge the gap between academic knowledge and real-world impact. From graduate researchers to international NGOs, we craft compelling, rigorous research documents that open doors and drive change.</p>
                 <div class="d-flex flex-wrap gap-2 mt-4">
                     @foreach(['Academic Researchers','Graduate Students','NGOs','International Development Partners','Government Institutions'] as $cl)
-                    <span class="badge rounded-pill px-3 py-2" style="background:rgba(13,148,136,0.1);color:#0d9488;border:1px solid rgba(13,148,136,0.25);font-size:0.78rem;">{{ $cl }}</span>
+                    <span class="badge rounded-0 px-3 py-2" style="background:rgba(13,148,136,0.1);color:#0d9488;border:1px solid rgba(13,148,136,0.25);font-size:0.78rem;">{{ $cl }}</span>
                     @endforeach
                 </div>
             </div>
@@ -313,7 +313,7 @@
             @endforeach
         </div>
         <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-white" style="background:#0d9488;">Submit Research Request <i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0d9488;">Submit Research Request <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
@@ -328,7 +328,7 @@
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We are your trusted partner for building compliant, well-structured organizations. From the first registration to full operational compliance — we handle the complexity so you can focus on growth.</p>
                 <div class="d-flex flex-wrap gap-2 mt-4">
                     @foreach(['Startups','Joint Ventures','NGOs','Tourism Operators','Agribusinesses','Govt. Institutions'] as $cl)
-                    <span class="badge rounded-pill px-3 py-2" style="background:rgba(29,78,216,0.15);color:#60a5fa;border:1px solid rgba(29,78,216,0.25);font-size:0.78rem;">{{ $cl }}</span>
+                    <span class="badge rounded-0 px-3 py-2" style="background:rgba(29,78,216,0.15);color:#60a5fa;border:1px solid rgba(29,78,216,0.25);font-size:0.78rem;">{{ $cl }}</span>
                     @endforeach
                 </div>
             </div>
@@ -361,7 +361,7 @@
             @endforeach
         </div>
         <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-white" style="background:#1d4ed8;border-color:#1d4ed8;">Start Your Registration Journey <i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#1d4ed8;border-color:#1d4ed8;">Start Your Registration Journey <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
@@ -429,7 +429,7 @@
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:12px;">Areas of Practice</div>
                             <div class="d-flex flex-wrap gap-2">
                                 @foreach(['Legal Activities','Research Writing','Proposal Development','Company Registration','NGO/CSO Setup','Tax Compliance','Immigration Law','Arbitration','Business Plans','Org. Structuring'] as $area)
-                                <span class="badge rounded-pill px-3 py-2" style="background:rgba(201,153,58,0.12);color:var(--gold);border:1px solid rgba(201,153,58,0.2);font-size:0.75rem;">{{ $area }}</span>
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(201,153,58,0.12);color:var(--gold);border:1px solid rgba(201,153,58,0.2);font-size:0.75rem;">{{ $area }}</span>
                                 @endforeach
                             </div>
                         </div>
@@ -529,7 +529,7 @@
                 <p class="text-secondary mt-3">Latest insights on Tanzanian law, business compliance, and research trends.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
-                <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-dark" style="background:var(--gold);">Subscribe to Updates</a>
+                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Subscribe to Updates</a>
             </div>
         </div>
         <div class="row g-4">
@@ -548,7 +548,7 @@
                     </div>
                     <div class="p-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <span class="badge rounded-pill px-2 py-1" style="background:{{ $b['catBg'] }};color:{{ $b['catColor'] }};font-size:0.72rem;">{{ $b['cat'] }}</span>
+                            <span class="badge rounded-0 px-2 py-1" style="background:{{ $b['catBg'] }};color:{{ $b['catColor'] }};font-size:0.72rem;">{{ $b['cat'] }}</span>
                             <span class="text-secondary small">{{ $b['date'] }}</span>
                         </div>
                         <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $b['title'] }}</h5>
@@ -595,8 +595,8 @@
                     </div>
                 </div>
                 <div class="d-flex gap-3">
-                    <a href="https://wa.me/255653291058" class="btn btn-success rounded-pill px-4 fw-semibold"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill px-4 fw-semibold"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
+                    <a href="https://wa.me/255653291058" class="btn btn-success rounded-0 px-4 fw-semibold"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
+                    <a href="#" class="btn btn-outline-secondary rounded-0 px-4 fw-semibold"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -657,7 +657,7 @@
                                 <textarea name="message" class="form-control rounded-3 border-0 bg-light text-dark" rows="4" placeholder="Describe your case, project, or inquiry..." required></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-lg w-100 rounded-pill fw-bold py-3 text-dark shadow-sm" style="background:var(--gold);border-color:var(--gold);">
+                                <button type="submit" class="btn btn-lg w-100 rounded-0 fw-bold py-3 text-dark shadow-sm" style="background:var(--gold);border-color:var(--gold);">
                                     <i class="bi bi-send-fill me-2"></i>Send Message
                                 </button>
                             </div>

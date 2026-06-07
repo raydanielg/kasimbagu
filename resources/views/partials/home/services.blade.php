@@ -25,7 +25,7 @@
                                 <h3 class="text-white fw-bold mb-3">Business Consultancy</h3>
                                 <div class="kasb-pkg-details">
                                     <p class="text-white-50 small mb-4">Strategic advisory, operational planning, and organizational development to help your business grow sustainably.</p>
-                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-pill fw-bold">Learn More</a>
+                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-0 fw-bold">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                                 <h3 class="text-white fw-bold mb-3">ICT Solutions</h3>
                                 <div class="kasb-pkg-details">
                                     <p class="text-white-50 small mb-4">Custom software, system integration, network infrastructure, and full digital transformation services.</p>
-                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-pill fw-bold">Learn More</a>
+                                    <a href="#cta" class="btn btn-warning btn-sm px-4 rounded-0 fw-bold">Learn More</a>
                                 </div>
                             </div>
                         </div>

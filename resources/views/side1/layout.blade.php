@@ -155,10 +155,10 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
             <div class="d-flex align-items-center gap-2">
-                <a href="{{ route('travel') }}" class="btn btn-sm btn-outline-light rounded-pill px-3" style="font-size:0.82rem;">
+                <a href="{{ route('travel') }}" class="btn btn-sm btn-outline-light rounded-0 px-3" style="font-size:0.82rem;">
                     <i class="bi bi-airplane me-1"></i>Travel
                 </a>
-                <a href="#contact" class="btn btn-sm rounded-pill px-4 fw-bold text-dark" style="background:var(--gold);font-size:0.85rem;">
+                <a href="#contact" class="btn btn-sm rounded-0 px-4 fw-bold text-dark" style="background:var(--gold);font-size:0.85rem;">
                     Book Consultation
                 </a>
             </div>
@@ -188,8 +188,8 @@
             <li><a href="#contact" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Contact</a></li>
         </ul>
         <div class="mt-4 d-grid gap-2">
-            <a href="{{ route('travel') }}" class="btn btn-outline-light rounded-pill"><i class="bi bi-airplane me-1"></i>Travel Agency</a>
-            <a href="#contact" class="btn rounded-pill fw-bold text-dark" style="background:var(--gold);" data-bs-dismiss="offcanvas">Book Consultation</a>
+            <a href="{{ route('travel') }}" class="btn btn-outline-light rounded-0"><i class="bi bi-airplane me-1"></i>Travel Agency</a>
+            <a href="#contact" class="btn rounded-0 fw-bold text-dark" style="background:var(--gold);" data-bs-dismiss="offcanvas">Book Consultation</a>
         </div>
     </div>
 </div>

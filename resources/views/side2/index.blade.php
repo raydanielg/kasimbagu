@@ -27,8 +27,8 @@
                     <h1 class="display-2 fw-bold text-white mb-4 animate__animated animate__fadeInUp" style="line-height:1.1;">Your Journey <span style="background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Starts Here</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Same-day flight tickets, competitive fares, and full booking support for 50+ global destinations.</p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="javascript:void(0)" onclick="openBookingModal('', 'flight')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Book a Flight</a>
-                        <a href="#destinations" class="btn btn-outline-light btn-lg px-5 rounded-pill">View Destinations</a>
+                        <a href="javascript:void(0)" onclick="openBookingModal('', 'flight')" class="btn btn-lg px-5 rounded-0 fw-bold shadow text-dark" style="background:#38bdf8;">Book a Flight</a>
+                        <a href="#destinations" class="btn btn-outline-light btn-lg px-5 rounded-0">View Destinations</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                     <span class="k2-hero-badge"><i class="bi bi-globe2 me-2"></i>Visa Assistance</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;">Visa Approved. <span style="color:#38bdf8;">Stress-Free.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Expert visa processing for UAE, UK, USA, Schengen, China, India, Turkey and more — fast, accurate, and hassle-free.</p>
-                    <a href="javascript:void(0)" onclick="openBookingModal('', 'visa')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Apply for Visa</a>
+                    <a href="javascript:void(0)" onclick="openBookingModal('', 'visa')" class="btn btn-lg px-5 rounded-0 fw-bold shadow text-dark" style="background:#38bdf8;">Apply for Visa</a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <span class="k2-hero-badge"><i class="bi bi-map-fill me-2"></i>Tour Packages</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;">Explore the <span style="color:#38bdf8;">World</span> With Us</h1>
                     <p class="lead text-white mb-5" style="opacity:0.88;">Curated international tour packages with hotel, transport, and guide — tailored to your budget and interests.</p>
-                    <a href="javascript:void(0)" onclick="openBookingModal('', 'tour')" class="btn btn-lg px-5 rounded-pill fw-bold shadow text-dark" style="background:#38bdf8;">Get a Package Quote</a>
+                    <a href="javascript:void(0)" onclick="openBookingModal('', 'tour')" class="btn btn-lg px-5 rounded-0 fw-bold shadow text-dark" style="background:#38bdf8;">Get a Package Quote</a>
                 </div>
             </div>
         </div>
@@ -84,12 +84,12 @@
     <div class="container py-4">
         <div class="row align-items-end mb-5">
             <div class="col-lg-6">
-                <span class="badge rounded-pill px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">POPULAR DESTINATIONS</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">POPULAR DESTINATIONS</span>
                 <h2 class="display-5 fw-bold mb-3">Where Do You <br>Want to Go?</h2>
                 <p class="text-secondary lead">50+ destinations — all bookings handled from Dar es Salaam.</p>
             </div>
             <div class="col-lg-6 text-lg-end">
-                <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-white" style="background:#0284c7;">Get Visa Quote <i class="bi bi-arrow-right ms-2"></i></a>
+                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0284c7;">Get Visa Quote <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
         </div>
         <div class="row g-4">
@@ -110,7 +110,7 @@
                                     <h5 class="text-white fw-bold mb-0">{{ $d->name }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d->country }}</div>
                                 </div>
-                                <span class="badge rounded-pill px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">
                                     {{ $d->visa_required ? ($d->visa_type ?? 'Visa Required') : 'No Visa Required' }}
                                 </span>
                             </div>
@@ -141,7 +141,7 @@
                                     <h5 class="text-white fw-bold mb-0">{{ $d['city'] }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
                                 </div>
-                                <span class="badge rounded-pill px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
 <section class="py-5 bg-white" id="services">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <span class="badge rounded-pill px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHAT WE OFFER</span>
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHAT WE OFFER</span>
             <h2 class="display-5 fw-bold mb-3">Complete Travel Services</h2>
             <p class="text-secondary mx-auto" style="max-width:560px;">Everything you need for a perfect trip — from booking to landing.</p>
         </div>
@@ -206,10 +206,10 @@
     <div class="container py-4 position-relative" style="z-index:1;">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <span class="badge rounded-pill px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY TRAVEL WITH US</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY TRAVEL WITH US</span>
                 <h2 class="display-4 fw-bold text-white mb-4">Your Trip. <span style="background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Our Promise.</span></h2>
                 <p style="color:#94a3b8;font-size:1rem;line-height:1.8;margin-bottom:2rem;">We don't just book trips. We craft seamless travel experiences backed by expertise, speed, and personal service from first inquiry to safe return.</p>
-                <a href="#contact" class="btn btn-lg rounded-pill px-5 fw-bold text-dark" style="background:#38bdf8;">Plan My Trip <i class="bi bi-arrow-right ms-2"></i></a>
+                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#38bdf8;">Plan My Trip <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
             <div class="col-lg-7">
                 <div class="row g-3">
@@ -252,7 +252,7 @@
 <section class="py-5" style="background:#f0f9ff;" id="testimonials">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <span class="badge rounded-pill px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TESTIMONIALS</span>
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TESTIMONIALS</span>
             <h2 class="display-5 fw-bold mb-3">What Our Travellers Say</h2>
         </div>
         <div class="swiper k2-testi pb-5">
@@ -296,7 +296,7 @@
     <div class="container py-4">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <span class="badge rounded-pill px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR TRIP</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR TRIP</span>
                 <h2 class="display-5 fw-bold mb-4">Ready to <br><span style="color:#0284c7;">Take Off?</span></h2>
                 <p class="text-secondary lead mb-5">Tell us your destination, dates, and requirements. We'll get back to you with a full quote within a few hours.</p>
                 <div class="d-flex flex-column gap-3">
@@ -361,7 +361,7 @@
                                 <textarea name="message" class="form-control rounded-3 border-0 bg-light text-dark" rows="4" placeholder="Travel dates, number of passengers, any special requirements..." required></textarea>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-lg w-100 rounded-pill fw-bold py-3 text-white shadow-sm" style="background:#0284c7;border-color:#0284c7;">
+                                <button type="submit" class="btn btn-lg w-100 rounded-0 fw-bold py-3 text-white shadow-sm" style="background:#0284c7;border-color:#0284c7;">
                                     <i class="bi bi-send-fill me-2"></i>Send Booking Request
                                 </button>
                             </div>
@@ -439,8 +439,8 @@
                         </div>
                     </div>
                     <div class="mt-4 d-flex justify-content-end gap-2">
-                        <button type="button" class="btn btn-secondary px-4 py-2 rounded-pill fw-bold" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn text-white px-5 py-2 rounded-pill fw-bold shadow" style="background: #0284c7;">Submit Booking Request <i class="bi bi-send ms-2"></i></button>
+                        <button type="button" class="btn btn-secondary px-4 py-2 rounded-0 fw-bold" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn text-white px-5 py-2 rounded-0 fw-bold shadow" style="background: #0284c7;">Submit Booking Request <i class="bi bi-send ms-2"></i></button>
                     </div>
                 </form>
             </div>
