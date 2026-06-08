@@ -173,7 +173,7 @@
             <h2 class="display-4 fw-bold text-white mt-2">Vision &amp; Mission</h2>
         </div>
         <div class="row g-4">
-            <div class="col-lg-6 k1-animate-left k1-stagger-1">
+            <div class="col-lg-6 col-md-12 k1-animate-left k1-stagger-1">
                 <div class="p-4 p-lg-5 rounded-4 h-100" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
                     <div style="width:56px;height:56px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:20px;">
                         <i class="bi bi-eye-fill"></i>
@@ -182,7 +182,7 @@
                     <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;font-family:'EB Garamond',serif;">To be the most trusted and impactful consultancy firm in East Africa, known for transforming individuals, organizations, and communities through excellence in legal services, research, and corporate governance.</p>
                 </div>
             </div>
-            <div class="col-lg-6 k1-animate-right k1-stagger-2">
+            <div class="col-lg-6 col-md-12 k1-animate-right k1-stagger-2">
                 <div class="p-4 p-lg-5 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
                     <div style="width:56px;height:56px;background:linear-gradient(135deg,#1d4ed8,#3b82f6);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:white;margin-bottom:20px;">
                         <i class="bi bi-bullseye"></i>
@@ -656,7 +656,7 @@
                     <a href="#" class="btn btn-outline-secondary rounded-0 px-4 fw-semibold"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12">
                 <div class="p-4 p-md-5 rounded-4 bg-white shadow-sm" style="border:1px solid #e8d9b8;">
                     <h5 class="fw-bold mb-4" style="font-family:'EB Garamond',serif;font-size:1.4rem;">Send Us a Message</h5>
                     <form id="consultancyContactForm" action="{{ route('inquiry.submit') }}" method="POST">
