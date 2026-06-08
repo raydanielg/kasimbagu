@@ -266,7 +266,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 k1-animate-scale k1-stagger-3">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-3">
                 <a href="#company" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Company">
@@ -433,7 +433,7 @@
             <h2 class="display-4 fw-bold text-white mt-2">Company <span style="color:var(--gold);">Profile</span></h2>
         </div>
         <div class="row g-4 align-items-stretch">
-            <div class="col-lg-5 k1-animate-left k1-stagger-1">
+            <div class="col-lg-5 col-md-12 k1-animate-left k1-stagger-1">
                 <div class="p-4 p-lg-5 rounded-4 h-100 d-flex flex-column justify-content-center" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
                     <div class="mb-4">
                         <div style="font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1.1;">Kasimbagu</div>
@@ -598,7 +598,7 @@
             ];
             @endphp
             @foreach($blogs as $b)
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card">
                     <div style="overflow:hidden;">
                         <img src="{{ $b['img'] }}" alt="{{ $b['title'] }}">
