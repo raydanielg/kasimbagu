@@ -238,7 +238,7 @@
             <p class="text-secondary mx-auto mt-3" style="max-width:580px;">Click to explore each area of specialisation in depth.</p>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4 k1-animate-scale k1-stagger-1">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-1">
                 <a href="#legal" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt="Legal">
@@ -252,7 +252,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 k1-animate-scale k1-stagger-2">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-2">
                 <a href="#research" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80" alt="Research">
