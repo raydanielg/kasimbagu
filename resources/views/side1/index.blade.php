@@ -332,10 +332,10 @@
 <section id="research" class="py-5 k1-animate-on-scroll" style="background:#f8f5ef;">
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-5 k1-animate-left k1-stagger-1">
+            <div class="col-lg-5 col-md-12 k1-animate-left k1-stagger-1">
                 <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80" alt="Research" class="img-fluid rounded-4 shadow-lg">
             </div>
-            <div class="col-lg-7 k1-animate-right k1-stagger-2">
+            <div class="col-lg-7 col-md-12 k1-animate-right k1-stagger-2">
                 <span class="k1-section-badge" style="background:rgba(13,148,136,0.1);border-color:rgba(13,148,136,0.3);color:#0d9488;"><i class="bi bi-search me-2"></i>Interface Two</span>
                 <h2 class="display-4 fw-bold mt-2 mb-3" style="font-family:'EB Garamond',serif;">Research &amp; <span style="color:#0d9488;">Consultancy</span></h2>
                 <p class="text-secondary" style="font-size:1.05rem;line-height:1.85;max-width:560px;">We bridge the gap between academic knowledge and real-world impact. From graduate researchers to international NGOs, we craft compelling, rigorous research documents that open doors and drive change.</p>
@@ -379,7 +379,7 @@
 <section id="company" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(135deg,#0f2248 0%,#1a3268 60%,#122050 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-7 k1-animate-left k1-stagger-1">
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
                 <span class="k1-section-badge" style="background:rgba(29,78,216,0.15);border-color:rgba(29,78,216,0.3);color:#60a5fa;"><i class="bi bi-building-fill me-2"></i>Interface Three</span>
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Company &amp; Organization <span style="color:#60a5fa;">Management</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We are your trusted partner for building compliant, well-structured organizations. From the first registration to full operational compliance — we handle the complexity so you can focus on growth.</p>
@@ -389,7 +389,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-lg-5 k1-animate-right k1-stagger-2">
+            <div class="col-lg-5 col-md-12 k1-animate-right k1-stagger-2">
                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80" alt="Company" class="img-fluid rounded-4 shadow-lg">
             </div>
         </div>
@@ -580,12 +580,12 @@
 <section id="blog" class="py-5 bg-white">
     <div class="container py-4">
         <div class="row align-items-end mb-5">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12">
                 <span class="k1-section-badge"><i class="bi bi-newspaper me-2"></i>Insights</span>
                 <h2 class="display-4 fw-bold mt-2">Blog &amp; <span style="color:var(--gold);">Updates</span></h2>
                 <p class="text-secondary mt-3">Latest insights on Tanzanian law, business compliance, and research trends.</p>
             </div>
-            <div class="col-lg-5 text-lg-end">
+            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
                 <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Subscribe to Updates</a>
             </div>
         </div>
