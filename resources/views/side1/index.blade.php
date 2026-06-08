@@ -463,7 +463,7 @@
             </div>
             <div class="col-lg-7 k1-animate-right k1-stagger-2">
                 <div class="row g-3 h-100">
-                    <div class="col-6 k1-animate-scale k1-stagger-3">
+                    <div class="col-6 col-md-6 k1-animate-scale k1-stagger-3">
                         <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
                             <div style="color:var(--gold);font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building-fill"></i></div>
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Head Office</div>
@@ -472,7 +472,7 @@
                             <a href="tel:+255690075672" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 690 075 672</a>
                         </div>
                     </div>
-                    <div class="col-6 k1-animate-scale k1-stagger-4">
+                    <div class="col-6 col-md-6 k1-animate-scale k1-stagger-4">
                         <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
                             <div style="color:#60a5fa;font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building"></i></div>
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Branch Office</div>
@@ -627,7 +627,7 @@
             <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">Book a <span style="color:var(--gold);">Consultation</span></h2>
         </div>
         <div class="row g-5 align-items-start">
-            <div class="col-lg-5">
+            <div class="col-lg-5 col-md-12">
                 <h5 class="fw-bold mb-4">Our Offices</h5>
                 <div class="d-flex flex-column gap-3 mb-5">
                     <div class="p-4 rounded-4" style="background:white;border:1px solid #e8d9b8;">
