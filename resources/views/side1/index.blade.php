@@ -108,7 +108,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80');">
             <div class="container k1-hero-content">
-                <div class="col-lg-7">
+                <div class="col-lg-7 col-md-12">
                     <span class="k1-hero-badge"><i class="bi bi-journal-richtext me-2"></i>Legal Activities</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Justice. Clarity. <span style="color:var(--gold);">Results.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Litigation, arbitration, contract review, immigration law, and full legal representation — approachable, client-centred, and results-driven.</p>
@@ -121,7 +121,7 @@
         </div>
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&q=80');">
             <div class="container k1-hero-content text-center">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 col-md-12 mx-auto">
                     <span class="k1-hero-badge"><i class="bi bi-search me-2"></i>Research &amp; Consultancy</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Research That <span style="color:var(--gold);">Creates Impact.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Research writing, proposal development, concept notes, business plans — bridging academic knowledge with real-world results for NGOs, institutions, and researchers.</p>
@@ -131,7 +131,7 @@
         </div>
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80');">
             <div class="container k1-hero-content">
-                <div class="col-lg-7 ms-auto text-end">
+                <div class="col-lg-7 col-md-12 ms-auto text-end">
                     <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
                     <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">BRELA, TIN, NGO/CSO, CRB, microfinance registration, tax compliance and full organizational structuring — all handled expertly from start to finish.</p>
@@ -519,7 +519,7 @@
             ];
             @endphp
             @foreach($whys as $w)
-            <div class="col-lg-6 {{ $loop->last && $loop->count % 2 !== 0 ? 'col-lg-12' : '' }}">
+            <div class="col-lg-6 col-md-12 {{ $loop->last && $loop->count % 2 !== 0 ? 'col-lg-12' : '' }}">
                 <div class="k1-why-card d-flex gap-4">
                     <div style="width:54px;height:54px;background:{{ $w['grad'] }};border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;color:white;box-shadow:0 8px 24px rgba(0,0,0,0.3);">
                         <i class="bi {{ $w['icon'] }}"></i>
