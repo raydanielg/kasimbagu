@@ -288,12 +288,12 @@
 <section id="legal" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#0a1c38 0%,#112644 60%,#0e2040 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-7 k1-animate-left k1-stagger-1">
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
                 <span class="k1-section-badge"><i class="bi bi-journal-richtext me-2"></i>Interface One</span>
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Legal <span style="color:var(--gold);">Activities</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:560px;">Our legal team combines deep expertise with an approachable, client-centred philosophy. Whether you face a courtroom dispute, need a contract reviewed, or require immigration guidance — we are your dedicated legal partner.</p>
             </div>
-            <div class="col-lg-5 k1-animate-right k1-stagger-2">
+            <div class="col-lg-5 col-md-12 k1-animate-right k1-stagger-2">
                 <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80" alt="Legal" class="img-fluid rounded-4 shadow-lg">
             </div>
         </div>
