@@ -792,7 +792,7 @@
     <div style="position:absolute;top:-50px;right:-50px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,153,58,0.1),transparent);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
     <div class="container py-4 position-relative" style="z-index:1;">
         <div class="text-center mb-5">
-            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-airplane-engined me-2"></i>Fortune Travel</span>
+            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-airplane-engined me-2"></i>Travel Services</span>
             <h2 class="display-4 fw-bold text-white mt-2" style="font-family:'EB Garamond',serif;">We Love Helping Our <span style="color:var(--gold);">Customers</span></h2>
             <p class="text-white mt-3" style="opacity:0.85;font-size:1.05rem;line-height:1.7;">The services we provide for your travel needs</p>
         </div>
