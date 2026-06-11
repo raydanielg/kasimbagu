@@ -155,7 +155,7 @@
                         <li><a class="dropdown-item" href="#ngo"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts Registration</a></li>
                         <li><a class="dropdown-item" href="#company"><i class="bi bi-receipt text-gold"></i>TRA &amp; TAX Compliances</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#travel"><i class="bi bi-airplane-engined text-gold"></i>Fortune Travel</a></li>
+                        <li><a class="dropdown-item" href="#travel"><i class="bi bi-airplane-engined text-gold"></i>Travel Services</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('events.index') }}">Events</a></li>
