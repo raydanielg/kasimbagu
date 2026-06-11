@@ -587,12 +587,12 @@
             @endphp
             @foreach($traServices as $i => $tr)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
-                <div class="p-4 rounded-3 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(251,146,60,0.2);transition:all 0.3s ease;">
-                    <div style="width:56px;height:56px;background:rgba(251,146,60,0.15);border:2px solid rgba(251,146,60,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;color:#fb923c;">
+                <div class="p-4 rounded-3 h-100 tra-service-card">
+                    <div class="tra-service-icon">
                         <i class="bi {{ $tr['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2 text-center" style="color:white;font-size:1.05rem;">{{ $tr['title'] }}</h5>
-                    <p class="text-white mb-0 text-center" style="font-size:0.88rem;line-height:1.6;opacity:0.85;">{{ $tr['desc'] }}</p>
+                    <h5 class="fw-bold mb-2 text-center tra-service-title">{{ $tr['title'] }}</h5>
+                    <p class="text-white mb-0 text-center tra-service-desc">{{ $tr['desc'] }}</p>
                 </div>
             </div>
             @endforeach
