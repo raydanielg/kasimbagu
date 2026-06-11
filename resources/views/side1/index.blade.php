@@ -601,6 +601,35 @@
             </div>
             @endforeach
         </div>
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-1">
+                <div class="tra-service-card p-4 rounded-4 h-100 text-center">
+                    <div class="tra-service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 tra-service-title">SDL and PAYE Filling</h5>
+                    <p class="tra-service-desc">Monthly SDL and PAYE return filing for employers, ensuring compliance with Tanzania Revenue Authority requirements.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-2">
+                <div class="tra-service-card p-4 rounded-4 h-100 text-center">
+                    <div class="tra-service-icon">
+                        <i class="bi bi-clipboard-check"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 tra-service-title">TAX Assessment Filling</h5>
+                    <p class="tra-service-desc">Professional tax assessment filing services for individuals and businesses to ensure accurate tax declarations.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-3">
+                <div class="tra-service-card p-4 rounded-4 h-100 text-center">
+                    <div class="tra-service-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 tra-service-title">Solving TAX Penalties</h5>
+                    <p class="tra-service-desc">Expert assistance in resolving tax penalties, waivers, and disputes with Tanzania Revenue Authority.</p>
+                </div>
+            </div>
+        </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#fb923c;">Get TRA Compliance Help <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
