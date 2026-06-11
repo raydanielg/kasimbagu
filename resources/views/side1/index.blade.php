@@ -382,30 +382,6 @@
     </div>
 </section>
 
-{{-- ═══ ADDITIONAL LEGAL PRACTICE AREAS ═══ --}}
-<section class="py-5 bg-white k1-animate-on-scroll">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-list-check me-2"></i>Comprehensive Legal Coverage</span>
-            <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">Full Spectrum <span style="color:var(--gold);">Legal Services</span></h2>
-            <p class="text-secondary mx-auto mt-3" style="max-width:680px;">From aviation to telecommunications, we provide expert legal counsel across all major sectors and practice areas.</p>
-        </div>
-        <div class="row g-4">
-            @foreach($additionalLegal as $i => $al)
-            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 2 > 5 ? 5 : $i + 2 }}">
-                <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
-                    <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
-                        <i class="bi {{ $al['icon'] }}"></i>
-                    </div>
-                    <h6 class="fw-bold mb-2" style="color:#1a202c;font-size:0.95rem;">{{ $al['title'] }}</h6>
-                    <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.5;">{{ $al['desc'] }}</p>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
 {{-- ═══ INTERFACE 2: RESEARCH & CONSULTANCY ═══ --}}
 <section id="research" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#061826 0%,#0a2440 60%,#0d2a4a 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
     <div class="container py-4">
