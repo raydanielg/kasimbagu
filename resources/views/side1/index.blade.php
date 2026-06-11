@@ -851,18 +851,3 @@
         });
     });
 @endsection
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('k1-visible');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all animated elements
-    document.querySelectorAll('.k1-animate-on-scroll, .k1-animate-left, .k1-animate-right, .k1-animate-scale').forEach(el => {
-        observer.observe(el);
-    });
-</script>
-@endsection
