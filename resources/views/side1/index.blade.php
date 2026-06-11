@@ -516,7 +516,7 @@
             ];
             ?>
             @foreach($company as $i => $sv)
-            <?php $stagger = min($i + 3, 6); @endphp
+            <?php $stagger = min($i + 3, 6); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
@@ -782,7 +782,7 @@
                 ->orderBy('sort_order')
                 ->take(3)
                 ->get();
-            @endphp
+            ?>
             @forelse($dbBlogs as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card">
@@ -829,14 +829,14 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $upcomingEvents = \App\Models\Event::where('is_published', true)
                 ->where('event_date', '>=', now())
                 ->orderBy('event_date', 'asc')
                 ->orderBy('sort_order')
                 ->take(3)
                 ->get();
-            @endphp
+            ?>
             @forelse($upcomingEvents as $event)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card">
