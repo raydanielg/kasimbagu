@@ -378,17 +378,6 @@
             </div>
         </div>
         <div class="row g-4">
-            <?php
-            $research = [
-                ['icon'=>'bi-journal-text','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Research Writing','desc'=>'Full academic and applied research writing services — from literature review to data analysis, findings, and recommendations.'],
-                ['icon'=>'bi-file-earmark-check-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Proposal Writing','desc'=>'Winning funding proposals for NGOs, development projects, academic grants, and government tenders.'],
-                ['icon'=>'bi-card-text','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Research Synopsis','desc'=>'Concise, well-structured research synopses for academic institutions, thesis committees, and funding bodies.'],
-                ['icon'=>'bi-lightbulb-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Concept Notes','desc'=>'Impactful concept notes that introduce project ideas to donors, partners, and development organizations.'],
-                ['icon'=>'bi-graph-up-arrow','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Business Plans','desc'=>'Comprehensive, investment-ready business plans for startups, SMEs, and organizations seeking financing.'],
-            ];
-            ?>
-            @foreach($research as $i => $sv)
-                <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
                     </div>
@@ -435,27 +424,6 @@
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:#60a5fa;">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- ═══ NGO REGISTRATION SERVICES ═══ --}}
-<section class="py-5 bg-white k1-animate-on-scroll">
-    <div class="container py-4">
-        <div class="text-center mb-5">
-            <span class="k1-section-badge" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.3);color:#10b981;"><i class="bi bi-people-fill me-2"></i>NGO & Social Organizations</span>
-            <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">NGO <span style="color:#10b981;">Registration Services</span></h2>
-            <p class="text-secondary mx-auto mt-3" style="max-width:680px;">Complete registration and compliance services for NGOs, CBOs, CSOs, Charities, Foundations, Societies, and Trusts.</p>
-        </div>
-        <div class="row g-4">
-            <?php
-            $ngoServices = [
-                ['icon'=>'bi-people-fill','color'=>'#10b981','title'=>'NGO Registration','desc'=>'Full registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.'],
-                ['icon'=>'bi-house-heart-fill','color'=>'#059669','title'=>'CBO Registration','desc'=>'Registration of Community-Based Organizations for grassroots development and community initiatives.'],
-                ['icon'=>'bi-globe2','color'=>'#047857','title'=>'CSO Registration','desc'=>'Registration of Civil Society Organizations for advocacy, civic engagement, and social development.'],
-                ['icon'=>'bi-heart-fill','color'=>'#0d9488','title'=>'Charity Registration','desc'=>'Registration of charitable organizations for philanthropic activities and social welfare programs.'],
-                ['icon'=>'bi-building-exclamation','color'=>'#0f766e','title'=>'Foundation Registration','desc'=>'Registration of foundations for grant-making, charitable endowments, and institutional philanthropy.'],
                 ['icon'=>'bi-people','color'=>'#115e59','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
                 ['icon'=>'bi-shield-lock-fill','color':'#065f46','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
             ];
@@ -481,19 +449,7 @@
             <?php
             $traServices = [
                 ['icon'=>'bi-receipt','color'=>'#fb923c','title'=>'TIN Registration','desc'=>'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.'],
-                ['icon'=>'bi-percent','color'=>'#f472b6','title'=>'VAT Registration','desc'=>'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.'],
-                ['icon'=>'bi-file-earmark-text','color'=>'#a78bfa','title'=>'Tax Returns Filing','desc'=>'Professional tax returns filing services for corporate and individual taxpayers with TRA compliance.'],
-                ['icon'=>'bi-cash-coin','color'=>'#60a5fa','title'=>'Tax Advisory','desc':'Strategic tax planning, consultation, and advisory services for optimal tax compliance and efficiency.'],
-                ['icon'=>'bi-shield-check','color'=>'#34d399','title'=>'Tax Compliance Audit','desc'=>'Comprehensive tax compliance audits to ensure full adherence to TRA regulations and requirements.'],
-                ['icon'=>'bi-graph-up','color'=>'#f87171','title'=>'Tax Dispute Resolution','desc'=>'Expert representation and resolution services for tax disputes, assessments, and negotiations with TRA.'],
-            ];
-            ?>
-            @foreach($traServices as $i => $tr)
         </div>
-        <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#fb923c;">Get TRA Compliance <i class="bi bi-arrow-right ms-2"></i></a>
-        </div>
-    </div>
 </section>
 
 {{-- ═══ COMPANY PROFILE VISUAL ═══ --}}
@@ -510,17 +466,6 @@
                 <div class="p-4 p-lg-5 rounded-4 h-100 d-flex flex-column justify-content-center" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
                     <div class="mb-4">
                         <div style="font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1.1;">Kasimbagu</div>
-                        <div style="font-family:'EB Garamond',serif;font-size:1rem;color:var(--gold);font-style:italic;margin-top:4px;">Consultancy Agency</div>
-                        <div style="width:50px;height:3px;background:var(--gold);margin-top:12px;border-radius:2px;"></div>
-                    </div>
-                    <p style="color:#94a3b8;font-size:0.95rem;line-height:1.9;font-family:'EB Garamond',serif;font-size:1.05rem;">"A multi-disciplinary consultancy firm dedicated to providing exceptional legal, research, and organizational management services. We operate with integrity, innovation, and an unwavering commitment to client success across East Africa."</p>
-                    <div class="mt-4 d-flex gap-3">
-                        <div class="text-center">
-                            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">10+</div>
-                            <div style="color:#64748b;font-size:0.75rem;">Years</div>
-                        </div>
-                        <div class="text-center">
-                            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">500+</div>
                             <div style="color:#64748b;font-size:0.75rem;">Clients</div>
                         </div>
                         <div class="text-center">
@@ -651,17 +596,6 @@
             <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
                 <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Blogs</a>
             </div>
-        </div>
-        <div class="row g-4">
-            <?php
-            $dbBlogs = \App\Models\Blog::where('is_published', true)
-                ->orderBy('published_at', 'desc')
-                ->orderBy('sort_order')
-                ->take(3)
-                ->get();
-            ?>
-                        </div>
-                        @endif
                     </div>
                     <div class="p-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
@@ -708,13 +642,6 @@
                             <i class="bi bi-calendar-event text-white" style="font-size: 3rem; opacity: 0.5;"></i>
                         </div>
                         @endif
-                    </div>
-                    <div class="p-4">
-                        <div class="d-flex align-items-center gap-2 mb-3">
-                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(201,153,58,0.1);color:var(--gold);font-size:0.72rem;">{{ $event->event_date ? $event->event_date->format('M d, Y') : '' }}</span>
-                            @if($event->event_time)
-                            <span class="text-secondary small">{{ $event->event_time }}</span>
-                            @endif
                         </div>
                         <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $event->title }}</h5>
                         <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;"><i class="bi bi-geo-alt me-1"></i>{{ $event->location }}</p>
