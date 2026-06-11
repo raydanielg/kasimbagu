@@ -413,21 +413,6 @@
             </div>
         </div>
         <div class="row g-4">
-            <?php
-            $company = [
-                <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
-                    <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
-                        <i class="bi {{ $sv['icon'] }}"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2" style="color:white !important;">{!! $sv['title'] !!}</h5>
-                    <p class="text-white mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#60a5fa;">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
-            </div>
-                ['icon'=>'bi-people','color'=>'#115e59','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
-                ['icon'=>'bi-shield-lock-fill','color':'#065f46','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
-            ];
-            ?>
             @foreach($ngoServices as $i => $ng)
             <?php $stagger = min($i + 2, 5); ?>
                     <div class="ngo-service-icon">
@@ -444,7 +429,6 @@
             <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
             <h2 class="display-4 fw-bold mt-2 text-white" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
             <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
-        </div>
         <div class="row g-4">
             <?php
             $traServices = [
