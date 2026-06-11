@@ -549,8 +549,6 @@
                 </div>
             </div>
             @endforeach
-        </div>
-        <div class="row g-4 mt-4">
             <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-1">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
