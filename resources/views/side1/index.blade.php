@@ -683,12 +683,14 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <a href="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}" target="_blank" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">
+            <a href="#pdf-viewer" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">
                 <i class="bi bi-file-earmark-pdf-fill me-2"></i>View Company Profile
             </a>
         </div>
     </div>
 </section>
+
+@include('side1.pdfview')
 
 {{-- ═══ TARGET CLIENTS ═══ --}}
 <section class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(140deg,#0a1c38 0%,#112644 60%,#0e2040 100%);">
