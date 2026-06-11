@@ -395,7 +395,7 @@
             ];
             ?>
             @foreach($additionalLegal as $i => $al)
-            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $stagger }}">
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 2 > 5 ? 5 : $i + 2 }}">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
                     <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
                         <i class="bi {{ $al['icon'] }}"></i>
@@ -418,7 +418,6 @@
             ];
             ?>
             @foreach($research as $i => $sv)
-            <?php $stagger = min($i + 3, 6); ?>
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -493,7 +492,6 @@
             ?>
             @foreach($ngoServices as $i => $ng)
             <?php $stagger = min($i + 2, 5); ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                     <div class="ngo-service-icon">
                         <i class="bi {{ $ng['icon'] }}"></i>
                     </div>
