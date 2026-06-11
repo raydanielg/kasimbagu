@@ -694,7 +694,7 @@
             </div>
             @endforeach
         </div>
-        <div class="text-center mb-4 mt-5">
+        {{-- <div class="text-center mb-4 mt-5">
             <span class="k1-section-badge" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#10b981;"><i class="bi bi-people-fill me-2"></i>Target Clients</span>
         </div>
         <div class="row g-4">
@@ -726,7 +726,7 @@
                 </div>
             </div>
             @endforeach
-        </div>
+        </div> --}}
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#10b981;">Get NGO Registration Help <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
