@@ -145,7 +145,6 @@
         <div class="collapse navbar-collapse" id="k1Collapse">
             <ul class="navbar-nav mx-auto gap-1">
                 <li class="nav-item"><a class="nav-link" href="{{ route('consultacy') }}">Home</a></li>
-                <li class="nav-item d-none d-lg-block"><span class="nav-link" style="color:var(--gold);font-size:0.82rem;cursor:default;"><i class="bi bi-geo-alt-fill me-1"></i>Dar es Salaam & Moshi, Kilimanjaro</span></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
                     <ul class="dropdown-menu">
