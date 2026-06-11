@@ -155,7 +155,7 @@
                 <h6 class="fw-bold mb-4 small text-uppercase" style="letter-spacing:1px;">Get in Touch</h6>
                 <div class="k2f-contact">
                     <p><i class="bi bi-geo-alt-fill me-2" style="color:#38bdf8;"></i>Dar es Salaam, Tanzania</p>
-                    <p><i class="bi bi-envelope-fill me-2" style="color:#38bdf8;"></i><a href="mailto:travel@kasimbagu.com">travel@kasimbagu.com</a></p>
+                    <p><i class="bi bi-envelope-fill me-2" style="color:#38bdf8;"></i><a href="mailto:info@kasimbagu.com">info@kasimbagu.com</a></p>
                     <p class="mb-0"><i class="bi bi-telephone-fill me-2" style="color:#38bdf8;"></i><a href="tel:+255690075672">+255 690 075 672</a></p>
                 </div>
             </div>

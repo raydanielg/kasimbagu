@@ -527,7 +527,7 @@
                         <div style="width:46px;height:46px;background:#0284c7;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-envelope-fill text-white"></i></div>
                         <div>
                             <div class="small fw-bold text-uppercase" style="color:#94a3b8;letter-spacing:1px;">Email</div>
-                            <a href="mailto:travel@kasimbagu.com" class="text-dark fw-semibold text-decoration-none">travel@kasimbagu.com</a>
+                            <a href="mailto:info@kasimbagu.com" class="text-dark fw-semibold text-decoration-none">info@kasimbagu.com</a>
                         </div>
                     </div>
                     <div class="d-flex align-items-center gap-3">
