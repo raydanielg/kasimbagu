@@ -458,22 +458,14 @@
             <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
         </div>
         <div class="row g-4">
-            @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
-            <?php
-            $traIcons = ['bi-receipt-cutoff','bi-percent','bi-file-earmark-text'];
-            $traDescs = [
-                'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.',
-                'Registration of Value Added Tax (VAT) Number for businesses meeting the annual turnover threshold.',
-                'Professional tax returns filing services ensuring timely and accurate submission to Tanzania Revenue Authority.'
-            ];
-            ?>
+            @foreach($traServices as $i => $ts)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
                 <div class="tra-service-card p-4 rounded-4 h-100 text-center">
                     <div class="tra-service-icon">
-                        <i class="bi {{ $traIcons[$i] }}"></i>
+                        <i class="bi {{ $ts['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2 tra-service-title">{{ $ts }}</h5>
-                    <p class="tra-service-desc">{{ $traDescs[$i] }}</p>
+                    <h5 class="fw-bold mb-2 tra-service-title">{{ $ts['title'] }}</h5>
+                    <p class="tra-service-desc">{{ $ts['desc'] }}</p>
                 </div>
             </div>
             @endforeach
@@ -549,15 +541,19 @@
             <p style="color:#94a3b8;margin:12px auto 0;max-width:550px;">Not just consultants — we are committed partners dedicated to your success.</p>
         </div>
         <div class="row g-4">
-            <?php
-            $whys = [
-                ['icon'=>'bi-person-hearts','grad'=>'linear-gradient(135deg,#c9993a,#a07825)','title'=>'Approachable &amp; Client-Centered','desc'=>'We listen first. Every service is tailored to your unique situation — no generic answers, no one-size-fits-all solutions.'],
-                ['icon'=>'bi-shield-fill-check','grad'=>'linear-gradient(135deg,#1d4ed8,#3b82f6)','title'=>'Integrity &amp; Trust','desc'=>'Complete honesty in every engagement. No hidden costs. No over-promising. Just transparent, reliable service.'],
-                ['icon'=>'bi-lightning-charge-fill','grad'=>'linear-gradient(135deg,#d97706,#fbbf24)','title'=>'Speed &amp; Efficiency','desc'=>'Responses within 24 hours. Fast-tracked processing. We understand that time is critical for your goals.'],
-                ['icon'=>'bi-globe2','grad'=>'linear-gradient(135deg,#047857,#10b981)','title'=>'Cross-Sector Experience','desc'=>'We have served clients across legal, academic, NGO, private sector, government, and development domains in East Africa.'],
-                ['icon'=>'bi-graph-up-arrow','grad'=>'linear-gradient(135deg,#7c3aed,#a78bfa)','title'=>'Measurable Impact','desc'=>'We measure our success by yours — tracking outcomes, client growth, and the real-world impact of every engagement.'],
-            ];
-            ?>
+            @foreach($whys as $i => $w)
+            <div class="col-lg-6 col-md-12 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-why-card d-flex gap-4">
+                    <div style="width:54px;height:54px;background:{{ $w['grad'] }};border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;color:white;box-shadow:0 8px 24px rgba(0,0,0,0.3);">
+                        <i class="bi {{ $w['icon'] }}"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold text-white mb-2">{!! $w['title'] !!}</h5>
+                        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.75;margin:0;">{{ $w['desc'] }}</p>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>
