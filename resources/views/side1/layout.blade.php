@@ -110,6 +110,9 @@
         .text-gold { color: var(--gold) !important; }
         .bg-navy { background: var(--navy) !important; }
         .k1-section-badge { display: inline-flex; align-items: center; background: rgba(201,153,58,0.1); border: 1px solid rgba(201,153,58,0.3); color: var(--gold); padding: 5px 16px; border-radius: 50px; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+        /* ── Service Cards ── */
+        .k1-svc-card h5 { color: white !important; }
+        .k1-svc-card p { color: white !important; }
     </style>
 </head>
 <body>
