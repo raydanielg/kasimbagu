@@ -37,7 +37,7 @@ class CompanyServiceSeeder extends Seeder
             [
                 'name' => 'Organizational Structuring',
                 'slug' => 'organizational-structuring',
-                'category' => 'company',
+                'category' => 'registration',
                 'icon' => 'bi-diagram-3',
                 'icon_color' => '#60a5fa',
                 'short_description' => 'Corporate structure design, organizational hierarchy, and governance framework development.',
@@ -58,7 +58,7 @@ class CompanyServiceSeeder extends Seeder
             [
                 'name' => 'Construction Company Registration',
                 'slug' => 'construction-company-registration',
-                'category' => 'company',
+                'category' => 'registration',
                 'icon' => 'bi-building-gear',
                 'icon_color' => '#60a5fa',
                 'short_description' => 'Construction company registration, contractor licensing, and building permits.',
@@ -79,7 +79,7 @@ class CompanyServiceSeeder extends Seeder
             [
                 'name' => 'Microfinance Institution Registration',
                 'slug' => 'microfinance-institution-registration',
-                'category' => 'company',
+                'category' => 'registration',
                 'icon' => 'bi-bank2',
                 'icon_color' => '#60a5fa',
                 'short_description' => 'Microfinance institution licensing, financial services registration, and regulatory compliance.',

@@ -16,7 +16,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'TIN Registration',
                 'slug' => 'tin-registration',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-receipt',
                 'icon_color' => '#fb923c',
                 'short_description' => 'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.',
