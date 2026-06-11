@@ -537,7 +537,7 @@
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Company &amp; Organization <span style="color:#60a5fa;">Management</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We are your trusted partner for building compliant, well-structured organizations. From the first registration to full operational compliance — we handle the complexity so you can focus on growth.</p>
                 <div class="d-flex flex-wrap gap-2 mt-4">
-                    @foreach(['Startups','Joint Ventures','Tourism Operators','Agribusinesses','Govt. Institutions'] as $cl)
+                    @foreach(['Startups','Joint Ventures','Tourism Operators','Agribusinesses'] as $cl)
                     <span class="badge rounded-0 px-3 py-2" style="background:rgba(29,78,216,0.15);color:#60a5fa;border:1px solid rgba(29,78,216,0.25);font-size:0.78rem;">{{ $cl }}</span>
                     @endforeach
                 </div>
