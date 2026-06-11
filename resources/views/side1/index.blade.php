@@ -567,14 +567,6 @@
         </div>
         <div class="swiper k1-testi pb-5">
             <div class="swiper-wrapper">
-                <?php
-                $testi = [
-                    ['q'=>'Kasimbagu handled our company registration from BRELA to TIN to business license in record time. Professional, fast, and completely transparent. Highly recommended!','name'=>'Juma Mwangi','role'=>'CEO, Mwangi Enterprises, Dar es Salaam','init'=>'JM'],
-                    ['q'=>'Our NGO proposal was successfully funded after Kasimbagu rewrote it. The quality of their research writing is truly exceptional. They understood our vision completely.','name'=>'Sarah Okonkwo','role'=>'Executive Director, SafeHands NGO','init'=>'SO'],
-                    ['q'=>'I faced a complex land conflict that had dragged on for 3 years. Kasimbagu resolved it through mediation in 6 weeks. I cannot express my gratitude enough.','name'=>'Abdallah Hassan','role'=>'Client, Moshi, Kilimanjaro','init'=>'AH'],
-                    ['q'=>'Their immigration law team got my work permit approved in two weeks — other firms said it would take months. Kasimbagu delivers on their promises.','name'=>'Chen Wei','role'=>'Business Investor, Dar es Salaam','init'=>'CW'],
-                ];
-                ?>
                 @foreach($testi as $t)
                 <div class="swiper-slide">
                     <div class="p-4 p-md-5 rounded-4 shadow-sm mx-2 h-100" style="background:white;border:1px solid #e8d9b8;">
@@ -613,10 +605,7 @@
             </div>
         </div>
         <div class="row g-4">
-            <?php
-            $blogs = \App\Models\Blog::where('is_published', true)->orderBy('published_at', 'desc')->take(3)->get();
-            ?>
-            @forelse($blogs as $blog)
+            @forelse($blogs ?? [] as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card h-100">
                     <img src="{{ $blog->image ?? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80' }}" alt="{{ $blog->title }}">
@@ -654,10 +643,7 @@
             </div>
         </div>
         <div class="row g-4">
-            <?php
-            $upcomingEvents = \App\Models\Event::where('event_date', '>=', now())->orderBy('event_date')->take(3)->get();
-            ?>
-            @forelse($upcomingEvents as $event)
+            @forelse($upcomingEvents ?? [] as $event)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card">
                     <div style="overflow:hidden;">
