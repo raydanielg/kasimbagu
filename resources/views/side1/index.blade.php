@@ -493,12 +493,12 @@
             @endphp
             @foreach($ngoServices as $i => $ng)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
-                <div class="p-4 rounded-3 h-100" style="background:#f0fdf4;border:2px solid #d1fae5;transition:all 0.3s ease;">
-                    <div style="width:56px;height:56px;background:linear-gradient(135deg,#10b981,#059669);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;color:white;box-shadow:0 4px 12px rgba(16,185,129,0.25);">
+                <div class="p-4 rounded-3 h-100 ngo-service-card">
+                    <div class="ngo-service-icon">
                         <i class="bi {{ $ng['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2 text-center" style="color:#065f46;font-size:1.05rem;">{{ $ng['title'] }}</h5>
-                    <p class="text-secondary mb-0 text-center" style="font-size:0.88rem;line-height:1.6;">{{ $ng['desc'] }}</p>
+                    <h5 class="fw-bold mb-2 text-center ngo-service-title">{{ $ng['title'] }}</h5>
+                    <p class="text-secondary mb-0 text-center ngo-service-desc">{{ $ng['desc'] }}</p>
                 </div>
             </div>
             @endforeach
