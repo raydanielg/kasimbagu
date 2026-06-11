@@ -376,7 +376,7 @@
             ];
             ?>
             @foreach($legal as $i => $sv)
-            @php $stagger = min($i + 3, 6); @endphp
+            <?php $stagger = min($i + 3, 6); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:rgba(201,153,58,0.05);border-color:rgba(201,153,58,0.12);">
                     <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
@@ -425,7 +425,7 @@
             ];
             ?>
             @foreach($additionalLegal as $i => $al)
-            @php $stagger = min($i + 2, 5); @endphp
+            <?php $stagger = min($i + 2, 5); ?>
             <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
                     <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
@@ -507,14 +507,14 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $company = [
                 ['icon'=>'bi-building-fill-check','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Company Registration','desc'=>'Full BRELA registration, TIN, Business License, VAT, and all statutory requirements for new companies and partnerships.'],
                 ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
                 ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
                 ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO, and savings group institutions.'],
             ];
-            @endphp
+            ?>
             @foreach($company as $i => $sv)
             @php $stagger = min($i + 3, 6); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
@@ -580,7 +580,7 @@
             <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $traServices = [
                 ['icon'=>'bi-receipt','color'=>'#fb923c','title'=>'TIN Registration','desc'=>'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.'],
                 ['icon'=>'bi-percent','color'=>'#f472b6','title'=>'VAT Registration','desc'=>'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.'],
@@ -589,7 +589,7 @@
                 ['icon'=>'bi-shield-check','color'=>'#34d399','title'=>'Tax Compliance Audit','desc'=>'Comprehensive tax compliance audits to ensure full adherence to TRA regulations and requirements.'],
                 ['icon'=>'bi-graph-up','color'=>'#f87171','title'=>'Tax Dispute Resolution','desc'=>'Expert representation and resolution services for tax disputes, assessments, and negotiations with TRA.'],
             ];
-            @endphp
+            ?>
             @foreach($traServices as $i => $tr)
             @php $stagger = min($i + 2, 5); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
