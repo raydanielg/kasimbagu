@@ -261,7 +261,7 @@
             <div class="k1-section-divider mx-auto"></div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $values = [
                 ['icon'=>'bi-shield-fill-check','color'=>'#c9993a','bg'=>'rgba(201,153,58,0.1)','title'=>'Integrity','desc'=>'We operate with complete honesty, transparency, and ethical standards in every client engagement.'],
                 ['icon'=>'bi-award-fill','color'=>'#1d4ed8','bg'=>'rgba(29,78,216,0.08)','title'=>'Excellence','desc'=>'We are committed to delivering the highest quality of work, always exceeding expectations.'],
@@ -270,7 +270,7 @@
                 ['icon'=>'bi-check2-circle','color'=>'#7c3aed','bg'=>'rgba(124,58,237,0.08)','title'=>'Accountability','desc'=>'We take full responsibility for our work and stand behind every service we deliver.'],
                 ['icon'=>'bi-globe2','color'=>'#dc2626','bg'=>'rgba(220,38,38,0.08)','title'=>'Impact','desc'=>'We measure our success by the tangible difference we make in clients\' lives and organizations.'],
             ];
-            @endphp
+            ?>
             @foreach($values as $v)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-value-card">
@@ -469,7 +469,7 @@
             ];
             ?>
             @foreach($research as $i => $sv)
-            @php $stagger = min($i + 3, 6); @endphp
+            <?php $stagger = min($i + 3, 6); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
@@ -516,7 +516,7 @@
             ];
             ?>
             @foreach($company as $i => $sv)
-            @php $stagger = min($i + 3, 6); @endphp
+            <?php $stagger = min($i + 3, 6); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
@@ -553,7 +553,7 @@
             ];
             ?>
             @foreach($ngoServices as $i => $ng)
-            @php $stagger = min($i + 2, 5); @endphp
+            <?php $stagger = min($i + 2, 5); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 ngo-service-card">
                     <div class="ngo-service-icon">
@@ -591,7 +591,7 @@
             ];
             ?>
             @foreach($traServices as $i => $tr)
-            @php $stagger = min($i + 2, 5); @endphp
+            <?php $stagger = min($i + 2, 5); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 tra-service-card">
                     <div class="tra-service-icon">
@@ -776,7 +776,7 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $dbBlogs = \App\Models\Blog::where('is_published', true)
                 ->orderBy('published_at', 'desc')
                 ->orderBy('sort_order')
