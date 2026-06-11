@@ -431,7 +431,6 @@
         </div>
         <div class="row g-4">
             @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
-            <?php
                     <div class="tra-service-icon">
                         <i class="bi {{ $traIcons[$i] }}"></i>
                     </div>
@@ -522,17 +521,6 @@
             ];
             ?>
             @foreach($whys as $w)
-            <div class="col-lg-6 col-md-12 {{ $loop->last && $loop->count % 2 !== 0 ? 'col-lg-12' : '' }}">
-                <div class="k1-why-card d-flex gap-4">
-                    <div style="width:54px;height:54px;background:{{ $w['grad'] }};border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.3rem;color:white;box-shadow:0 8px 24px rgba(0,0,0,0.3);">
-                        <i class="bi {{ $w['icon'] }}"></i>
-                    </div>
-                    <div>
-                        <h5 class="fw-bold text-white mb-2">{!! $w['title'] !!}</h5>
-                        <p style="color:#94a3b8;font-size:0.9rem;line-height:1.75;margin:0;">{{ $w['desc'] }}</p>
-                    </div>
-                </div>
-            </div>
             @endforeach
         </div>
     </div>
@@ -568,14 +556,6 @@
                             </div>
                             <div class="ms-auto" style="color:var(--gold);">
                                 @for($i=0;$i<5;$i++) <i class="bi bi-star-fill"></i> @endfor
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="swiper-pagination" style="bottom:0;"></div>
-        </div>
     </div>
 </section>
 
