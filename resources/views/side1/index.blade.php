@@ -325,7 +325,7 @@
                         <i class="bi {{ $sv['icon'] }}"></i>
                     </div>
                     <h5 class="fw-bold mb-2">{!! $sv['title'] !!}</h5>
-                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
+                    <p class="text-white mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:var(--gold);">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
