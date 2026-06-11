@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class AddNgoToServicesCategoryEnum extends Migration
 {
@@ -13,9 +14,7 @@ class AddNgoToServicesCategoryEnum extends Migration
      */
     public function up()
     {
-        Schema::table('services', function (Blueprint $table) {
-            //
-        });
+        DB::statement("ALTER TABLE services MODIFY COLUMN category ENUM('travel', 'legal', 'research', 'registration', 'ict', 'ngo')");
     }
 
     /**
@@ -25,8 +24,6 @@ class AddNgoToServicesCategoryEnum extends Migration
      */
     public function down()
     {
-        Schema::table('services', function (Blueprint $table) {
-            //
-        });
+        DB::statement("ALTER TABLE services MODIFY COLUMN category ENUM('travel', 'legal', 'research', 'registration', 'ict')");
     }
 }
