@@ -183,6 +183,77 @@
 </section>
 
 {{-- ══════════════════════════════════════════
+     SPECIALIZED TRAVEL SERVICES
+══════════════════════════════════════════ --}}
+<section class="py-5 bg-white" id="specialized-services">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">SPECIALIZED SERVICES</span>
+            <h2 class="display-5 fw-bold mb-3">Beyond <span style="color:#0284c7;">Ordinary Travel</span></h2>
+            <p class="text-secondary mx-auto" style="max-width:560px;">Specialized travel services for students, medical patients, businesses, and trade professionals.</p>
+        </div>
+        <div class="row g-4">
+            @php
+            $specialServices = [
+                [
+                    'icon'=>'bi-mortarboard-fill',
+                    'color'=>'#7c3aed',
+                    'bg'=>'rgba(124,58,237,0.08)',
+                    'title'=>'Study Abroad',
+                    'desc'=>'Complete support for students studying abroad — university applications, student visas, accommodation, and travel arrangements.',
+                    'highlights'=>['University Admission','Student Visa Processing','Accommodation Booking','Flight Tickets']
+                ],
+                [
+                    'icon'=>'bi-heart-pulse-fill',
+                    'color'=>'#dc2626',
+                    'bg'=>'rgba(220,38,38,0.08)',
+                    'title'=>'Medical Tourism',
+                    'desc'=>'Access world-class medical treatment abroad. We handle hospital bookings, medical visas, travel, and accommodation for patients and families.',
+                    'highlights'=>['Hospital Booking','Medical Visa','Travel Arrangements','Family Accommodation']
+                ],
+                [
+                    'icon'=>'bi-briefcase-fill',
+                    'color'=>'#0284c7',
+                    'bg'=>'rgba(2,132,199,0.08)',
+                    'title'=>'Business Travel',
+                    'desc'=>'Corporate travel solutions for business meetings, conferences, and trade shows. Streamlined booking, visa support, and expense management.',
+                    'highlights'=>['Corporate Booking','Business Visa','Conference Registration','Expense Management']
+                ],
+                [
+                    'icon'=>'bi-cart-fill',
+                    'color'=>'#d97706',
+                    'bg'=>'rgba(217,119,6,0.08)',
+                    'title'=>'Trade Services',
+                    'desc'=>'International trade facilitation including trade fair participation, business matching, import/export documentation, and market research.',
+                    'highlights'=>['Trade Fair Booking','Business Matching','Import/Export Docs','Market Research']
+                ],
+            ];
+            @endphp
+            @foreach($specialServices as $i => $s)
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:{{ $s['bg'] }};border:1px solid transparent;transition:all 0.3s;">
+                    <div style="width:52px;height:52px;background:{{ $s['color'] }};border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 4px 15px rgba(0,0,0,0.15);">
+                        <i class="bi {{ $s['icon'] }} text-white" style="font-size:1.25rem;"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2" style="color:#1a202c;">{{ $s['title'] }}</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.6;">{{ $s['desc'] }}</p>
+                    <ul class="list-unstyled mb-3">
+                        @foreach($s['highlights'] as $h)
+                        <li class="small text-secondary mb-1" style="font-size:0.8rem;"><i class="bi bi-check-circle-fill me-2" style="color:{{ $s['color'] }};"></i>{{ $h }}</li>
+                        @endforeach
+                    </ul>
+                    <a href="#contact" class="fw-bold text-decoration-none small" style="color:{{ $s['color'] }};">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<style>
+    #specialized-services .rounded-4:hover { transform: translateY(-7px); border-color: rgba(2,132,199,0.25) !important; box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+</style>
+
+{{-- ══════════════════════════════════════════
      SERVICES
 ══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="services">
