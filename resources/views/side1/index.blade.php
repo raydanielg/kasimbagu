@@ -358,6 +358,24 @@
             </div>
             @endforeach
         </div>
+        
+        {{-- Additional Legal Practice Areas --}}
+        <div class="text-center mt-5 mb-4">
+            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-list-check me-2"></i>More Practice Areas</span>
+        </div>
+        <div class="row g-3">
+            @foreach($additionalLegal as $i => $al)
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi {{ $al['icon'] }}"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:white;font-size:0.9rem;">{{ $al['title'] }}</h6>
+                    <p class="mb-0" style="font-size:0.75rem;line-height:1.4;color:rgba(255,255,255,0.7);">{{ $al['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
