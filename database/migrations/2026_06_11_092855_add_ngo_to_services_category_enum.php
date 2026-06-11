@@ -14,7 +14,13 @@ class AddNgoToServicesCategoryEnum extends Migration
      */
     public function up()
     {
-        DB::statement("ALTER TABLE services MODIFY COLUMN category ENUM('travel', 'legal', 'research', 'registration', 'ict', 'ngo')");
+        Schema::table('services', function (Blueprint $table) {
+            $table->dropColumn('category');
+        });
+
+        Schema::table('services', function (Blueprint $table) {
+            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict', 'ngo'])->default('travel');
+        });
     }
 
     /**
@@ -24,6 +30,12 @@ class AddNgoToServicesCategoryEnum extends Migration
      */
     public function down()
     {
-        DB::statement("ALTER TABLE services MODIFY COLUMN category ENUM('travel', 'legal', 'research', 'registration', 'ict')");
+        Schema::table('services', function (Blueprint $table) {
+            $table->dropColumn('category');
+        });
+
+        Schema::table('services', function (Blueprint $table) {
+            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict'])->default('travel');
+        });
     }
 }
