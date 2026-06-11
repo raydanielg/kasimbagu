@@ -416,17 +416,78 @@
             <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-list-check me-2"></i>More Practice Areas</span>
         </div>
         <div class="row g-3">
-            @foreach($additionalLegal as $i => $al)
-            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-1">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
                     <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
-                        <i class="bi {{ $al['icon'] }}"></i>
+                        <i class="bi bi-receipt"></i>
                     </div>
-                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">{{ $al['title'] }}</h6>
-                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">{{ $al['desc'] }}</p>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">TRAB & TRAT</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Tax issues resolution</p>
                 </div>
             </div>
-            @endforeach
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-2">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-building"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">COURT</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Litigation services</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-3">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">CMA</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Labour dispute settlements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-4">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">OMBUDSMAN</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Insurance claim settlements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-5">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-hammer"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">ARBITRATION</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Alternative dispute resolution</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-6">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-handshake"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">MEDIATION</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Neutral third-party assistance</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-7">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-chat-heart"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">CONCILLIATION</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Facilitated negotiation process</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-8">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.3s ease;">
+                    <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
+                        <i class="bi bi-chat-square-text"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">NEGOTIATIONS</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">Direct dispute resolution</p>
+                </div>
+            </div>
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
