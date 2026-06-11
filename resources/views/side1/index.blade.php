@@ -510,7 +510,7 @@
         </div>
         <div class="row g-4">
             @foreach($research as $i => $r)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $r['bg'] }};color:{{ $r['color'] }};">
                         <i class="bi {{ $r['icon'] }}"></i>
@@ -523,7 +523,7 @@
             @endforeach
         </div>
         <div class="row g-4 mt-4">
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-1">
+            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-1">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
                         <i class="bi bi-file-earmark-person"></i>
@@ -533,7 +533,7 @@
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-2">
+            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-2">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
                         <i class="bi bi-diagram-3"></i>
@@ -543,7 +543,7 @@
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-3">
+            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-3">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
                         <i class="bi bi-mortarboard-fill"></i>
@@ -553,7 +553,7 @@
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-4">
+            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-4">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
                         <i class="bi bi-book"></i>
