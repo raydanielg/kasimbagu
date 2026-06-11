@@ -212,7 +212,7 @@
                 <div class="col-lg-7 col-md-12 ms-auto text-end">
                     <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company &amp; Org. Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
-                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Company registration, organizational structuring, construction company setup, and SACCO's registration — comprehensive business formation services.</p>
+                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Company registration, organizational structuring, construction company setup, and SACCOS registration — comprehensive business formation services.</p>
                     <a href="#company" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Get Started</a>
                 </div>
             </div>

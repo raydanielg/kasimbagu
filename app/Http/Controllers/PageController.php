@@ -90,7 +90,7 @@ class PageController extends Controller
             ['icon'=>'bi-building-fill-check','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Company Registration','desc'=>'Full BRELA registration, TIN, Business License, VAT, and all statutory requirements for new companies and partnerships.'],
             ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
             ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
-            ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO\'s, and savings group institutions.'],
+            ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCOS, and savings group institutions.'],
         ];
 
         $ngoServices = [
