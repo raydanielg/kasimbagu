@@ -13,18 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('side1.index');
-})->name('home');
+Route::get('/', [App\Http\Controllers\PageController::class, 'side1Index'])->name('home');
 
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 // Site 1: Kasimbagu Consultancy Agency
-Route::get('/consultacy', function () {
-    return view('side1.index');
-})->name('consultacy');
+Route::get('/consultacy', [App\Http\Controllers\PageController::class, 'side1Index'])->name('consultacy');
 
 // Site 2: Kasimbagu Travelling Agency
 Route::get('/travel', function () {
