@@ -183,58 +183,6 @@
 </section>
 
 {{-- ══════════════════════════════════════════
-     TANZANIA SAFARIS
-══════════════════════════════════════════ --}}
-<section class="py-5 overflow-hidden" id="safaris" style="background:#020c1d;">
-    <div class="container py-4">
-        <div class="row align-items-end mb-5">
-            <div class="col-lg-6">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.3);color:#22c55e;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TANZANIA SAFARIS</span>
-                <h2 class="display-5 fw-bold mb-3 text-white">Experience <span style="color:#22c55e;">Wild Tanzania</span></h2>
-                <p class="text-secondary lead">Discover the magic of Tanzania's national parks, wildlife, and breathtaking landscapes.</p>
-            </div>
-            <div class="col-lg-6 text-lg-end">
-                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#22c55e;">Book Safari <i class="bi bi-arrow-right ms-2"></i></a>
-            </div>
-        </div>
-        <div class="row g-4">
-            @php
-            $safaris = [
-                ['name'=>'Serengeti National Park','desc'=>'Witness the Great Migration and Big Five in their natural habitat','img'=>'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80','price'=>'From $250/day','duration'=>'3-7 Days'],
-                ['name'=>'Ngorongoro Crater','desc'=>'Explore the world\'s largest volcanic caldera with incredible wildlife density','img'=>'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=600&q=80','price'=>'From $280/day','duration'=>'2-3 Days'],
-                ['name'=>'Mount Kilimanjaro','desc'=>'Climb Africa\'s highest peak through scenic routes and diverse ecosystems','img'=>'https://images.unsplash.com/photo-1609766857071-0e0b3a9f4c19?w=600&q=80','price'=>'From $1,200','duration'=>'5-9 Days'],
-                ['name'=>'Zanzibar Beach','desc'=>'Relax on pristine beaches with rich Swahili culture and historic Stone Town','img'=>'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80','price'=>'From $150/day','duration'=>'2-5 Days'],
-                ['name'=>'Tarangire National Park','desc'=>'See massive elephant herds and ancient baobab trees','img'=>'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80','price'=>'From $200/day','duration'=>'2-3 Days'],
-                ['name'=>'Lake Manyara','desc'=>'Experience tree-climbing lions and diverse birdlife','img'=>'https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80','price'=>'From $180/day','duration'=>'1-2 Days'],
-            ];
-            @endphp
-            @foreach($safaris as $s)
-            <div class="col-lg-4 col-md-6">
-                <div class="k2-safari-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:280px;">
-                    <img src="{{ $s['img'] }}" alt="{{ $s['name'] }}" class="w-100 h-100 k2-safari-img" style="object-fit:cover;transition:transform 0.5s ease;">
-                    <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(2,12,28,0.9) 0%,rgba(2,12,28,0.2) 60%);"></div>
-                    <div class="position-absolute bottom-0 start-0 p-4 w-100">
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(34,197,94,0.2);border:1px solid rgba(34,197,94,0.4);color:#22c55e;font-size:0.7rem;">{{ $s['duration'] }}</span>
-                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(56,189,248,0.2);border:1px solid rgba(56,189,248,0.4);color:#38bdf8;font-size:0.7rem;">{{ $s['price'] }}</span>
-                        </div>
-                        <h5 class="text-white fw-bold mb-2" style="font-size:1.1rem;">{{ $s['name'] }}</h5>
-                        <p style="color:rgba(255,255,255,0.7);font-size:0.85rem;line-height:1.5;">{{ $s['desc'] }}</p>
-                        <a href="javascript:void(0)" onclick="openBookingModal('{{ $s['name'] }}', 'safari')" class="fw-bold text-decoration-none small" style="color:#22c55e;">Book Now <i class="bi bi-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-<style>
-    .k2-safari-card:hover .k2-safari-img { transform: scale(1.07); }
-    .k2-safari-card { cursor: pointer; transition: box-shadow 0.3s; }
-    .k2-safari-card:hover { box-shadow: 0 20px 50px rgba(34,197,94,0.2) !important; }
-</style>
-
-{{-- ══════════════════════════════════════════
      SERVICES
 ══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="services">
