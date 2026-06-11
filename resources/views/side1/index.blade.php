@@ -39,6 +39,63 @@
     .k1-stagger-5 { transition-delay: 0.5s; }
     .k1-stagger-6 { transition-delay: 0.6s; }
     
+    /* ── NGO Service Cards ── */
+    .ngo-service-card {
+        background: #f0fdf4;
+        border: 2px solid #d1fae5;
+        transition: all 0.3s ease;
+    }
+    .ngo-service-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #10b981, #059669);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-size: 1.4rem;
+        color: white;
+        box-shadow: 0 4px 12px rgba(16,185,129,0.25);
+    }
+    .ngo-service-title {
+        color: #065f46;
+        font-size: 1.05rem;
+    }
+    .ngo-service-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+    
+    /* ── TRA Service Cards ── */
+    .tra-service-card {
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(251,146,60,0.2);
+        transition: all 0.3s ease;
+    }
+    .tra-service-icon {
+        width: 56px;
+        height: 56px;
+        background: rgba(251,146,60,0.15);
+        border: 2px solid rgba(251,146,60,0.3);
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        font-size: 1.4rem;
+        color: #fb923c;
+    }
+    .tra-service-title {
+        color: white;
+        font-size: 1.05rem;
+    }
+    .tra-service-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        opacity: 0.85;
+    }
+    
     /* ── Interface cards ── */
     .k1-iface-card { border-radius:20px; overflow:hidden; position:relative; height:360px; cursor:pointer; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
     .k1-iface-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
