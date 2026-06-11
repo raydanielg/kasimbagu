@@ -681,7 +681,7 @@
             </div>
         </div>
         <div class="row g-4">
-            @forelse($blogs ?? [] as $blog)
+            @forelse($blogs ?? [] as $i => $blog)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
                 <div class="k1-blog-card h-100" style="border-radius:16px;overflow:hidden;border:1px solid #e8d9b8;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);background:#fff;">
                     <div style="overflow:hidden;position:relative;">
