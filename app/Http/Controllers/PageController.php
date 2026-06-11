@@ -91,6 +91,13 @@ class PageController extends Controller
             ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
             ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
             ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCOS, and savings group institutions.'],
+            ['icon'=>'bi-people-fill','color'=>'#8b5cf6','bg'=>'rgba(139,92,246,0.12)','title'=>'Partnership Registration','desc'=>'Formal partnership registration with BRELA, partnership agreements, and compliance setup for business partnerships.'],
+            ['icon'=>'bi-person-fill','color'=>'#06b6d4','bg'=>'rgba(6,182,212,0.12)','title'=>'Sole Proprietorship Registration','desc'=>'Individual business registration, TIN, business license, and compliance for sole proprietor businesses.'],
+            ['icon'=>'bi-currency-exchange','color'=>'#10b981','bg'=>'rgba(16,185,129,0.12)','title'=>'Forex and Bureau de Change Registration','desc'=>'Complete registration and licensing for forex bureaus and Bureau de Change operations in Tanzania.'],
+            ['icon'=>'bi-truck','color'=>'#f59e0b','bg'=>'rgba(245,158,11,0.12)','title'=>'Logistics and Transportation Compliances','desc'=>'TRA, SUMATRA, and regulatory compliance for logistics and transportation companies.'],
+            ['icon'=>'bi-box-seam','color'=>'#ef4444','bg'=>'rgba(239,68,68,0.12)','title'=>'Freights Clearing and Forwarding Compliances','desc'=>'TICTA, TRA, and customs compliance for clearing and forwarding companies.'],
+            ['icon'=>'bi-passport','color'=>'#3b82f6','bg'=>'rgba(59,130,246,0.12)','title'=>'Passport and Visa Application','desc'=>'Passport application, visa processing, and immigration documentation services.'],
+            ['icon'=>'bi-house-door-fill','color'=>'#8b5cf6','bg'=>'rgba(139,92,246,0.12)','title'=>'Work and Residence Permits Applications','desc'=>'Work permit, residence permit, and immigration permit applications for foreign nationals.'],
         ];
 
         $ngoServices = [
