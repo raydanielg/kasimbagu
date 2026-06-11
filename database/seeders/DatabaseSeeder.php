@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         $this->call(TRAServiceSeeder::class);
         $this->call(BlogSeeder::class);
         $this->call(EventSeeder::class);
+        $this->call(DestinationSeeder::class);
     }
 }
