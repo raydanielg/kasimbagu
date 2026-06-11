@@ -151,6 +151,8 @@
                         <li><a class="dropdown-item" href="#legal"><i class="bi bi-journal-richtext text-gold"></i>Legal Activities</a></li>
                         <li><a class="dropdown-item" href="#research"><i class="bi bi-search text-gold"></i>Research &amp; Consultancy</a></li>
                         <li><a class="dropdown-item" href="#company"><i class="bi bi-building-fill text-gold"></i>Company &amp; Org. Management</a></li>
+                        <li><a class="dropdown-item" href="#company"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts Registration</a></li>
+                        <li><a class="dropdown-item" href="#company"><i class="bi bi-receipt text-gold"></i>TRA &amp; TAX Compliances</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('events.index') }}">Events</a></li>
