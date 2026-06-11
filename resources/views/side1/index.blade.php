@@ -450,23 +450,103 @@
             @php
             $company = [
                 ['icon'=>'bi-building-fill-check','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Company Registration','desc'=>'Full BRELA registration, TIN, Business License, VAT, and all statutory requirements for new companies and partnerships.'],
-                ['icon'=>'bi-people-fill','color'=>'#34d399','bg'=>'rgba(16,185,129,0.08)','title'=>'NGO Registration','desc'=>'Registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.'],
-                ['icon'=>'bi-house-heart-fill','color'=>'#10b981','bg'=>'rgba(16,185,129,0.08)','title'=>'CBO Registration','desc'=>'Registration of Community-Based Organizations for grassroots development and community initiatives.'],
-                ['icon'=>'bi-globe2','color'=>'#059669','bg'=>'rgba(5,150,105,0.08)','title'=>'CSO Registration','desc'=>'Registration of Civil Society Organizations for advocacy, civic engagement, and social development.'],
-                ['icon'=>'bi-heart-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Charity Registration','desc'=>'Registration of charitable organizations for philanthropic activities and social welfare programs.'],
-                ['icon'=>'bi-building-exclamation','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Foundation Registration','desc'=>'Registration of foundations for grant-making, charitable endowments, and institutional philanthropy.'],
-                ['icon'=>'bi-people','color'=>'#0f766e','bg'=>'rgba(15,118,110,0.08)','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
-                ['icon'=>'bi-shield-lock-fill','color'=>'#115e59','bg'=>'rgba(17,94,89,0.08)','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
+                ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
                 ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
                 ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO, and savings group institutions.'],
-                ['icon'=>'bi-receipt','color'=>'#a78bfa','bg'=>'rgba(124,58,237,0.08)','title'=>'TIN Registration','desc'=>'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.'],
-                ['icon'=>'bi-percent','color'=>'#f472b6','bg'=>'rgba(236,72,153,0.08)','title'=>'VAT Registration','desc'=>'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.'],
-                ['icon'=>'bi-file-earmark-text','color'=>'#fb923c','bg'=>'rgba(251,146,60,0.08)','title'=>'Tax Returns Filing','desc'=>'Professional tax returns filing services for corporate and individual taxpayers with TRA compliance.'],
-                ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
             ];
             @endphp
             @foreach($company as $i => $sv)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
+                <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
+                    <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
+                        <i class="bi {{ $sv['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2" style="color:white !important;">{!! $sv['title'] !!}</h5>
+                    <p class="text-white mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#60a5fa;">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- ═══ NGO REGISTRATION SERVICES ═══ --}}
+<section class="py-5 bg-white k1-animate-on-scroll">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="k1-section-badge" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.3);color:#10b981;"><i class="bi bi-people-fill me-2"></i>NGO & Social Organizations</span>
+            <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">NGO <span style="color:#10b981;">Registration Services</span></h2>
+            <p class="text-secondary mx-auto mt-3" style="max-width:680px;">Complete registration and compliance services for NGOs, CBOs, CSOs, Charities, Foundations, Societies, and Trusts.</p>
+        </div>
+        <div class="row g-4">
+            @php
+            $ngoServices = [
+                ['icon'=>'bi-people-fill','color'=>'#10b981','title'=>'NGO Registration','desc'=>'Full registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.'],
+                ['icon'=>'bi-house-heart-fill','color'=>'#059669','title'=>'CBO Registration','desc'=>'Registration of Community-Based Organizations for grassroots development and community initiatives.'],
+                ['icon'=>'bi-globe2','color'=>'#047857','title'=>'CSO Registration','desc'=>'Registration of Civil Society Organizations for advocacy, civic engagement, and social development.'],
+                ['icon'=>'bi-heart-fill','color'=>'#0d9488','title'=>'Charity Registration','desc'=>'Registration of charitable organizations for philanthropic activities and social welfare programs.'],
+                ['icon'=>'bi-building-exclamation','color'=>'#0f766e','title'=>'Foundation Registration','desc'=>'Registration of foundations for grant-making, charitable endowments, and institutional philanthropy.'],
+                ['icon'=>'bi-people','color'=>'#115e59','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
+                ['icon'=>'bi-shield-lock-fill','color':'#065f46','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
+            ];
+            @endphp
+            @foreach($ngoServices as $i => $ng)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+                <div class="p-4 rounded-3 h-100" style="background:#f0fdf4;border:2px solid #d1fae5;transition:all 0.3s ease;">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,#10b981,#059669);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;color:white;box-shadow:0 4px 12px rgba(16,185,129,0.25);">
+                        <i class="bi {{ $ng['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 text-center" style="color:#065f46;font-size:1.05rem;">{{ $ng['title'] }}</h5>
+                    <p class="text-secondary mb-0 text-center" style="font-size:0.88rem;line-height:1.6;">{{ $ng['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-5">
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#10b981;">Register NGO <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+{{-- ═══ TRA COMPLIANCE SERVICES ═══ --}}
+<section class="py-5 k1-animate-on-scroll" style="background:linear-gradient(135deg,#1e3a5f 0%,#2d4a6f 100%);">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
+            <h2 class="display-4 fw-bold mt-2 text-white" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
+            <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
+        </div>
+        <div class="row g-4">
+            @php
+            $traServices = [
+                ['icon'=>'bi-receipt','color'=>'#fb923c','title'=>'TIN Registration','desc'=>'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.'],
+                ['icon'=>'bi-percent','color'=>'#f472b6','title'=>'VAT Registration','desc'=>'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.'],
+                ['icon'=>'bi-file-earmark-text','color'=>'#a78bfa','title'=>'Tax Returns Filing','desc'=>'Professional tax returns filing services for corporate and individual taxpayers with TRA compliance.'],
+                ['icon'=>'bi-cash-coin','color'=>'#60a5fa','title'=>'Tax Advisory','desc':'Strategic tax planning, consultation, and advisory services for optimal tax compliance and efficiency.'],
+                ['icon'=>'bi-shield-check','color'=>'#34d399','title'=>'Tax Compliance Audit','desc'=>'Comprehensive tax compliance audits to ensure full adherence to TRA regulations and requirements.'],
+                ['icon'=>'bi-graph-up','color'=>'#f87171','title'=>'Tax Dispute Resolution','desc'=>'Expert representation and resolution services for tax disputes, assessments, and negotiations with TRA.'],
+            ];
+            @endphp
+            @foreach($traServices as $i => $tr)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+                <div class="p-4 rounded-3 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(251,146,60,0.2);transition:all 0.3s ease;">
+                    <div style="width:56px;height:56px;background:rgba(251,146,60,0.15);border:2px solid rgba(251,146,60,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;color:#fb923c;">
+                        <i class="bi {{ $tr['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 text-center" style="color:white;font-size:1.05rem;">{{ $tr['title'] }}</h5>
+                    <p class="text-white mb-0 text-center" style="font-size:0.88rem;line-height:1.6;opacity:0.85;">{{ $tr['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-5">
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#fb923c;">Get TRA Compliance <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+{{-- ═══ INTERFACE 3: COMPANY & ORG MANAGEMENT ═══ --}}
                 <div class="k1-svc-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
