@@ -37,7 +37,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'VAT Registration',
                 'slug' => 'vat-registration',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-percent',
                 'icon_color' => '#f472b6',
                 'short_description' => 'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.',
@@ -58,7 +58,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'Tax Returns Filing',
                 'slug' => 'tax-returns-filing',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-file-earmark-text',
                 'icon_color' => '#a78bfa',
                 'short_description' => 'Professional tax returns filing services for corporate and individual taxpayers with TRA compliance.',
@@ -79,7 +79,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'Tax Advisory',
                 'slug' => 'tax-advisory',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-cash-coin',
                 'icon_color' => '#60a5fa',
                 'short_description' => 'Strategic tax planning, consultation, and advisory services for optimal tax compliance and efficiency.',
