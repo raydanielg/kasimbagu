@@ -261,16 +261,6 @@
             <div class="k1-section-divider mx-auto"></div>
         </div>
         <div class="row g-4">
-            <?php
-            $values = [
-                ['icon'=>'bi-shield-fill-check','color'=>'#c9993a','bg'=>'rgba(201,153,58,0.1)','title'=>'Integrity','desc'=>'We operate with complete honesty, transparency, and ethical standards in every client engagement.'],
-                ['icon'=>'bi-award-fill','color'=>'#1d4ed8','bg'=>'rgba(29,78,216,0.08)','title'=>'Excellence','desc'=>'We are committed to delivering the highest quality of work, always exceeding expectations.'],
-                ['icon'=>'bi-lightbulb-fill','color'=>'#d97706','bg'=>'rgba(217,119,6,0.08)','title'=>'Innovation','desc'=>'We embrace creative, modern approaches to solve complex legal and business challenges.'],
-                ['icon'=>'bi-people-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Client Focus','desc'=>'Our clients are at the heart of everything we do — approachable, responsive, and relationship-driven.'],
-                ['icon'=>'bi-check2-circle','color'=>'#7c3aed','bg'=>'rgba(124,58,237,0.08)','title'=>'Accountability','desc'=>'We take full responsibility for our work and stand behind every service we deliver.'],
-                ['icon'=>'bi-globe2','color'=>'#dc2626','bg'=>'rgba(220,38,38,0.08)','title'=>'Impact','desc'=>'We measure our success by the tangible difference we make in clients\' lives and organizations.'],
-            ];
-            ?>
             @foreach($values as $v)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-value-card">
@@ -365,26 +355,6 @@
                 ['icon'=>'bi-gavel','color'=>'#e8b84b','title'=>'Criminal Law','desc'=>'Criminal defence, white-collar crime, fraud cases, and comprehensive criminal litigation support.'],
                 ['icon'=>'bi-briefcase','color'=>'#c9993a','title'=>'Employment Law','desc'=>'Employment contracts, labour disputes, workplace policies, and HR legal compliance.'],
                 ['icon'=>'bi-shield-plus','color'=>'#e8b84b','title'=>'Insurance Law','desc'=>'Insurance claims, policy drafting, regulatory compliance, and risk transfer advisory.'],
-                ['icon'=>'bi-lightbulb','color'=>'#c9993a','title'=>'Intellectual Property','desc'=>'Trademark registration, patent protection, copyright enforcement, and IP portfolio management.'],
-                ['icon'=>'bi-hammer','color'=>'#e8b84b','title'=>'Litigation','desc'=>'Civil and commercial litigation, dispute resolution, court representation, and legal advocacy.'],
-                ['icon'=>'bi-gem','color'=>'#c9993a','title'=>'Mining Laws','desc'=>'Mining licenses, environmental compliance, mineral rights, and extractive industry regulations.'],
-                ['icon'=>'bi-fuel-pump','color'=>'#e8b84b','title'=>'Oil &amp; Gas','desc'=>'Upstream and downstream operations, petroleum agreements, regulatory compliance, and energy sector advisory.'],
-                ['icon'=>'bi-graph-up','color'=>'#c9993a','title'=>'Project Finance &amp; International Trade','desc'=>'Project financing, trade agreements, cross-border transactions, and international commerce advisory.'],
-                ['icon'=>'bi-house','color'=>'#e8b84b','title'=>'Real Estate &amp; Conveyancing','desc'=>'Property transactions, title searches, land registration, and real estate development advisory.'],
-                ['icon'=>'bi-cash-coin','color'=>'#c9993a','title'=>'Tax Law','desc'=>'Tax planning, VAT compliance, tax disputes, and comprehensive tax advisory services.'],
-                ['icon'=>'bi-tower','color'=>'#e8b84b','title'=>'Telecommunications','desc'=>'Telecom licensing, regulatory compliance, spectrum management, and communications sector advisory.'],
-            ];
-            ?>
-            @foreach($legal as $i => $sv)
-            <?php $stagger = min($i + 3, 6); ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
-                <div class="k1-svc-card" style="background:rgba(201,153,58,0.05);border-color:rgba(201,153,58,0.12);">
-                    <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
-                        <i class="bi {{ $sv['icon'] }}"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2" style="color:white !important;">{!! $sv['title'] !!}</h5>
-                    <p class="text-white mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:var(--gold);">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
             @endforeach
@@ -425,7 +395,6 @@
             ];
             ?>
             @foreach($additionalLegal as $i => $al)
-            <?php $stagger = min($i + 2, 5); ?>
             <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
                     <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
@@ -434,26 +403,6 @@
                     <h6 class="fw-bold mb-2" style="color:#1a202c;font-size:0.95rem;">{{ $al['title'] }}</h6>
                     <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.5;">{{ $al['desc'] }}</p>
                 </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-{{-- ═══ INTERFACE 2: RESEARCH & CONSULTANCY ═══ --}}
-<section id="research" class="py-5 k1-animate-on-scroll" style="background:#f8f5ef;">
-    <div class="container py-4">
-        <div class="row align-items-center g-5 mb-5">
-            <div class="col-lg-5 col-md-12 k1-animate-left k1-stagger-1">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80" alt="Research" class="img-fluid rounded-4 shadow-lg">
-            </div>
-            <div class="col-lg-7 col-md-12 k1-animate-right k1-stagger-2">
-                <span class="k1-section-badge" style="background:rgba(13,148,136,0.1);border-color:rgba(13,148,136,0.3);color:#0d9488;"><i class="bi bi-search me-2"></i>Interface Two</span>
-                <h2 class="display-4 fw-bold mt-2 mb-3" style="font-family:'EB Garamond',serif;">Research &amp; <span style="color:#0d9488;">Consultancy</span></h2>
-                <p class="text-secondary" style="font-size:1.05rem;line-height:1.85;max-width:560px;">We bridge the gap between academic knowledge and real-world impact. From graduate researchers to international NGOs, we craft compelling, rigorous research documents that open doors and drive change.</p>
-                <div class="d-flex flex-wrap gap-2 mt-4">
-                    @foreach(['Academic Researchers','Graduate Students','NGOs','International Development Partners','Government Institutions'] as $cl)
-                    <span class="badge rounded-0 px-3 py-2" style="background:rgba(13,148,136,0.1);color:#0d9488;border:1px solid rgba(13,148,136,0.25);font-size:0.78rem;">{{ $cl }}</span>
                     @endforeach
                 </div>
             </div>
@@ -470,7 +419,6 @@
             ?>
             @foreach($research as $i => $sv)
             <?php $stagger = min($i + 3, 6); ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -509,15 +457,6 @@
         <div class="row g-4">
             <?php
             $company = [
-                ['icon'=>'bi-building-fill-check','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Company Registration','desc'=>'Full BRELA registration, TIN, Business License, VAT, and all statutory requirements for new companies and partnerships.'],
-                ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
-                ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
-                ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO, and savings group institutions.'],
-            ];
-            ?>
-            @foreach($company as $i => $sv)
-            <?php $stagger = min($i + 3, 6); ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -555,7 +494,6 @@
             @foreach($ngoServices as $i => $ng)
             <?php $stagger = min($i + 2, 5); ?>
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
-                <div class="p-4 rounded-3 h-100 ngo-service-card">
                     <div class="ngo-service-icon">
                         <i class="bi {{ $ng['icon'] }}"></i>
                     </div>
@@ -566,14 +504,6 @@
             @endforeach
         </div>
         <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#10b981;">Register NGO <i class="bi bi-arrow-right ms-2"></i></a>
-        </div>
-    </div>
-</section>
-
-{{-- ═══ TRA COMPLIANCE SERVICES ═══ --}}
-<section class="py-5 k1-animate-on-scroll" style="background:linear-gradient(135deg,#1e3a5f 0%,#2d4a6f 100%);">
-    <div class="container py-4">
         <div class="text-center mb-5">
             <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
             <h2 class="display-4 fw-bold mt-2 text-white" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
@@ -591,17 +521,6 @@
             ];
             ?>
             @foreach($traServices as $i => $tr)
-            <?php $stagger = min($i + 2, 5); ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
-                <div class="p-4 rounded-3 h-100 tra-service-card">
-                    <div class="tra-service-icon">
-                        <i class="bi {{ $tr['icon'] }}"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2 text-center tra-service-title">{{ $tr['title'] }}</h5>
-                    <p class="text-white mb-0 text-center tra-service-desc">{{ $tr['desc'] }}</p>
-                </div>
-            </div>
-            @endforeach
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#fb923c;">Get TRA Compliance <i class="bi bi-arrow-right ms-2"></i></a>
@@ -658,16 +577,6 @@
                             <a href="tel:+255690075672" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 690 075 672</a>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6 k1-animate-scale k1-stagger-4">
-                        <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
-                            <div style="color:#60a5fa;font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building"></i></div>
-                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Branch Office</div>
-                            <div class="text-white fw-bold mb-1">Moshi, Kilimanjaro</div>
-                            <div style="color:#64748b;font-size:0.83rem;">Tanzania</div>
-                            <a href="tel:+255653291058" class="d-block mt-2 text-decoration-none" style="color:#60a5fa;font-size:0.83rem;">+255 653 291 058</a>
-                        </div>
-                    </div>
-                    <div class="col-12">
                         <div class="p-4 rounded-4" style="background:rgba(201,153,58,0.05);border:1px solid rgba(201,153,58,0.15);">
                             <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:12px;">Areas of Practice</div>
                             <div class="d-flex flex-wrap gap-2">
@@ -783,15 +692,6 @@
                 ->take(3)
                 ->get();
             ?>
-            @forelse($dbBlogs as $blog)
-            <div class="col-lg-4 col-md-6">
-                <div class="k1-blog-card">
-                    <div style="overflow:hidden;">
-                        @if($blog->image)
-                        <img src="{{ $blog->image }}" alt="{{ $blog->title }}">
-                        @else
-                        <div style="height: 200px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-journal-text text-white" style="font-size: 3rem; opacity: 0.5;"></i>
                         </div>
                         @endif
                     </div>
@@ -827,14 +727,6 @@
             <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
                 <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Events</a>
             </div>
-        </div>
-        <div class="row g-4">
-            <?php
-            $upcomingEvents = \App\Models\Event::where('is_published', true)
-                ->where('event_date', '>=', now())
-                ->orderBy('event_date', 'asc')
-                ->orderBy('sort_order')
-                ->take(3)
                 ->get();
             ?>
             @forelse($upcomingEvents as $event)
@@ -881,15 +773,6 @@
         <div class="row g-5 align-items-start">
             <div class="col-lg-5 col-md-12">
                 <h5 class="fw-bold mb-4">Our Offices</h5>
-                <div class="d-flex flex-column gap-3 mb-5">
-                    <div class="p-4 rounded-4" style="background:white;border:1px solid #e8d9b8;">
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                            <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-building-fill text-white"></i></div>
-                            <div><div class="fw-bold" style="color:#1a202c;">Head Office</div><div class="text-secondary small">Dar es Salaam, Tanzania</div></div>
-                        </div>
-                        <div class="d-flex flex-column gap-2 ms-1" style="font-size:0.88rem;">
-                            <a href="tel:+255690075672" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill text-gold"></i>+255 690 075 672</a>
-                            <a href="mailto:info@kasimbagu.com" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-envelope-fill text-gold"></i>info@kasimbagu.com</a>
                         </div>
                     </div>
                     <div class="p-4 rounded-4" style="background:white;border:1px solid #e8d9b8;">
@@ -943,15 +826,6 @@
                                         <option>Proposal Writing</option>
                                         <option>Business Plan</option>
                                         <option>Concept Note</option>
-                                    </optgroup>
-                                    <optgroup label="Company Management">
-                                        <option>Company Registration</option>
-                                        <option>NGO/CSO Registration</option>
-                                        <option>Tax Compliance</option>
-                                        <option>Org. Structuring</option>
-                                    </optgroup>
-                                </select>
-                            </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Preferred Office</label>
                                 <select name="destination" class="form-select rounded-3 py-3 border-0 bg-light text-dark">
