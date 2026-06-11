@@ -21,6 +21,9 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])-
 
 // Site 1: Kasimbagu Consultancy Agency
 Route::get('/consultacy', [App\Http\Controllers\PageController::class, 'side1Index'])->name('consultacy');
+Route::get('/company-profile', function () {
+    return view('side1.pdfview');
+})->name('company-profile');
 
 // Site 2: Kasimbagu Travelling Agency
 Route::get('/travel', function () {
