@@ -133,15 +133,15 @@
                 ];
                 @endphp
                 @foreach($dests as $d)
-                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d['city'] }}', 'visa')">
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d['destination'] }}', 'visa')">
                     <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
-                        <img src="{{ $d['img'] }}" alt="{{ $d['city'] }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
+                        <img src="{{ $d['img'] }}" alt="{{ $d['destination'] }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
                         <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(1,12,28,0.85) 0%,rgba(1,12,28,0.1) 60%);"></div>
                         <div class="position-absolute bottom-0 start-0 p-4 w-100">
                             <div class="d-flex align-items-end justify-content-between">
                                 <div>
                                     <div style="margin-bottom:8px;"><i class="bi bi-geo-alt-fill text-info" style="font-size:1.4rem;"></i></div>
-                                    <h5 class="text-white fw-bold mb-0">{{ $d['city'] }}</h5>
+                                    <h5 class="text-white fw-bold mb-0">{{ $d['destination'] }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
                                 </div>
                                 <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
