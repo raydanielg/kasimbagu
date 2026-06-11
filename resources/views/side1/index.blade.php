@@ -364,26 +364,6 @@
             <p class="text-secondary mx-auto mt-3" style="max-width:680px;">From aviation to telecommunications, we provide expert legal counsel across all major sectors and practice areas.</p>
         </div>
         <div class="row g-4">
-            <?php
-            $additionalLegal = [
-                ['icon'=>'bi-airplane','color'=>'#1a202c','title'=>'Aviation','desc'=>'Aircraft registration, leasing, regulatory compliance'],
-                ['icon'=>'bi-bank2','color'=>'#1a202c','title'=>'Banking & Finance','desc'=>'Capital markets, securities, financial transactions'],
-                ['icon'=>'bi-scale','color'=>'#1a202c','title'=>'Competition Law','desc'=>'Antitrust, merger control, market regulation'],
-                ['icon'=>'bi-shield-check','color'=>'#1a202c','title'=>'Compliance','desc'=>'Regulatory compliance, risk management'],
-                ['icon'=>'bi-building','color'=>'#1a202c','title'=>'Corporate Law','desc'=>'M&A, restructuring, commercial transactions'],
-                ['icon'=>'bi-gavel','color'=>'#1a202c','title'=>'Criminal Law','desc'=>'Defence, white-collar crime, litigation'],
-                ['icon'=>'bi-briefcase','color'=>'#1a202c','title'=>'Employment Law','desc'=>'Contracts, labour disputes, HR compliance'],
-                ['icon'=>'bi-shield-plus','color'=>'#1a202c','title'=>'Insurance','desc'=>'Claims, policies, risk transfer'],
-                ['icon'=>'bi-lightbulb','color'=>'#1a202c','title'=>'Intellectual Property','desc'=>'Trademarks, patents, copyright enforcement'],
-                ['icon'=>'bi-hammer','color'=>'#1a202c','title'=>'Litigation','desc'=>'Civil/commercial litigation, dispute resolution'],
-                ['icon'=>'bi-gem','color'=>'#1a202c','title'=>'Mining','desc'=>'Licenses, environmental compliance, mineral rights'],
-                ['icon'=>'bi-fuel-pump','color'=>'#1a202c','title'=>'Oil & Gas','desc'=>'Petroleum agreements, energy sector advisory'],
-                ['icon'=>'bi-graph-up','color'=>'#1a202c','title'=>'Project Finance','desc'=>'Trade agreements, cross-border transactions'],
-                ['icon'=>'bi-house','color'=>'#1a202c','title'=>'Real Estate','desc'=>'Property transactions, conveyancing'],
-                ['icon'=>'bi-cash-coin','color'=>'#1a202c','title'=>'Tax Law','desc'=>'Tax planning, VAT, dispute resolution'],
-                ['icon'=>'bi-tower','color'=>'#1a202c','title'=>'Telecommunications','desc'=>'Licensing, spectrum, regulatory compliance'],
-            ];
-            ?>
             @foreach($additionalLegal as $i => $al)
             <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $i + 2 > 5 ? 5 : $i + 2 }}">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
