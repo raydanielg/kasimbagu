@@ -619,7 +619,7 @@
         </div>
         <div class="row g-4">
             <?php
-            $upcomingEvents = \App\Models\Event::where('date', '>=', now())->orderBy('date')->take(3)->get();
+            $upcomingEvents = \App\Models\Event::where('event_date', '>=', now())->orderBy('event_date')->take(3)->get();
             ?>
             @forelse($upcomingEvents as $event)
             <div class="col-lg-4 col-md-6">
