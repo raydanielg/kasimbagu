@@ -345,16 +345,6 @@
             </div>
         </div>
         <div class="row g-4">
-            <?php
-            $legal = [
-                ['icon'=>'bi-airplane','color'=>'#c9993a','title'=>'Aviation Law','desc'=>'Regulatory compliance, aircraft registration, leasing agreements, and aviation industry legal advisory.'],
-                ['icon'=>'bi-bank2','color'=>'#e8b84b','title'=>'Banking, Finance &amp; Capital Markets','desc'=>'Banking regulations, securities, capital markets, financial transactions, and investment advisory services.'],
-                ['icon'=>'bi-scale','color'=>'#c9993a','title'=>'Competition Laws','desc'=>'Antitrust compliance, merger control, competition regulation, and market conduct advisory.'],
-                ['icon'=>'bi-shield-check','color'=>'#e8b84b','title'=>'Compliance &amp; Advisory','desc'=>'Regulatory compliance, risk management, corporate governance, and legal advisory services.'],
-                ['icon'=>'bi-building','color'=>'#c9993a','title'=>'Corporate Law','desc'=>'Company formation, mergers &amp; acquisitions, corporate restructuring, and commercial transactions.'],
-                ['icon'=>'bi-gavel','color'=>'#e8b84b','title'=>'Criminal Law','desc'=>'Criminal defence, white-collar crime, fraud cases, and comprehensive criminal litigation support.'],
-                ['icon'=>'bi-briefcase','color'=>'#c9993a','title'=>'Employment Law','desc'=>'Employment contracts, labour disputes, workplace policies, and HR legal compliance.'],
-                ['icon'=>'bi-shield-plus','color'=>'#e8b84b','title'=>'Insurance Law','desc'=>'Insurance claims, policy drafting, regulatory compliance, and risk transfer advisory.'],
                 </div>
             </div>
             @endforeach
