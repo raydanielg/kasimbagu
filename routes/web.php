@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    return view('side1.index');
+})->name('home');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 // Site 1: Kasimbagu Consultancy Agency
 Route::get('/consultacy', function () {
@@ -52,6 +52,14 @@ Route::get('/destinations', [App\Http\Controllers\PageController::class, 'destin
 Route::get('/about',        [App\Http\Controllers\PageController::class, 'about'])->name('about');
 Route::get('/contact',      [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
 Route::post('/contact',     [App\Http\Controllers\PageController::class, 'submitContact'])->name('contact.submit');
+
+// ─── Blog Routes (Public) ────────────────────────────────
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [App\Http\Controllers\BlogController::class, 'show'])->name('blog.show');
+
+// ─── Events Routes (Public) ───────────────────────────────
+Route::get('/events', [App\Http\Controllers\EventController::class, 'index'])->name('events.index');
+Route::get('/events/{slug}', [App\Http\Controllers\EventController::class, 'show'])->name('events.show');
 
 // ─── Inquiry handler (saves to DB) ────────────────────────
 Route::post('/inquiry', [App\Http\Controllers\PageController::class, 'submitContact'])->name('inquiry.submit');
@@ -102,4 +110,24 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/destinations/{id}/edit', [App\Http\Controllers\AdminController::class, 'destinationsEdit'])->name('admin.destinations.edit');
     Route::put('/admin/destinations/{id}', [App\Http\Controllers\AdminController::class, 'destinationsUpdate'])->name('admin.destinations.update');
     Route::delete('/admin/destinations/{id}', [App\Http\Controllers\AdminController::class, 'destinationsDestroy'])->name('admin.destinations.destroy');
+
+    // Blogs Management
+    Route::get('/admin/blogs', [App\Http\Controllers\BlogController::class, 'adminIndex'])->name('admin.blogs');
+    Route::get('/admin/blogs/create', [App\Http\Controllers\BlogController::class, 'create'])->name('admin.blogs.create');
+    Route::post('/admin/blogs', [App\Http\Controllers\BlogController::class, 'store'])->name('admin.blogs.store');
+    Route::get('/admin/blogs/{id}', [App\Http\Controllers\BlogController::class, 'adminShow'])->name('admin.blogs.show');
+    Route::get('/admin/blogs/{id}/edit', [App\Http\Controllers\BlogController::class, 'edit'])->name('admin.blogs.edit');
+    Route::put('/admin/blogs/{id}', [App\Http\Controllers\BlogController::class, 'update'])->name('admin.blogs.update');
+    Route::delete('/admin/blogs/{id}', [App\Http\Controllers\BlogController::class, 'destroy'])->name('admin.blogs.destroy');
+    Route::put('/admin/blogs/{id}/toggle', [App\Http\Controllers\BlogController::class, 'togglePublish'])->name('admin.blogs.toggle');
+
+    // Events Management
+    Route::get('/admin/events', [App\Http\Controllers\EventController::class, 'adminIndex'])->name('admin.events');
+    Route::get('/admin/events/create', [App\Http\Controllers\EventController::class, 'create'])->name('admin.events.create');
+    Route::post('/admin/events', [App\Http\Controllers\EventController::class, 'store'])->name('admin.events.store');
+    Route::get('/admin/events/{id}', [App\Http\Controllers\EventController::class, 'adminShow'])->name('admin.events.show');
+    Route::get('/admin/events/{id}/edit', [App\Http\Controllers\EventController::class, 'edit'])->name('admin.events.edit');
+    Route::put('/admin/events/{id}', [App\Http\Controllers\EventController::class, 'update'])->name('admin.events.update');
+    Route::delete('/admin/events/{id}', [App\Http\Controllers\EventController::class, 'destroy'])->name('admin.events.destroy');
+    Route::put('/admin/events/{id}/toggle', [App\Http\Controllers\EventController::class, 'togglePublish'])->name('admin.events.toggle');
 });

@@ -290,6 +290,94 @@
 </section>
 
 {{-- ══════════════════════════════════════════
+     TRAVEL BLOG / INSIGHTS
+═══════════════════════════════════════════ --}}
+<section class="py-5 bg-white" id="blog">
+    <div class="container py-4">
+        <div class="row align-items-end mb-5">
+            <div class="col-lg-7">
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TRAVEL INSIGHTS</span>
+                <h2 class="display-5 fw-bold mb-3">Travel Tips & <span style="color:#0284c7;">Stories</span></h2>
+                <p class="text-secondary lead">Expert travel advice, destination guides, and visa tips.</p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+                <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0284c7;">View All Blogs <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+        <div class="row g-4">
+            @php
+            $travelBlogs = \App\Models\Blog::where('is_published', true)
+                ->where('category', 'Travel')
+                ->orderBy('published_at', 'desc')
+                ->orderBy('sort_order')
+                ->take(3)
+                ->get();
+            @endphp
+            @forelse($travelBlogs as $blog)
+            <div class="col-lg-4 col-md-6">
+                <div class="rounded-4 overflow-hidden shadow-sm" style="background:white;border:1px solid #e0f2fe;transition:all 0.3s;">
+                    <div style="overflow:hidden;">
+                        @if($blog->image)
+                        <img src="{{ $blog->image }}" alt="{{ $blog->title }}" style="height: 200px; width: 100%; object-fit: cover;">
+                        @else
+                        <div style="height: 200px; background: linear-gradient(135deg, #0284c7, #38bdf8); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-airplane text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.72rem;">{{ $blog->category }}</span>
+                            <span class="text-secondary small">{{ $blog->published_at ? $blog->published_at->format('M Y') : '' }}</span>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="font-size:1.1rem;line-height:1.4;">{{ $blog->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;">{{ Str::limit($blog->excerpt, 100) }}</p>
+                        <a href="{{ route('blog.show', $blog->slug) }}" class="fw-bold text-decoration-none small" style="color:#0284c7;">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            @empty
+            @php
+            $allBlogs = \App\Models\Blog::where('is_published', true)
+                ->orderBy('published_at', 'desc')
+                ->orderBy('sort_order')
+                ->take(3)
+                ->get();
+            @endphp
+            @forelse($allBlogs as $blog)
+            <div class="col-lg-4 col-md-6">
+                <div class="rounded-4 overflow-hidden shadow-sm" style="background:white;border:1px solid #e0f2fe;transition:all 0.3s;">
+                    <div style="overflow:hidden;">
+                        @if($blog->image)
+                        <img src="{{ $blog->image }}" alt="{{ $blog->title }}" style="height: 200px; width: 100%; object-fit: cover;">
+                        @else
+                        <div style="height: 200px; background: linear-gradient(135deg, #0284c7, #38bdf8); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-airplane text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.72rem;">{{ $blog->category }}</span>
+                            <span class="text-secondary small">{{ $blog->published_at ? $blog->published_at->format('M Y') : '' }}</span>
+                        </div>
+                        <h5 class="fw-bold mb-2" style="font-size:1.1rem;line-height:1.4;">{{ $blog->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;">{{ Str::limit($blog->excerpt, 100) }}</p>
+                        <a href="{{ route('blog.show', $blog->slug) }}" class="fw-bold text-decoration-none small" style="color:#0284c7;">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            @empty
+            <div class="col-12 text-center py-5">
+                <p class="text-secondary">No blog posts available yet.</p>
+            </div>
+            @endforelse
+            @endforelse
+        </div>
+    </div>
+</section>
+
+{{-- ══════════════════════════════════════════
      CONTACT / BOOKING FORM
 ══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="contact">

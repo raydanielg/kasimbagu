@@ -300,17 +300,26 @@
         <div class="row g-4">
             @php
             $legal = [
-                ['icon'=>'bi-bank','color'=>'#c9993a','title'=>'Litigation &amp; Mediation','desc'=>'Professional representation in court proceedings and skilled mediation to resolve disputes efficiently and cost-effectively.'],
-                ['icon'=>'bi-file-earmark-ruled','color'=>'#e8b84b','title'=>'Arbitration &amp; Business Formation','desc'=>'Expert arbitration services and legal guidance for business formation, partnerships, and joint ventures.'],
-                ['icon'=>'bi-file-earmark-text-fill','color'=>'#c9993a','title'=>'Contract Review','desc'=>'Thorough review, drafting, and negotiation of contracts to protect your interests and ensure enforceability.'],
-                ['icon'=>'bi-airplane-fill','color'=>'#e8b84b','title'=>'Immigration Law','desc'=>'Work permits, residence permits, citizenship applications, and full immigration advisory services for individuals and companies.'],
-                ['icon'=>'bi-house-heart-fill','color'=>'#c9993a','title'=>'Family Law Support','desc'=>'Compassionate guidance on divorce, child custody, inheritance, and all family law matters with sensitivity and discretion.'],
-                ['icon'=>'bi-shield-fill-exclamation','color'=>'#e8b84b','title'=>'Criminal Defence &amp; Land Conflicts','desc'=>'Strong criminal defence representation and resolution of land disputes, boundary conflicts, and property rights cases.'],
-                ['icon'=>'bi-people-fill','color'=>'#c9993a','title'=>'Legal Consultations &amp; Representation','desc'=>'General legal consultations, advisory sessions, and full court representation across civil, commercial, and administrative matters.'],
+                ['icon'=>'bi-airplane','color'=>'#c9993a','title'=>'Aviation Law','desc'=>'Regulatory compliance, aircraft registration, leasing agreements, and aviation industry legal advisory.'],
+                ['icon'=>'bi-bank2','color'=>'#e8b84b','title'=>'Banking, Finance &amp; Capital Markets','desc'=>'Banking regulations, securities, capital markets, financial transactions, and investment advisory services.'],
+                ['icon'=>'bi-scale','color'=>'#c9993a','title'=>'Competition Laws','desc'=>'Antitrust compliance, merger control, competition regulation, and market conduct advisory.'],
+                ['icon'=>'bi-shield-check','color'=>'#e8b84b','title'=>'Compliance &amp; Advisory','desc'=>'Regulatory compliance, risk management, corporate governance, and legal advisory services.'],
+                ['icon'=>'bi-building','color'=>'#c9993a','title'=>'Corporate Law','desc'=>'Company formation, mergers &amp; acquisitions, corporate restructuring, and commercial transactions.'],
+                ['icon'=>'bi-gavel','color'=>'#e8b84b','title'=>'Criminal Law','desc'=>'Criminal defence, white-collar crime, fraud cases, and comprehensive criminal litigation support.'],
+                ['icon'=>'bi-briefcase','color'=>'#c9993a','title'=>'Employment Law','desc'=>'Employment contracts, labour disputes, workplace policies, and HR legal compliance.'],
+                ['icon'=>'bi-shield-plus','color'=>'#e8b84b','title'=>'Insurance Law','desc'=>'Insurance claims, policy drafting, regulatory compliance, and risk transfer advisory.'],
+                ['icon'=>'bi-lightbulb','color'=>'#c9993a','title'=>'Intellectual Property','desc'=>'Trademark registration, patent protection, copyright enforcement, and IP portfolio management.'],
+                ['icon'=>'bi-hammer','color'=>'#e8b84b','title'=>'Litigation','desc'=>'Civil and commercial litigation, dispute resolution, court representation, and legal advocacy.'],
+                ['icon'=>'bi-gem','color'=>'#c9993a','title'=>'Mining Laws','desc'=>'Mining licenses, environmental compliance, mineral rights, and extractive industry regulations.'],
+                ['icon'=>'bi-fuel-pump','color'=>'#e8b84b','title'=>'Oil &amp; Gas','desc'=>'Upstream and downstream operations, petroleum agreements, regulatory compliance, and energy sector advisory.'],
+                ['icon'=>'bi-graph-up','color'=>'#c9993a','title'=>'Project Finance &amp; International Trade','desc'=>'Project financing, trade agreements, cross-border transactions, and international commerce advisory.'],
+                ['icon'=>'bi-house','color'=>'#e8b84b','title'=>'Real Estate &amp; Conveyancing','desc'=>'Property transactions, title searches, land registration, and real estate development advisory.'],
+                ['icon'=>'bi-cash-coin','color'=>'#c9993a','title'=>'Tax Law','desc'=>'Tax planning, VAT compliance, tax disputes, and comprehensive tax advisory services.'],
+                ['icon'=>'bi-tower','color'=>'#e8b84b','title'=>'Telecommunications','desc'=>'Telecom licensing, regulatory compliance, spectrum management, and communications sector advisory.'],
             ];
             @endphp
             @foreach($legal as $i => $sv)
-            <div class="col-lg-4 col-md-6 {{ $i===6 ? 'col-lg-12' : '' }} k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
                 <div class="k1-svc-card" style="background:rgba(201,153,58,0.05);border-color:rgba(201,153,58,0.12);">
                     <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -324,6 +333,50 @@
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+{{-- ═══ ADDITIONAL LEGAL PRACTICE AREAS ═══ --}}
+<section class="py-5 bg-white k1-animate-on-scroll">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-list-check me-2"></i>Comprehensive Legal Coverage</span>
+            <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">Full Spectrum <span style="color:var(--gold);">Legal Services</span></h2>
+            <p class="text-secondary mx-auto mt-3" style="max-width:680px;">From aviation to telecommunications, we provide expert legal counsel across all major sectors and practice areas.</p>
+        </div>
+        <div class="row g-4">
+            @php
+            $additionalLegal = [
+                ['icon'=>'bi-airplane','color'=>'#1a202c','title'=>'Aviation','desc'=>'Aircraft registration, leasing, regulatory compliance'],
+                ['icon'=>'bi-bank2','color'=>'#1a202c','title'=>'Banking & Finance','desc'=>'Capital markets, securities, financial transactions'],
+                ['icon'=>'bi-scale','color'=>'#1a202c','title'=>'Competition Law','desc'=>'Antitrust, merger control, market regulation'],
+                ['icon'=>'bi-shield-check','color'=>'#1a202c','title'=>'Compliance','desc'=>'Regulatory compliance, risk management'],
+                ['icon'=>'bi-building','color'=>'#1a202c','title'=>'Corporate Law','desc'=>'M&A, restructuring, commercial transactions'],
+                ['icon'=>'bi-gavel','color'=>'#1a202c','title'=>'Criminal Law','desc'=>'Defence, white-collar crime, litigation'],
+                ['icon'=>'bi-briefcase','color'=>'#1a202c','title'=>'Employment Law','desc'=>'Contracts, labour disputes, HR compliance'],
+                ['icon'=>'bi-shield-plus','color'=>'#1a202c','title'=>'Insurance','desc'=>'Claims, policies, risk transfer'],
+                ['icon'=>'bi-lightbulb','color'=>'#1a202c','title'=>'Intellectual Property','desc'=>'Trademarks, patents, copyright enforcement'],
+                ['icon'=>'bi-hammer','color'=>'#1a202c','title'=>'Litigation','desc'=>'Civil/commercial litigation, dispute resolution'],
+                ['icon'=>'bi-gem','color'=>'#1a202c','title'=>'Mining','desc'=>'Licenses, environmental compliance, mineral rights'],
+                ['icon'=>'bi-fuel-pump','color'=>'#1a202c','title'=>'Oil & Gas','desc'=>'Petroleum agreements, energy sector advisory'],
+                ['icon'=>'bi-graph-up','color'=>'#1a202c','title'=>'Project Finance','desc'=>'Trade agreements, cross-border transactions'],
+                ['icon'=>'bi-house','color'=>'#1a202c','title'=>'Real Estate','desc'=>'Property transactions, conveyancing'],
+                ['icon'=>'bi-cash-coin','color'=>'#1a202c','title'=>'Tax Law','desc'=>'Tax planning, VAT, dispute resolution'],
+                ['icon'=>'bi-tower','color'=>'#1a202c','title'=>'Telecommunications','desc'=>'Licensing, spectrum, regulatory compliance'],
+            ];
+            @endphp
+            @foreach($additionalLegal as $i => $al)
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+                <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
+                    <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
+                        <i class="bi {{ $al['icon'] }}"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2" style="color:#1a202c;font-size:0.95rem;">{{ $al['title'] }}</h6>
+                    <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.5;">{{ $al['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -397,10 +450,18 @@
             @php
             $company = [
                 ['icon'=>'bi-building-fill-check','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Company Registration','desc'=>'Full BRELA registration, TIN, Business License, VAT, and all statutory requirements for new companies and partnerships.'],
-                ['icon'=>'bi-heart-pulse-fill','color'=>'#34d399','bg'=>'rgba(16,185,129,0.08)','title'=>'NGO / CSO / CBO Registration','desc'=>'Complete registration and compliance setup for non-governmental organizations, civil society organizations, and community-based organizations.'],
+                ['icon'=>'bi-people-fill','color'=>'#34d399','bg'=>'rgba(16,185,129,0.08)','title'=>'NGO Registration','desc'=>'Registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.'],
+                ['icon'=>'bi-house-heart-fill','color'=>'#10b981','bg'=>'rgba(16,185,129,0.08)','title'=>'CBO Registration','desc'=>'Registration of Community-Based Organizations for grassroots development and community initiatives.'],
+                ['icon'=>'bi-globe2','color'=>'#059669','bg'=>'rgba(5,150,105,0.08)','title'=>'CSO Registration','desc'=>'Registration of Civil Society Organizations for advocacy, civic engagement, and social development.'],
+                ['icon'=>'bi-heart-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Charity Registration','desc'=>'Registration of charitable organizations for philanthropic activities and social welfare programs.'],
+                ['icon'=>'bi-building-exclamation','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Foundation Registration','desc'=>'Registration of foundations for grant-making, charitable endowments, and institutional philanthropy.'],
+                ['icon'=>'bi-people','color'=>'#0f766e','bg'=>'rgba(15,118,110,0.08)','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
+                ['icon'=>'bi-shield-lock-fill','color'=>'#115e59','bg'=>'rgba(17,94,89,0.08)','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
                 ['icon'=>'bi-hammer','color'=>'#fbbf24','bg'=>'rgba(251,191,36,0.08)','title'=>'Construction Company Registration','desc'=>'CRB, OSHA, NSSF, WCF registration and full compliance for construction and engineering firms operating in Tanzania.'],
                 ['icon'=>'bi-currency-dollar','color'=>'#f87171','bg'=>'rgba(239,68,68,0.08)','title'=>'Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO, and savings group institutions.'],
-                ['icon'=>'bi-receipt-cutoff','color'=>'#a78bfa','bg'=>'rgba(124,58,237,0.08)','title'=>'Tax Compliance &amp; Auditing','desc'=>'TRA compliance, annual returns, tax planning, audit support, and full financial regulatory compliance services.'],
+                ['icon'=>'bi-receipt','color'=>'#a78bfa','bg'=>'rgba(124,58,237,0.08)','title'=>'TIN Registration','desc'=>'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.'],
+                ['icon'=>'bi-percent','color'=>'#f472b6','bg'=>'rgba(236,72,153,0.08)','title'=>'VAT Registration','desc'=>'Registration of Value Added Tax Number (VAT) for businesses meeting TRA threshold requirements.'],
+                ['icon'=>'bi-file-earmark-text','color'=>'#fb923c','bg'=>'rgba(251,146,60,0.08)','title'=>'Tax Returns Filing','desc'=>'Professional tax returns filing services for corporate and individual taxpayers with TRA compliance.'],
                 ['icon'=>'bi-diagram-3-fill','color'=>'#60a5fa','bg'=>'rgba(29,78,216,0.12)','title'=>'Organizational Structuring','desc'=>'Designing governance frameworks, constitutions, by-laws, org charts, and operational policies for sustainable organizations.'],
             ];
             @endphp
@@ -586,35 +647,101 @@
                 <p class="text-secondary mt-3">Latest insights on Tanzanian law, business compliance, and research trends.</p>
             </div>
             <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
-                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Subscribe to Updates</a>
+                <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Blogs</a>
             </div>
         </div>
         <div class="row g-4">
             @php
-            $blogs = [
-                ['cat'=>'Legal','catColor'=>'#c9993a','catBg'=>'rgba(201,153,58,0.1)','img'=>'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80','date'=>'May 2025','title'=>'Key Changes to Tanzania\'s Business Registration Act 2024','excerpt'=>'An overview of the latest amendments to the Business Registrations and Licensing Agency (BRELA) regulations and what they mean for entrepreneurs.'],
-                ['cat'=>'Research','catColor'=>'#0d9488','catBg'=>'rgba(13,148,136,0.1)','img'=>'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80','date'=>'Apr 2025','title'=>'Writing a Winning Research Proposal: 7 Critical Elements','excerpt'=>'Learn the essential components that distinguish a funded research proposal from the ones that don\'t make the cut — with Tanzanian examples.'],
-                ['cat'=>'Compliance','catColor'=>'#1d4ed8','catBg'=>'rgba(29,78,216,0.1)','img'=>'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=600&q=80','date'=>'Mar 2025','title'=>'NGO Registration in Tanzania: A Step-by-Step 2025 Guide','excerpt'=>'From the NGO Act to TRA registration — a practical, updated guide for civil society organizations looking to operate in Tanzania.'],
-            ];
+            $dbBlogs = \App\Models\Blog::where('is_published', true)
+                ->orderBy('published_at', 'desc')
+                ->orderBy('sort_order')
+                ->take(3)
+                ->get();
             @endphp
-            @foreach($blogs as $b)
+            @forelse($dbBlogs as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="k1-blog-card">
                     <div style="overflow:hidden;">
-                        <img src="{{ $b['img'] }}" alt="{{ $b['title'] }}">
+                        @if($blog->image)
+                        <img src="{{ $blog->image }}" alt="{{ $blog->title }}">
+                        @else
+                        <div style="height: 200px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-journal-text text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        @endif
                     </div>
                     <div class="p-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <span class="badge rounded-0 px-2 py-1" style="background:{{ $b['catBg'] }};color:{{ $b['catColor'] }};font-size:0.72rem;">{{ $b['cat'] }}</span>
-                            <span class="text-secondary small">{{ $b['date'] }}</span>
+                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(201,153,58,0.1);color:var(--gold);font-size:0.72rem;">{{ $blog->category }}</span>
+                            <span class="text-secondary small">{{ $blog->published_at ? $blog->published_at->format('M Y') : '' }}</span>
                         </div>
-                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $b['title'] }}</h5>
-                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;">{{ $b['excerpt'] }}</p>
-                        <a href="#contact" class="fw-bold text-decoration-none small" style="color:var(--gold);">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $blog->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;">{{ Str::limit($blog->excerpt, 100) }}</p>
+                        <a href="{{ route('blog.show', $blog->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);">Read More <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
-            @endforeach
+            @empty
+            <div class="col-12 text-center py-5">
+                <p class="text-secondary">No blog posts available yet.</p>
+            </div>
+            @endforelse
+        </div>
+    </div>
+</section>
+
+{{-- ═══ EVENTS ═══ --}}
+<section id="events" class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row align-items-end mb-5">
+            <div class="col-lg-7 col-md-12">
+                <span class="k1-section-badge"><i class="bi bi-calendar-event me-2"></i>Events</span>
+                <h2 class="display-4 fw-bold mt-2">Upcoming <span style="color:var(--gold);">Events</span></h2>
+                <p class="text-secondary mt-3">Join us for workshops, seminars, and networking events.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
+                <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Events</a>
+            </div>
+        </div>
+        <div class="row g-4">
+            @php
+            $upcomingEvents = \App\Models\Event::where('is_published', true)
+                ->where('event_date', '>=', now())
+                ->orderBy('event_date', 'asc')
+                ->orderBy('sort_order')
+                ->take(3)
+                ->get();
+            @endphp
+            @forelse($upcomingEvents as $event)
+            <div class="col-lg-4 col-md-6">
+                <div class="k1-blog-card">
+                    <div style="overflow:hidden;">
+                        @if($event->image)
+                        <img src="{{ $event->image }}" alt="{{ $event->title }}">
+                        @else
+                        <div style="height: 200px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-calendar-event text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        </div>
+                        @endif
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(201,153,58,0.1);color:var(--gold);font-size:0.72rem;">{{ $event->event_date ? $event->event_date->format('M d, Y') : '' }}</span>
+                            @if($event->event_time)
+                            <span class="text-secondary small">{{ $event->event_time }}</span>
+                            @endif
+                        </div>
+                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $event->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;"><i class="bi bi-geo-alt me-1"></i>{{ $event->location }}</p>
+                        <a href="{{ route('events.show', $event->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);">View Details <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            @empty
+            <div class="col-12 text-center py-5">
+                <p class="text-secondary">No upcoming events scheduled.</p>
+            </div>
+            @endforelse
         </div>
     </div>
 </section>
