@@ -324,7 +324,7 @@
                     <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2 text-white">{!! $sv['title'] !!}</h5>
+                    <h5 class="fw-bold mb-2" style="color:white !important;">{!! $sv['title'] !!}</h5>
                     <p class="text-white mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:var(--gold);">Request Support <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
