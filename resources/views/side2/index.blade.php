@@ -164,7 +164,7 @@
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHAT WE OFFER</span>
-            <h2 class="display-5 fw-bold mb-3">Complete Travel Services</h2>
+            <h2 class="display-5 fw-bold mb-3">Complete Safari na Tour Services</h2>
             <p class="text-secondary mx-auto" style="max-width:560px;">Everything you need for a perfect trip — from booking to landing.</p>
         </div>
         <div class="row g-4 justify-content-center">
