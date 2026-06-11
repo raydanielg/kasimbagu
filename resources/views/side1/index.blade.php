@@ -116,6 +116,8 @@
     .k1-svc-card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), #e8b84b); transform: scaleX(0); transition: transform 0.4s ease; }
     .k1-svc-card:hover::before { transform: scaleX(1); }
     .k1-svc-card:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(201,153,58,0.2); border-color:var(--gold); }
+    .k1-svc-card h5 { color: #1a202c; font-weight: 700; font-size: 1.15rem; }
+    .k1-svc-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
     .k1-svc-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.25rem; transition: all 0.4s ease; }
     .k1-svc-card:hover .k1-svc-icon { transform: scale(1.1) rotate(-5deg); }
     
@@ -373,8 +375,8 @@
                     <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.2rem;color:white;box-shadow:0 4px 12px rgba(201,153,58,0.3);">
                         <i class="bi {{ $al['icon'] }}"></i>
                     </div>
-                    <h6 class="fw-bold mb-2" style="color:white;font-size:0.9rem;">{{ $al['title'] }}</h6>
-                    <p class="mb-0" style="font-size:0.75rem;line-height:1.4;color:rgba(255,255,255,0.7);">{{ $al['desc'] }}</p>
+                    <h6 class="fw-bold mb-2" style="color:#fed7aa;font-size:0.95rem;">{{ $al['title'] }}</h6>
+                    <p class="mb-0" style="font-size:0.8rem;line-height:1.4;color:#fdba74;">{{ $al['desc'] }}</p>
                 </div>
             </div>
             @endforeach
