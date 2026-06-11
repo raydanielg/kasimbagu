@@ -353,12 +353,12 @@
             @foreach($legal as $i => $l)
             <div class="col-lg-6 col-md-12 k1-animate-scale k1-stagger-{{ $i + 1 }}">
                 <div class="k1-svc-card">
-                    <div class="k1-svc-icon" style="background:{{ $l['bg'] ?? 'rgba(201,153,58,0.1)' }};color:{{ $l['color'] ?? 'var(--gold)' }};">
+                    <div class="k1-svc-icon" style="background:linear-gradient(135deg,var(--gold),#a07825);color:white;">
                         <i class="bi {{ $l['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2">{{ $l['title'] }}</h5>
-                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $l['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:var(--gold);">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                    <h5 class="fw-bold mb-2" style="color:#000;font-size:1.2rem;">{{ $l['title'] }}</h5>
+                    <p class="mb-3" style="font-size:0.95rem;line-height:1.7;color:#1a1a1a;">{{ $l['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#000;background:var(--gold);padding:8px 16px;border-radius:4px;display:inline-block;">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
             @endforeach
