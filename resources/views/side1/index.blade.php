@@ -850,78 +850,7 @@
             });
         });
     });
-
-    // Consultancy Form Submission via AJAX
-    document.getElementById('consultancyContactForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const origBtnText = submitBtn.innerHTML;
-
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending Message...';
-
-        fetch("{{ route('inquiry.submit') }}", {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not OK');
-            }
-            return response.json();
-        })
-        .then(data => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = origBtnText;
-            if (data.success) {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Message Sent!',
-                    text: data.message,
-                    confirmButtonColor: '#c9993a'
-                });
-                document.getElementById('consultancyContactForm').reset();
-            } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Failed to Send',
-                    text: 'Something went wrong. Please try again.',
-                    confirmButtonColor: '#c9993a'
-                });
-            }
-        })
-        .catch(err => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = origBtnText;
-            Swal.fire({
-                icon: 'error',
-                title: 'Error Occurred',
-                text: 'Please check your connection and try again.',
-                confirmButtonColor: '#c9993a'
-            });
-        });
-    });
-
-    // Fallback traditional session success check
-    @if(session('success'))
-    Swal.fire({
-        icon: 'success',
-        title: 'Message Sent!',
-        text: "{{ session('success') }}",
-        confirmButtonColor: '#c9993a'
-    });
-    @endif
-
-    // Scroll Animation Observer
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+@endsection
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
