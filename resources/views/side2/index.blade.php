@@ -65,7 +65,7 @@
 <div style="background:#020c1d;border-bottom:1px solid rgba(255,255,255,0.06);">
     <div class="container py-4">
         <div class="row g-3 text-center">
-            @foreach([['50+','Destinations'],['500+','Happy Travellers'],['100%','Visa Success Rate'],['24/7','Support']] as $s)
+            @foreach([['50+','Destinations'],['500+','Safari na Tour Guests'],['100%','Visa Success Rate'],['24/7','Support']] as $s)
             <div class="col-6 col-md-3">
                 <div class="py-2">
                     <div class="fw-bold" style="font-size:2rem;color:#38bdf8;line-height:1;">{{ $s[0] }}</div>
