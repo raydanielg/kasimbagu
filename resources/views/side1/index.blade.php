@@ -362,7 +362,7 @@
                         <div class="card-content">
                             <div class="card-icon" style="background:rgba(29,78,216,0.25);border:1px solid rgba(29,78,216,0.4);color:#60a5fa;"><i class="bi bi-building-fill"></i></div>
                             <h4 class="text-white fw-bold mb-2" style="font-family:'EB Garamond',serif;">Company &amp; Org. Management</h4>
-                            <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-bottom:12px;">BRELA · NGO/CSO · Tax Compliance · SACCO's · Org. Structuring</p>
+                            <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-bottom:12px;">BRELA · NGO/CSO · Tax Compliance · SACCOS · Org. Structuring</p>
                             <span style="color:#60a5fa;font-size:0.82rem;font-weight:700;">6 Services &rarr;</span>
                         </div>
                     </div>
