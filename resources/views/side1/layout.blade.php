@@ -121,7 +121,7 @@
 <div class="k1-topbar d-none d-md-block">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="d-flex gap-4">
-            <span><i class="bi bi-geo-alt-fill me-1 text-gold"></i>Dar es Salaam &amp; Moshi, Kilimanjaro</span>
+            <span style="color:white;"><i class="bi bi-geo-alt-fill me-1 text-gold"></i>Dar es Salaam &amp; Moshi, Kilimanjaro</span>
             <span><i class="bi bi-envelope-fill me-1 text-gold"></i><a href="mailto:info@kasimbagu.com">info@kasimbagu.com</a></span>
         </div>
         <div class="d-flex gap-4">
