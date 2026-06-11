@@ -456,7 +456,7 @@
                 <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Company &amp; Organization <span style="color:#60a5fa;">Management</span></h2>
                 <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We are your trusted partner for building compliant, well-structured organizations. From the first registration to full operational compliance — we handle the complexity so you can focus on growth.</p>
                 <div class="d-flex flex-wrap gap-2 mt-4">
-                    @foreach(['Startups','Joint Ventures','NGOs','Tourism Operators','Agribusinesses','Govt. Institutions'] as $cl)
+                    @foreach(['Startups','Joint Ventures','Tourism Operators','Agribusinesses','Govt. Institutions'] as $cl)
                     <span class="badge rounded-0 px-3 py-2" style="background:rgba(29,78,216,0.15);color:#60a5fa;border:1px solid rgba(29,78,216,0.25);font-size:0.78rem;">{{ $cl }}</span>
                     @endforeach
                 </div>
@@ -466,14 +466,15 @@
             </div>
         </div>
         <div class="row g-4">
-            @foreach($ngoServices as $i => $ng)
+            @foreach($company as $i => $c)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
-                <div class="ngo-service-card p-4 rounded-4 h-100 text-center">
-                    <div class="ngo-service-icon">
-                        <i class="bi {{ $ng['icon'] }}"></i>
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:{{ $c['bg'] }};color:{{ $c['color'] }};">
+                        <i class="bi {{ $c['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2 text-center ngo-service-title">{{ $ng['title'] }}</h5>
-                    <p class="text-secondary mb-0 text-center ngo-service-desc">{{ $ng['desc'] }}</p>
+                    <h5 class="fw-bold mb-2">{{ $c['title'] }}</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $c['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#60a5fa;">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
             @endforeach
@@ -498,6 +499,38 @@
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#fb923c;">Get TRA Compliance Help <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+{{-- ═══ NON GOVERNMENT ORGANIZATIONS SERVICES ═══ --}}
+<section id="ngo" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#064e3b 0%,#065f46 60%,#064e3b 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+    <div class="container py-4">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
+                <span class="k1-section-badge" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#10b981;"><i class="bi bi-people-fill me-2"></i>Interface Four</span>
+                <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Non Government <span style="color:#10b981;">Organizations Services</span></h2>
+                <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We provide comprehensive registration and compliance services for NGOs, CBOs, CSOs, Charities, Foundations, Societies, and Trusts. Our team ensures your organization meets all regulatory requirements in Tanzania.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 k1-animate-right k1-stagger-2">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=700&q=80" alt="NGO" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
+        <div class="row g-4">
+            @foreach($ngoServices as $i => $ng)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="ngo-service-card p-4 rounded-4 h-100 text-center">
+                    <div class="ngo-service-icon">
+                        <i class="bi {{ $ng['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 text-center ngo-service-title">{{ $ng['title'] }}</h5>
+                    <p class="text-secondary mb-0 text-center ngo-service-desc">{{ $ng['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-5">
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#10b981;">Get NGO Registration Help <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
