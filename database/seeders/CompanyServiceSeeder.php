@@ -16,7 +16,7 @@ class CompanyServiceSeeder extends Seeder
             [
                 'name' => 'Company Registration',
                 'slug' => 'company-registration',
-                'category' => 'company',
+                'category' => 'registration',
                 'icon' => 'bi-building-fill',
                 'icon_color' => '#60a5fa',
                 'short_description' => 'BRELA company registration, business name reservation, and incorporation services.',

@@ -13,9 +13,7 @@ class UpdateServicesCategoryEnum extends Migration
      */
     public function up()
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict', 'company', 'TRA', 'ngo'])->change();
-        });
+        DB::statement("ALTER TABLE services MODIFY COLUMN category VARCHAR(50)");
     }
 
     /**
@@ -25,8 +23,6 @@ class UpdateServicesCategoryEnum extends Migration
      */
     public function down()
     {
-        Schema::table('services', function (Blueprint $table) {
-            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict'])->change();
-        });
+        DB::statement("ALTER TABLE services MODIFY COLUMN category ENUM('travel', 'legal', 'research', 'registration', 'ict')");
     }
 }
