@@ -845,12 +845,12 @@
         <div class="text-center mt-5">
             <div class="d-inline-flex align-items-center gap-3 p-4 rounded-4" style="background:rgba(201,153,58,0.1);border:1px solid rgba(201,153,58,0.3);">
                 <div class="text-start">
-                    <div class="fw-bold text-white" style="font-size:1.1rem;">Fortune Travel and Tours Ltd</div>
-                    <div class="text-white" style="opacity:0.7;font-size:0.9rem;">Your trusted travel partner since 1997</div>
+                    <div class="fw-bold text-white" style="font-size:1.1rem;">Kasimbagu Travel Services</div>
+                    <div class="text-white" style="opacity:0.7;font-size:0.9rem;">Your trusted travel partner</div>
                 </div>
                 <div class="d-flex flex-column gap-2 ms-3" style="font-size:0.88rem;">
-                    <a href="tel:+255688418090" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-telephone-fill" style="color:var(--gold);"></i>+255 688 418 090</a>
-                    <a href="mailto:info@fortune.co.tz" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-envelope-fill" style="color:var(--gold);"></i>info@fortune.co.tz</a>
+                    <a href="tel:+255690075672" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-telephone-fill" style="color:var(--gold);"></i>+255 690 075 672</a>
+                    <a href="mailto:info@kasimbagu.com" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-envelope-fill" style="color:var(--gold);"></i>info@kasimbagu.com</a>
                 </div>
             </div>
         </div>
