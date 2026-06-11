@@ -384,7 +384,7 @@
     <div class="container py-4">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR TRIP</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR SAFARI NA TOUR</span>
                 <h2 class="display-5 fw-bold mb-4">Ready to <br><span style="color:#0284c7;">Take Off?</span></h2>
                 <p class="text-secondary lead mb-5">Tell us your destination, dates, and requirements. We'll get back to you with a full quote within a few hours.</p>
                 <div class="d-flex flex-column gap-3">
