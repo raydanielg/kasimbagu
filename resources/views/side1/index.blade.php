@@ -578,7 +578,7 @@
         </div>
         <div class="row g-4">
             <?php
-            $blogs = \App\Models\Blog::where('published', true)->orderBy('published_at', 'desc')->take(3)->get();
+            $blogs = \App\Models\Blog::where('is_published', true)->orderBy('published_at', 'desc')->take(3)->get();
             ?>
             @forelse($blogs as $blog)
             <div class="col-lg-4 col-md-6">
