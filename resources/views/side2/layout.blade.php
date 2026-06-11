@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Kasimbagu Safari na Tour Agency</title>
+    <title>Kasimbagu Safaris and Tour Agency</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -52,7 +52,7 @@
             </div>
             <div style="line-height:1.1;">
                 <div class="fw-bold" style="color:#fff;font-size:1rem;">Kasim<span style="color:#38bdf8;">bagu</span></div>
-                <div style="font-size:0.58rem;letter-spacing:2.5px;color:#7dd3fc;font-weight:700;text-transform:uppercase;">Safari na Tour Agency</div>
+                <div style="font-size:0.58rem;letter-spacing:2.5px;color:#7dd3fc;font-weight:700;text-transform:uppercase;">Safaris and Tour Agency</div>
             </div>
         </a>
         <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#k2Offcanvas">
@@ -85,7 +85,7 @@
             </div>
             <div style="line-height:1.1;">
                 <div class="fw-bold text-white" style="font-size:0.95rem;">Kasim<span style="color:#38bdf8;">bagu</span></div>
-                <div style="font-size:0.56rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">SAFARI NA TOUR</div>
+                <div style="font-size:0.56rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">SAFARIS AND TOUR</div>
             </div>
         </div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
@@ -120,10 +120,10 @@
                     </div>
                     <div style="line-height:1.1;">
                         <div class="fw-bold" style="color:#e2e8f0;">Kasim<span style="color:#38bdf8;">bagu</span></div>
-                        <div style="font-size:0.58rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">SAFARI NA TOUR AGENCY</div>
+                        <div style="font-size:0.58rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">SAFARIS AND TOUR AGENCY</div>
                     </div>
                 </div>
-                <p style="color:#64748b;font-size:0.88rem;line-height:1.8;">Your trusted partner for flights, visas, hotels, tours, and seamless safari na tour experiences across 50+ global destinations.</p>
+                <p style="color:#64748b;font-size:0.88rem;line-height:1.8;">Your trusted partner for flights, visas, hotels, tours, and seamless safaris and tour experiences across 50+ global destinations.</p>
                 <div class="d-flex gap-2 mt-3">
                     <a href="#" class="k2f-social"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="k2f-social"><i class="bi bi-instagram"></i></a>
@@ -162,7 +162,7 @@
         </div>
         <div class="row mt-5 pt-3" style="border-top:1px solid rgba(255,255,255,0.05);">
             <div class="col-12 text-center" style="color:#334155;font-size:0.83rem;">
-                &copy; {{ date('Y') }} Kasimbagu Safari na Tour Agency. All rights reserved. &nbsp;|&nbsp;
+                &copy; {{ date('Y') }} Kasimbagu Safaris and Tour Agency. All rights reserved. &nbsp;|&nbsp;
                 <a href="{{ url('/') }}" style="color:#475569;text-decoration:none;">Main Site</a> &nbsp;|&nbsp;
                 <a href="{{ route('consultacy') }}" style="color:#475569;text-decoration:none;">Consultancy</a>
             </div>
