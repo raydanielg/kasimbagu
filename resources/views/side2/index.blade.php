@@ -262,6 +262,69 @@
 </style>
 
 {{-- ══════════════════════════════════════════
+     WHO WE SERVE
+══════════════════════════════════════════ --}}
+<section class="py-5" style="background:#f0f9ff;" id="who-we-serve">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHO WE SERVE</span>
+            <h2 class="display-5 fw-bold mb-3">Trusted by <span style="color:#0284c7;">Diverse Clients</span></h2>
+            <p class="text-secondary mx-auto" style="max-width:560px;">We serve a wide range of clients with tailored travel and visa solutions.</p>
+        </div>
+        <div class="row g-4">
+            @php
+            $clients = [
+                [
+                    'icon'=>'bi-building-fill',
+                    'color'=>'#0284c7',
+                    'title'=>'Private Companies',
+                    'desc'=>'Corporate travel management, employee visa processing, and business trip coordination for private sector organizations.'
+                ],
+                [
+                    'icon'=>'bi-bank-fill',
+                    'color'=>'#7c3aed',
+                    'title'=>'Government Sectors',
+                    'desc':'Official travel arrangements, diplomatic visa processing, and government delegation management.'
+                ],
+                [
+                    'icon'=>'bi-graph-up-arrow',
+                    'color'=>'#059669',
+                    'title'=>'Business & Investors',
+                    'desc'=>'Trade missions, investment travel, business visa facilitation, and market exploration trips.'
+                ],
+                [
+                    'icon'=>'bi-mortarboard-fill',
+                    'color'=>'#d97706',
+                    'title'=>'Students',
+                    'desc'=>'Study abroad programs, university admissions, student visas, and accommodation for international education.'
+                ],
+                [
+                    'icon'=>'bi-globe2',
+                    'color'=>'#dc2626',
+                    'title'=>'Global Travellers',
+                    'desc'=>'Leisure travel, tourism packages, adventure trips, and personalized vacation planning for worldwide destinations.'
+                ],
+            ];
+            @endphp
+            @foreach($clients as $c)
+            <div class="col-lg-4 col-md-6">
+                <div class="p-4 rounded-4 h-100 text-center" style="background:white;border:1px solid #e0f2fe;transition:all 0.3s;">
+                    <div style="width:64px;height:64px;background:{{ $c['color'] }};border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                        <i class="bi {{ $c['icon'] }} text-white" style="font-size:1.5rem;"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2" style="color:#1a202c;">{{ $c['title'] }}</h5>
+                    <p class="text-secondary mb-0" style="font-size:0.88rem;line-height:1.6;">{{ $c['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+<style>
+    #who-we-serve .rounded-4:hover { transform: translateY(-5px); border-color: rgba(2,132,199,0.3) !important; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+</style>
+
+{{-- ══════════════════════════════════════════
      SERVICES
 ══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="services">
