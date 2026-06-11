@@ -412,8 +412,34 @@
             </div>
             @endforeach
         </div>
+        <div class="text-center mb-5 mt-5">
+            <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
+            <h2 class="display-4 fw-bold mt-2 text-white" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
+            <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
+        </div>
+        <div class="row g-4">
+            @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
+            <?php
+            $traIcons = ['bi-receipt-cutoff','bi-percent','bi-file-earmark-text'];
+            $traDescs = [
+                'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.',
+                'Registration of Value Added Tax (VAT) Number for businesses meeting the annual turnover threshold.',
+                'Professional tax returns filing services ensuring timely and accurate submission to Tanzania Revenue Authority.'
+            ];
+            ?>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="tra-service-card p-4 rounded-4 h-100 text-center">
+                    <div class="tra-service-icon">
+                        <i class="bi {{ $traIcons[$i] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2 tra-service-title">{{ $ts }}</h5>
+                    <p class="tra-service-desc">{{ $traDescs[$i] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
         <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#fb923c;">Get TRA Compliance Help <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
@@ -492,8 +518,6 @@
                 ['icon'=>'bi-graph-up-arrow','grad'=>'linear-gradient(135deg,#7c3aed,#a78bfa)','title'=>'Measurable Impact','desc'=>'We measure our success by yours — tracking outcomes, client growth, and the real-world impact of every engagement.'],
             ];
             ?>
-            @foreach($whys as $w)
-            @endforeach
         </div>
     </div>
 </section>
