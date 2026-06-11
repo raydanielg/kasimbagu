@@ -376,7 +376,8 @@
             ];
             @endphp
             @foreach($legal as $i => $sv)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
+            @php $stagger = min($i + 3, 6); @endphp
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:rgba(201,153,58,0.05);border-color:rgba(201,153,58,0.12);">
                     <div class="k1-svc-icon" style="background:rgba(201,153,58,0.12);color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -424,7 +425,8 @@
             ];
             @endphp
             @foreach($additionalLegal as $i => $al)
-            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+            @php $stagger = min($i + 2, 5); @endphp
+            <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 text-center" style="background:#f8f9fa;border:1px solid #e9ecef;transition:all 0.3s ease;">
                     <div style="width:52px;height:52px;background:var(--gold);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.3rem;color:white;">
                         <i class="bi {{ $al['icon'] }}"></i>
@@ -467,7 +469,8 @@
             ];
             @endphp
             @foreach($research as $i => $sv)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
+            @php $stagger = min($i + 3, 6); @endphp
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -513,7 +516,8 @@
             ];
             @endphp
             @foreach($company as $i => $sv)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 3, 6) }}">
+            @php $stagger = min($i + 3, 6); @endphp
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="k1-svc-card" style="background:{{ $sv['bg'] }};border-color:rgba(29,78,216,0.2);">
                     <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
                         <i class="bi {{ $sv['icon'] }}"></i>
@@ -587,7 +591,8 @@
             ];
             @endphp
             @foreach($traServices as $i => $tr)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+            @php $stagger = min($i + 2, 5); @endphp
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 tra-service-card">
                     <div class="tra-service-icon">
                         <i class="bi {{ $tr['icon'] }}"></i>
