@@ -206,9 +206,9 @@
     <div class="container py-4 position-relative" style="z-index:1;">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY TRAVEL WITH US</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY SAFARI NA TOUR WITH US</span>
                 <h2 class="display-4 fw-bold text-white mb-4">Your Trip. <span style="background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Our Promise.</span></h2>
-                <p style="color:#94a3b8;font-size:1rem;line-height:1.8;margin-bottom:2rem;">We don't just book trips. We craft seamless travel experiences backed by expertise, speed, and personal service from first inquiry to safe return.</p>
+                <p style="color:#94a3b8;font-size:1rem;line-height:1.8;margin-bottom:2rem;">We don't just book trips. We craft seamless safari na tour experiences backed by expertise, speed, and personal service from first inquiry to safe return.</p>
                 <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#38bdf8;">Plan My Trip <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
             <div class="col-lg-7">
@@ -253,7 +253,7 @@
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TESTIMONIALS</span>
-            <h2 class="display-5 fw-bold mb-3">What Our Travellers Say</h2>
+            <h2 class="display-5 fw-bold mb-3">What Our Safari na Tour Guests Say</h2>
         </div>
         <div class="swiper k2-testi pb-5">
             <div class="swiper-wrapper">
@@ -290,15 +290,15 @@
 </section>
 
 {{-- ══════════════════════════════════════════
-     TRAVEL BLOG / INSIGHTS
+     SAFARI NA TOUR BLOG / INSIGHTS
 ═══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="blog">
     <div class="container py-4">
         <div class="row align-items-end mb-5">
             <div class="col-lg-7">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TRAVEL INSIGHTS</span>
-                <h2 class="display-5 fw-bold mb-3">Travel Tips & <span style="color:#0284c7;">Stories</span></h2>
-                <p class="text-secondary lead">Expert travel advice, destination guides, and visa tips.</p>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">SAFARI NA TOUR INSIGHTS</span>
+                <h2 class="display-5 fw-bold mb-3">Safari na Tour Tips & <span style="color:#0284c7;">Stories</span></h2>
+                <p class="text-secondary lead">Expert safari na tour advice, destination guides, and visa tips.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
                 <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0284c7;">View All Blogs <i class="bi bi-arrow-right ms-2"></i></a>
