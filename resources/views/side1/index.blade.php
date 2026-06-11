@@ -551,7 +551,7 @@
                 ['icon'=>'bi-people','color'=>'#115e59','title'=>'Society Registration','desc'=>'Registration of societies and membership organizations for cultural, educational, and recreational purposes.'],
                 ['icon'=>'bi-shield-lock-fill','color':'#065f46','title'=>'Trust Registration','desc'=>'Registration of trusts for asset protection, estate planning, and fiduciary management.'],
             ];
-            @endphp
+            ?>
             @foreach($ngoServices as $i => $ng)
             @php $stagger = min($i + 2, 5); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
