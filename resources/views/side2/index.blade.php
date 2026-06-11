@@ -78,15 +78,15 @@
 </div>
 
 {{-- ══════════════════════════════════════════
-     DESTINATIONS
+     INTERNATIONAL DESTINATIONS
 ══════════════════════════════════════════ --}}
 <section class="py-5 overflow-hidden" id="destinations" style="background:#f0f9ff;">
     <div class="container py-4">
         <div class="row align-items-end mb-5">
             <div class="col-lg-6">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">POPULAR DESTINATIONS</span>
-                <h2 class="display-5 fw-bold mb-3">Where Do You <br>Want to Go?</h2>
-                <p class="text-secondary lead">50+ destinations — all bookings handled from Dar es Salaam.</p>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">INTERNATIONAL DESTINATIONS</span>
+                <h2 class="display-5 fw-bold mb-3">Explore the <br><span style="color:#0284c7;">World</span></h2>
+                <p class="text-secondary lead">International destinations with visa assistance — all bookings handled from Dar es Salaam.</p>
             </div>
             <div class="col-lg-6 text-lg-end">
                 <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0284c7;">Get Visa Quote <i class="bi bi-arrow-right ms-2"></i></a>
@@ -94,8 +94,8 @@
         </div>
         <div class="row g-4">
             @if(isset($destinations) && $destinations->count() > 0)
-                @foreach($destinations as $d)
-                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', '{{ $d->visa_required ? 'visa' : 'safari' }}')">
+                @foreach($destinations->where('visa_required', true) as $d)
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', 'visa')">
                     <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
                         @if($d->image_url)
                             <img src="{{ $d->image_url }}" alt="{{ $d->name }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
@@ -110,8 +110,8 @@
                                     <h5 class="text-white fw-bold mb-0">{{ $d->name }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d->country }}</div>
                                 </div>
-                                <span class="badge rounded-0 px-3 py-2" style="background:{{ $d->visa_required ? 'rgba(56,189,248,0.25)' : 'rgba(34,197,94,0.25)' }};border:1px solid {{ $d->visa_required ? 'rgba(56,189,248,0.4)' : 'rgba(34,197,94,0.4)' }};color:{{ $d->visa_required ? '#7dd3fc' : '#22c55e' }};font-size:0.7rem;">
-                                    {{ $d->visa_required ? ($d->visa_type ?? 'Visa Required') : 'No Visa Required' }}
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">
+                                    {{ $d->visa_type ?? 'Visa Required' }}
                                 </span>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                 @endforeach
             @else
                 <div class="col-12 text-center py-5">
-                    <p class="text-secondary">No destinations available yet.</p>
+                    <p class="text-secondary">No international destinations available yet.</p>
                 </div>
             @endif
         </div>
@@ -131,6 +131,56 @@
     .k2-dest-card { cursor: pointer; transition: box-shadow 0.3s; }
     .k2-dest-card:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.18) !important; }
 </style>
+
+{{-- ══════════════════════════════════════════
+     TANZANIA DESTINATIONS
+══════════════════════════════════════════ --}}
+<section class="py-5 overflow-hidden" id="tanzania-destinations" style="background:#020c1d;">
+    <div class="container py-4">
+        <div class="row align-items-end mb-5">
+            <div class="col-lg-6">
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.3);color:#22c55e;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TANZANIA DESTINATIONS</span>
+                <h2 class="display-5 fw-bold mb-3 text-white">Discover <span style="color:#22c55e;">Tanzania</span></h2>
+                <p class="text-secondary lead">Explore Tanzania's national parks, beaches, and natural wonders — no visa required for citizens.</p>
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#22c55e;">Book Safari <i class="bi bi-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+        <div class="row g-4">
+            @if(isset($destinations) && $destinations->count() > 0)
+                @foreach($destinations->where('visa_required', false) as $d)
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', 'safari')">
+                    <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
+                        @if($d->image_url)
+                            <img src="{{ $d->image_url }}" alt="{{ $d->name }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
+                        @else
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center bg-dark text-white"><i class="bi bi-image" style="font-size: 2rem;"></i></div>
+                        @endif
+                        <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(2,12,28,0.9) 0%,rgba(2,12,28,0.2) 60%);"></div>
+                        <div class="position-absolute bottom-0 start-0 p-4 w-100">
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <div style="margin-bottom:8px;"><i class="bi bi-geo-alt-fill" style="color:#22c55e;font-size:1.4rem;"></i></div>
+                                    <h5 class="text-white fw-bold mb-0">{{ $d->name }}</h5>
+                                    <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d->country }}</div>
+                                </div>
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(34,197,94,0.25);border:1px solid rgba(34,197,94,0.4);color:#22c55e;font-size:0.7rem;">
+                                    No Visa Required
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            @else
+                <div class="col-12 text-center py-5">
+                    <p class="text-secondary">No Tanzania destinations available yet.</p>
+                </div>
+            @endif
+        </div>
+    </div>
+</section>
 
 {{-- ══════════════════════════════════════════
      TANZANIA SAFARIS
