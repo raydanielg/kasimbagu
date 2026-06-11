@@ -354,6 +354,17 @@
 
 {{-- ═══ INTERFACE 1: LEGAL ACTIVITIES ═══ --}}
 <section id="legal" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#0a1c38 0%,#112644 60%,#0e2040 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+    <style>
+        #legal .k1-svc-card h5,
+        #legal .k1-svc-card p,
+        #legal .k1-svc-card a,
+        #legal .k1-svc-card * {
+            color: #000000 !important;
+        }
+        #legal .k1-svc-card .k1-svc-icon {
+            color: #ffffff !important;
+        }
+    </style>
     <div class="container py-4">
         <div class="row align-items-center g-5 mb-5">
             <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
