@@ -743,6 +743,16 @@
                                         <option>Proposal Writing</option>
                                         <option>Business Plan</option>
                                         <option>Concept Note</option>
+                                    </optgroup>
+                                    <optgroup label="Company &amp; Org. Management">
+                                        <option>Company Registration (BRELA)</option>
+                                        <option>NGO/CSO Registration</option>
+                                        <option>TIN Registration</option>
+                                        <option>VAT Registration</option>
+                                        <option>Tax Returns Filing</option>
+                                    </optgroup>
+                                </select>
+                            </div>
                             <div class="col-sm-6">
                                 <label class="form-label fw-semibold small">Preferred Office</label>
                                 <select name="destination" class="form-select rounded-3 py-3 border-0 bg-light text-dark">
@@ -785,6 +795,60 @@
         slidesPerView: 1,
         spaceBetween: 24,
         breakpoints: { 768: { slidesPerView: 2 } },
+    });
+
+    // Scroll Animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('k1-visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.k1-animate-on-scroll, .k1-animate-left, .k1-animate-right, .k1-animate-scale').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Contact Form Handler
+    document.getElementById('consultancyContactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Message Sent!',
+                    text: data.message,
+                    confirmButtonColor: '#c9993a'
+                });
+                form.reset();
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong. Please try again.',
+                confirmButtonColor: '#c9993a'
+            });
+        });
     });
 
     // Consultancy Form Submission via AJAX
