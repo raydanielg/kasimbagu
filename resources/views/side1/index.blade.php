@@ -541,7 +541,7 @@
             <p class="text-secondary mx-auto mt-3" style="max-width:680px;">Complete registration and compliance services for NGOs, CBOs, CSOs, Charities, Foundations, Societies, and Trusts.</p>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $ngoServices = [
                 ['icon'=>'bi-people-fill','color'=>'#10b981','title'=>'NGO Registration','desc'=>'Full registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.'],
                 ['icon'=>'bi-house-heart-fill','color'=>'#059669','title'=>'CBO Registration','desc'=>'Registration of Community-Based Organizations for grassroots development and community initiatives.'],
