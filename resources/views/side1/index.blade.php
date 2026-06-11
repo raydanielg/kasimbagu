@@ -552,6 +552,14 @@
                             </div>
                             <div class="ms-auto" style="color:var(--gold);">
                                 @for($i=0;$i<5;$i++) <i class="bi bi-star-fill"></i> @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="swiper-pagination" style="bottom:0;"></div>
+        </div>
     </div>
 </section>
 
@@ -567,7 +575,12 @@
             <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
                 <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Blogs</a>
             </div>
-                    </div>
+        </div>
+        <div class="row g-4">
+            @forelse($blogs as $blog)
+            <div class="col-lg-4 col-md-6">
+                <div class="k1-blog-card h-100">
+                    <img src="{{ $blog->image ?? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80' }}" alt="{{ $blog->title }}">
                     <div class="p-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
                             <span class="badge rounded-0 px-2 py-1" style="background:rgba(201,153,58,0.1);color:var(--gold);font-size:0.72rem;">{{ $blog->category }}</span>
