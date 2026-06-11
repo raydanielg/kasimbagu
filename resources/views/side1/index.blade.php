@@ -613,7 +613,10 @@
             <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
                 <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Events</a>
             </div>
-                ->get();
+        </div>
+        <div class="row g-4">
+            <?php
+            $upcomingEvents = \App\Models\Event::where('date', '>=', now())->orderBy('date')->take(3)->get();
             ?>
             @forelse($upcomingEvents as $event)
             <div class="col-lg-4 col-md-6">
@@ -626,7 +629,8 @@
                             <i class="bi bi-calendar-event text-white" style="font-size: 3rem; opacity: 0.5;"></i>
                         </div>
                         @endif
-                        </div>
+                    </div>
+                    <div class="p-4">
                         <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $event->title }}</h5>
                         <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;"><i class="bi bi-geo-alt me-1"></i>{{ $event->location }}</p>
                         <a href="{{ route('events.show', $event->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);">View Details <i class="bi bi-arrow-right ms-1"></i></a>
@@ -652,6 +656,15 @@
         <div class="row g-5 align-items-start">
             <div class="col-lg-5 col-md-12">
                 <h5 class="fw-bold mb-4">Our Offices</h5>
+                <div class="d-flex flex-column gap-3">
+                    <div class="p-4 rounded-4" style="background:white;border:1px solid #e8d9b8;">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-building-fill text-white"></i></div>
+                            <div><div class="fw-bold" style="color:#1a202c;">Head Office</div><div class="text-secondary small">Dar es Salaam, Tanzania</div></div>
+                        </div>
+                        <div class="d-flex flex-column gap-2 ms-1" style="font-size:0.88rem;">
+                            <a href="tel:+255690075672" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-telephone-fill" style="color:var(--gold);"></i>+255 690 075 672</a>
+                            <a href="mailto:info@kasimbagu.com" class="text-decoration-none text-dark d-flex gap-2"><i class="bi bi-envelope-fill" style="color:var(--gold);"></i>info@kasimbagu.com</a>
                         </div>
                     </div>
                     <div class="p-4 rounded-4" style="background:white;border:1px solid #e8d9b8;">
@@ -665,7 +678,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex gap-3">
+                <div class="d-flex gap-3 mt-4">
                     <a href="https://wa.me/255653291058" class="btn btn-success rounded-0 px-4 fw-semibold"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
                     <a href="#" class="btn btn-outline-secondary rounded-0 px-4 fw-semibold"><i class="bi bi-linkedin me-2"></i>LinkedIn</a>
                 </div>
