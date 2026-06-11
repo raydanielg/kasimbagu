@@ -28,7 +28,12 @@ Route::get('/company-profile', function () {
 // Site 2: Kasimbagu Travelling Agency
 Route::get('/travel', function () {
     $destinations = \App\Models\Destination::where('is_active', true)->orderBy('sort_order')->get();
-    return view('side2.index', compact('destinations'));
+    $blogs = \App\Models\Blog::where('is_published', true)
+        ->whereIn('category', ['Safari', 'Adventure', 'Beach', 'Wildlife', 'Travel', 'Tourism'])
+        ->orderBy('published_at', 'desc')
+        ->take(3)
+        ->get();
+    return view('side2.index', compact('destinations', 'blogs'));
 })->name('travel');
 
 // Google OAuth (placeholder handlers)
