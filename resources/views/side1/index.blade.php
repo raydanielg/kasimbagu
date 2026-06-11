@@ -368,13 +368,13 @@
         <div class="row g-4">
             @foreach($legal as $i => $l)
             <div class="col-lg-6 col-md-12 k1-animate-scale k1-stagger-{{ $i + 1 }}">
-                <div class="k1-svc-card" style="background:#fff !important;">
-                    <div class="k1-svc-icon" style="background:linear-gradient(135deg,var(--gold),#a07825);color:white;">
+                <div class="k1-svc-card" style="background:#ffffff !important;">
+                    <div class="k1-svc-icon" style="background:linear-gradient(135deg,var(--gold),#a07825);color:#ffffff !important;">
                         <i class="bi {{ $l['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color:#000 !important;font-size:1.2rem !important;">{{ $l['title'] }}</h5>
-                    <p class="mb-3" style="color:#000 !important;font-size:0.95rem;line-height:1.7;">{{ $l['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#000 !important;background:var(--gold);padding:8px 16px;border-radius:4px;display:inline-block;">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                    <h5 style="color:#000000 !important;font-weight:700 !important;font-size:1.2rem !important;margin-bottom:12px !important;">{{ $l['title'] }}</h5>
+                    <p style="color:#000000 !important;font-size:0.95rem !important;line-height:1.7 !important;margin-bottom:16px !important;">{{ $l['desc'] }}</p>
+                    <a href="#contact" style="color:#000000 !important;background:var(--gold);padding:8px 16px;border-radius:4px;display:inline-block !important;text-decoration:none !important;font-weight:700 !important;">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
             @endforeach
