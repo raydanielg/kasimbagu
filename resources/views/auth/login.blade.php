@@ -5,10 +5,10 @@
 @section('content')
 <div class="text-center mb-4">
     <h2 class="h3 font-weight-bold">Welcome back</h2>
-    <p class="text-muted">Don't have an account? <a href="{{ route('register') }}">Sign up →</a></p>
+    <p class="text-muted">Sign in to your account</p>
 </div>
 
-<form method="POST" action="{{ route('login') }}">
+<form id="loginForm" method="POST" action="{{ route('login') }}">
     @csrf
 
     <div class="mb-3">
@@ -40,8 +40,9 @@
         </label>
     </div>
 
-    <button type="submit" class="btn btn-primary w-100 mb-3">
-        Log in →
+    <button type="submit" id="loginBtn" class="btn btn-primary w-100 mb-3">
+        <span id="loginBtnText">Log in →</span>
+        <span id="loginBtnSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
     </button>
 
     <div class="divider">or</div>
@@ -57,3 +58,62 @@
     </a>
 </form>
 @endsection
+
+@push('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const submitBtn = document.getElementById('loginBtn');
+    const btnText = document.getElementById('loginBtnText');
+    const btnSpinner = document.getElementById('loginBtnSpinner');
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.classList.add('d-none');
+    btnSpinner.classList.remove('d-none');
+    
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Welcome Back!',
+                text: 'You have been logged in successfully.',
+                timer: 1500,
+                showConfirmButton: false
+            }).then(() => {
+                window.location.href = data.redirect || '/dashboard';
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Failed',
+                text: data.message || 'Invalid credentials. Please try again.',
+                confirmButtonColor: '#dc3545'
+            });
+        }
+    })
+    .catch(error => {
+        // If JSON response fails, try regular form submission
+        form.submit();
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        btnText.classList.remove('d-none');
+        btnSpinner.classList.add('d-none');
+    });
+});
+</script>
+@endpush
