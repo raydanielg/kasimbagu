@@ -414,7 +414,6 @@
         </div>
         <div class="row g-4">
             @foreach($ngoServices as $i => $ng)
-            <?php $stagger = min($i + 2, 5); ?>
                     <div class="ngo-service-icon">
                         <i class="bi {{ $ng['icon'] }}"></i>
                     </div>
@@ -433,15 +432,6 @@
         <div class="row g-4">
             @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
             <?php
-            $traIcons = ['bi-receipt-cutoff','bi-percent','bi-file-earmark-text'];
-            $traDescs = [
-                'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.',
-                'Registration of Value Added Tax (VAT) Number for businesses meeting the annual turnover threshold.',
-                'Professional tax returns filing services ensuring timely and accurate submission to Tanzania Revenue Authority.'
-            ];
-            ?>
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
-                <div class="tra-service-card p-4 rounded-4 h-100 text-center">
                     <div class="tra-service-icon">
                         <i class="bi {{ $traIcons[$i] }}"></i>
                     </div>
