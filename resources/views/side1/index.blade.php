@@ -844,4 +844,5 @@
             });
         });
     });
+</script>
 @endsection
