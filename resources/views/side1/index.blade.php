@@ -539,45 +539,61 @@
 <section class="py-5 overflow-hidden position-relative k1-animate-on-scroll" style="background:linear-gradient(140deg,#1e1300 0%,#2e1e06 45%,#1a1102 100%);">
     <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(201,153,58,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(201,153,58,0.07) 1px,transparent 1px);background-size:38px 38px;pointer-events:none;"></div>
     <div style="position:absolute;top:-100px;right:-100px;width:460px;height:460px;background:radial-gradient(circle,rgba(201,153,58,0.28),transparent);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-80px;left:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(201,153,58,0.2),transparent);border-radius:50%;filter:blur(50px);pointer-events:none;"></div>
     <div class="container py-4 position-relative" style="z-index:1;">
         <div class="text-center mb-5">
             <span class="k1-section-badge"><i class="bi bi-card-text me-2"></i>About Us</span>
-            <h2 class="display-4 fw-bold text-white mt-2">Company <span style="color:var(--gold);">Profile</span></h2>
+            <h2 class="display-4 fw-bold text-white mt-2" style="font-family:'EB Garamond',serif;">Company <span style="color:var(--gold);">Profile</span></h2>
+            <p style="color:#94a3b8;margin:12px auto 0;max-width:680px;">Your trusted partner for legal, research, and organizational management services in Tanzania.</p>
         </div>
         <div class="row g-4 align-items-stretch">
-            <div class="col-lg-5 col-md-12 k1-animate-left k1-stagger-1">
-                <div class="p-4 p-lg-5 rounded-4 h-100 d-flex flex-column justify-content-center" style="background:rgba(201,153,58,0.07);border:1px solid rgba(201,153,58,0.2);">
-                    <div class="mb-4">
-                        <div style="font-family:'EB Garamond',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1.1;">Kasimbagu</div>
-                            <div style="color:#64748b;font-size:0.75rem;">Clients</div>
+            <div class="col-lg-4 col-md-12 k1-animate-left k1-stagger-1">
+                <div class="p-4 p-lg-5 rounded-4 h-100" style="background:rgba(201,153,58,0.08);border:1px solid rgba(201,153,58,0.25);backdrop-filter:blur(10px);">
+                    <div class="text-center mb-4">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,var(--gold),#a07825);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 8px 24px rgba(201,153,58,0.3);">
+                            <i class="bi bi-award-fill text-white" style="font-size:2rem;"></i>
                         </div>
-                        <div class="text-center">
-                            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">2</div>
+                        <h3 style="font-family:'EB Garamond',serif;font-size:2.5rem;font-weight:700;color:white;line-height:1.1;margin-bottom:8px;">500+</h3>
+                        <div style="color:#94a3b8;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;">Happy Clients</div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6 text-center">
+                            <div class="k1-counter" data-target="2" style="font-size:2rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">0</div>
                             <div style="color:#64748b;font-size:0.75rem;">Offices</div>
                         </div>
-                        <div class="text-center">
-                            <div style="font-size:1.8rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">18</div>
+                        <div class="col-6 text-center">
+                            <div class="k1-counter" data-target="18" style="font-size:2rem;font-weight:700;color:var(--gold);font-family:'EB Garamond',serif;">0</div>
                             <div style="color:#64748b;font-size:0.75rem;">Services</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 k1-animate-right k1-stagger-2">
+            <div class="col-lg-8 k1-animate-right k1-stagger-2">
                 <div class="row g-3 h-100">
-                    <div class="col-6 col-md-6 k1-animate-scale k1-stagger-3">
-                        <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
-                            <div style="color:var(--gold);font-size:1.5rem;margin-bottom:12px;"><i class="bi bi-building-fill"></i></div>
-                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:8px;">Head Office</div>
-                            <div class="text-white fw-bold mb-1">Dar es Salaam</div>
-                            <div style="color:#64748b;font-size:0.83rem;">Tanzania</div>
-                            <a href="tel:+255690075672" class="d-block mt-2 text-decoration-none" style="color:var(--gold);font-size:0.83rem;">+255 690 075 672</a>
+                    <div class="col-md-6 k1-animate-scale k1-stagger-3">
+                        <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.3s ease;">
+                            <div style="color:var(--gold);font-size:1.8rem;margin-bottom:16px;"><i class="bi bi-building-fill"></i></div>
+                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:10px;">Head Office</div>
+                            <div class="text-white fw-bold mb-1" style="font-size:1.1rem;">Dar es Salaam</div>
+                            <div style="color:#64748b;font-size:0.85rem;">Tanzania</div>
+                            <a href="tel:+255690075672" class="d-block mt-3 text-decoration-none" style="color:var(--gold);font-size:0.9rem;font-weight:600;">+255 690 075 672</a>
                         </div>
                     </div>
-                        <div class="p-4 rounded-4" style="background:rgba(201,153,58,0.05);border:1px solid rgba(201,153,58,0.15);">
-                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:12px;">Areas of Practice</div>
+                    <div class="col-md-6 k1-animate-scale k1-stagger-4">
+                        <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);transition:all 0.3s ease;">
+                            <div style="color:var(--gold);font-size:1.8rem;margin-bottom:16px;"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:10px;">Branch Office</div>
+                            <div class="text-white fw-bold mb-1" style="font-size:1.1rem;">Moshi</div>
+                            <div style="color:#64748b;font-size:0.85rem;">Kilimanjaro</div>
+                            <a href="tel:+255690075672" class="d-block mt-3 text-decoration-none" style="color:var(--gold);font-size:0.9rem;font-weight:600;">+255 690 075 672</a>
+                        </div>
+                    </div>
+                    <div class="col-12 k1-animate-scale k1-stagger-5">
+                        <div class="p-4 rounded-4" style="background:rgba(201,153,58,0.06);border:1px solid rgba(201,153,58,0.18);">
+                            <div style="color:#94a3b8;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:16px;">Areas of Practice</div>
                             <div class="d-flex flex-wrap gap-2">
                                 @foreach(['Legal Activities','Research Writing','Proposal Development','Company Registration','NGO/CSO Setup','Tax Compliance','Immigration Law','Arbitration','Business Plans','Org. Structuring'] as $area)
-                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(201,153,58,0.12);color:var(--gold);border:1px solid rgba(201,153,58,0.2);font-size:0.75rem;">{{ $area }}</span>
+                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(201,153,58,0.15);color:var(--gold);border:1px solid rgba(201,153,58,0.25);font-size:0.78rem;font-weight:500;">{{ $area }}</span>
                                 @endforeach
                             </div>
                         </div>
@@ -908,6 +924,37 @@
                 confirmButtonColor: '#c9993a'
             });
         });
+    });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.k1-counter');
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(() => animateCounter(counter), 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
     });
 </script>
 @endsection
