@@ -548,6 +548,18 @@
                     <span>Newsletters</span>
                 </a>
             </div>
+            <div class="nav-item">
+                <a href="{{ route('admin.blogs') }}" class="nav-link {{ request()->is('admin/blogs*') ? 'active' : '' }}">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Blogs</span>
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="{{ route('admin.events') }}" class="nav-link {{ request()->is('admin/events*') ? 'active' : '' }}">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>Events</span>
+                </a>
+            </div>
 
             <div class="nav-section-title">SYSTEM</div>
             <div class="nav-item">
