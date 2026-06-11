@@ -116,8 +116,8 @@
     .k1-svc-card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), #e8b84b); transform: scaleX(0); transition: transform 0.4s ease; }
     .k1-svc-card:hover::before { transform: scaleX(1); }
     .k1-svc-card:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(201,153,58,0.2); border-color:var(--gold); }
-    .k1-svc-card h5 { color: #1a202c; font-weight: 700; font-size: 1.15rem; }
-    .k1-svc-card p { color: #475569; font-size: 0.95rem; line-height: 1.7; }
+    .k1-svc-card h5 { color: #000 !important; font-weight: 700; font-size: 1.2rem !important; }
+    .k1-svc-card p { color: #1a1a1a !important; font-size: 0.95rem; line-height: 1.7; }
     .k1-svc-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.25rem; transition: all 0.4s ease; }
     .k1-svc-card:hover .k1-svc-icon { transform: scale(1.1) rotate(-5deg); }
     
@@ -356,8 +356,8 @@
                     <div class="k1-svc-icon" style="background:linear-gradient(135deg,var(--gold),#a07825);color:white;">
                         <i class="bi {{ $l['icon'] }}"></i>
                     </div>
-                    <h5 class="fw-bold mb-2" style="color:#000;font-size:1.2rem;">{{ $l['title'] }}</h5>
-                    <p class="mb-3" style="font-size:0.95rem;line-height:1.7;color:#1a1a1a;">{{ $l['desc'] }}</p>
+                    <h5 class="fw-bold mb-2">{{ $l['title'] }}</h5>
+                    <p class="mb-3">{{ $l['desc'] }}</p>
                     <a href="#contact" class="text-decoration-none fw-bold small" style="color:#000;background:var(--gold);padding:8px 16px;border-radius:4px;display:inline-block;">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
                 </div>
             </div>
