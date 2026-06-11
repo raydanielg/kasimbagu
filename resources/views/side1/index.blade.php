@@ -355,7 +355,7 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $legal = [
                 ['icon'=>'bi-airplane','color'=>'#c9993a','title'=>'Aviation Law','desc'=>'Regulatory compliance, aircraft registration, leasing agreements, and aviation industry legal advisory.'],
                 ['icon'=>'bi-bank2','color'=>'#e8b84b','title'=>'Banking, Finance &amp; Capital Markets','desc'=>'Banking regulations, securities, capital markets, financial transactions, and investment advisory services.'],
@@ -374,7 +374,7 @@
                 ['icon'=>'bi-cash-coin','color'=>'#c9993a','title'=>'Tax Law','desc'=>'Tax planning, VAT compliance, tax disputes, and comprehensive tax advisory services.'],
                 ['icon'=>'bi-tower','color'=>'#e8b84b','title'=>'Telecommunications','desc'=>'Telecom licensing, regulatory compliance, spectrum management, and communications sector advisory.'],
             ];
-            @endphp
+            ?>
             @foreach($legal as $i => $sv)
             @php $stagger = min($i + 3, 6); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
@@ -404,7 +404,7 @@
             <p class="text-secondary mx-auto mt-3" style="max-width:680px;">From aviation to telecommunications, we provide expert legal counsel across all major sectors and practice areas.</p>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $additionalLegal = [
                 ['icon'=>'bi-airplane','color'=>'#1a202c','title'=>'Aviation','desc'=>'Aircraft registration, leasing, regulatory compliance'],
                 ['icon'=>'bi-bank2','color'=>'#1a202c','title'=>'Banking & Finance','desc'=>'Capital markets, securities, financial transactions'],
@@ -423,7 +423,7 @@
                 ['icon'=>'bi-cash-coin','color'=>'#1a202c','title'=>'Tax Law','desc'=>'Tax planning, VAT, dispute resolution'],
                 ['icon'=>'bi-tower','color'=>'#1a202c','title'=>'Telecommunications','desc'=>'Licensing, spectrum, regulatory compliance'],
             ];
-            @endphp
+            ?>
             @foreach($additionalLegal as $i => $al)
             @php $stagger = min($i + 2, 5); @endphp
             <div class="col-lg-3 col-md-4 col-sm-6 k1-animate-scale k1-stagger-{{ $stagger }}">
@@ -459,7 +459,7 @@
             </div>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $research = [
                 ['icon'=>'bi-journal-text','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Research Writing','desc'=>'Full academic and applied research writing services — from literature review to data analysis, findings, and recommendations.'],
                 ['icon'=>'bi-file-earmark-check-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Proposal Writing','desc'=>'Winning funding proposals for NGOs, development projects, academic grants, and government tenders.'],
@@ -467,7 +467,7 @@
                 ['icon'=>'bi-lightbulb-fill','color'=>'#047857','bg'=>'rgba(4,120,87,0.08)','title'=>'Concept Notes','desc'=>'Impactful concept notes that introduce project ideas to donors, partners, and development organizations.'],
                 ['icon'=>'bi-graph-up-arrow','color'=>'#0d9488','bg'=>'rgba(13,148,136,0.08)','title'=>'Business Plans','desc'=>'Comprehensive, investment-ready business plans for startups, SMEs, and organizations seeking financing.'],
             ];
-            @endphp
+            ?>
             @foreach($research as $i => $sv)
             @php $stagger = min($i + 3, 6); @endphp
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
@@ -695,7 +695,7 @@
             <p style="color:#94a3b8;margin:12px auto 0;max-width:550px;">Not just consultants — we are committed partners dedicated to your success.</p>
         </div>
         <div class="row g-4">
-            @php
+            <?php
             $whys = [
                 ['icon'=>'bi-person-hearts','grad'=>'linear-gradient(135deg,#c9993a,#a07825)','title'=>'Approachable &amp; Client-Centered','desc'=>'We listen first. Every service is tailored to your unique situation — no generic answers, no one-size-fits-all solutions.'],
                 ['icon'=>'bi-shield-fill-check','grad'=>'linear-gradient(135deg,#1d4ed8,#3b82f6)','title'=>'Integrity &amp; Trust','desc'=>'Complete honesty in every engagement. No hidden costs. No over-promising. Just transparent, reliable service.'],
@@ -703,7 +703,7 @@
                 ['icon'=>'bi-globe2','grad'=>'linear-gradient(135deg,#047857,#10b981)','title'=>'Cross-Sector Experience','desc'=>'We have served clients across legal, academic, NGO, private sector, government, and development domains in East Africa.'],
                 ['icon'=>'bi-graph-up-arrow','grad'=>'linear-gradient(135deg,#7c3aed,#a78bfa)','title'=>'Measurable Impact','desc'=>'We measure our success by yours — tracking outcomes, client growth, and the real-world impact of every engagement.'],
             ];
-            @endphp
+            ?>
             @foreach($whys as $w)
             <div class="col-lg-6 col-md-12 {{ $loop->last && $loop->count % 2 !== 0 ? 'col-lg-12' : '' }}">
                 <div class="k1-why-card d-flex gap-4">
@@ -730,14 +730,14 @@
         </div>
         <div class="swiper k1-testi pb-5">
             <div class="swiper-wrapper">
-                @php
+                <?php
                 $testi = [
                     ['q'=>'Kasimbagu handled our company registration from BRELA to TIN to business license in record time. Professional, fast, and completely transparent. Highly recommended!','name'=>'Juma Mwangi','role'=>'CEO, Mwangi Enterprises, Dar es Salaam','init'=>'JM'],
                     ['q'=>'Our NGO proposal was successfully funded after Kasimbagu rewrote it. The quality of their research writing is truly exceptional. They understood our vision completely.','name'=>'Sarah Okonkwo','role'=>'Executive Director, SafeHands NGO','init'=>'SO'],
                     ['q'=>'I faced a complex land conflict that had dragged on for 3 years. Kasimbagu resolved it through mediation in 6 weeks. I cannot express my gratitude enough.','name'=>'Abdallah Hassan','role'=>'Client, Moshi, Kilimanjaro','init'=>'AH'],
                     ['q'=>'Their immigration law team got my work permit approved in two weeks — other firms said it would take months. Kasimbagu delivers on their promises.','name'=>'Chen Wei','role'=>'Business Investor, Dar es Salaam','init'=>'CW'],
                 ];
-                @endphp
+                ?>
                 @foreach($testi as $t)
                 <div class="swiper-slide">
                     <div class="p-4 p-md-5 rounded-4 shadow-sm mx-2 h-100" style="background:white;border:1px solid #e8d9b8;">
