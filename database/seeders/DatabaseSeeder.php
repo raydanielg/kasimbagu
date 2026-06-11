@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CompanyServiceSeeder::class);
         $this->call(NGOServiceSeeder::class);
         $this->call(TRAServiceSeeder::class);
+        $this->call(BlogSeeder::class);
+        $this->call(EventSeeder::class);
     }
 }
