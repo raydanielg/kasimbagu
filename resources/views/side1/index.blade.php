@@ -549,7 +549,8 @@
             ];
             @endphp
             @foreach($ngoServices as $i => $ng)
-            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ min($i + 2, 5) }}">
+            @php $stagger = min($i + 2, 5); @endphp
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $stagger }}">
                 <div class="p-4 rounded-3 h-100 ngo-service-card">
                     <div class="ngo-service-icon">
                         <i class="bi {{ $ng['icon'] }}"></i>
