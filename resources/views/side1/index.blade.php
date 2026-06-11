@@ -610,6 +610,29 @@
             </div>
             @endforeach
         </div>
+        <div class="text-center mb-4 mt-5">
+            <span class="k1-section-badge" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.3);color:#10b981;"><i class="bi bi-people-fill me-2"></i>Target Clients</span>
+        </div>
+        <div class="row g-4">
+            @foreach([
+                ['icon'=>'bi-rocket-fill','color'=>'#f59e0b','title'=>'Startups','desc'=>'From company registration to tax compliance and business licensing, we\'re the go-to partner for entrepreneurs who want to build legally sound and scalable ventures.'],
+                ['icon'=>'bi-building-fill-add','color'=>'#7c3aed','title'=>'Joint Ventures','desc'=>'Whether local or international, joint ventures often face complex registration and compliance challenges. We can help partners align legally, draft clear agreements, and navigate multi-party obligations with confidence.'],
+                ['icon'=>'bi-airplane-fill','color'=>'#0891b2','title'=>'Tourism Operators','desc'=>'With our expertise in securing TALA licenses, BRELA registration, and tax setup, we\'re perfectly positioned to support Tanzania\'s growing tourism sector.'],
+                ['icon'=>'bi-flower1-fill','color'=>'#16a34a','title'=>'Agribusinesses','desc'=>'From cooperatives to private processors, these businesses benefit from our support in registration, compliance, and business planning—especially when scaling or seeking funding.'],
+                ['icon'=>'bi-bank-fill','color'=>'#dc2626','title'=>'Government Institutions','desc'=>'With the dynamic changes the country is having on its legal sphere, government institutions are also bound to ensure strictly compliance. Our Firm will always be ready to offer assistance whenever being engaged.']
+            ] as $i => $client)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-svc-card h-100">
+                    <div class="k1-svc-icon" style="background:{{ $client['color'] }}22;border:1px solid {{ $client['color'] }}44;color:{{ $client['color'] }};">
+                        <i class="bi {{ $client['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">{{ $client['title'] }}</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $client['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:{{ $client['color'] }};">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            @endforeach
+        </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#10b981;">Get NGO Registration Help <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
