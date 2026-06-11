@@ -325,8 +325,8 @@
             <h2 class="display-4 fw-bold mt-2">Five Pillars of Service</h2>
             <p class="text-secondary mx-auto mt-3" style="max-width:580px;">Click to explore each area of specialisation in depth.</p>
         </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-1">
+        <div class="d-flex flex-wrap gap-4 justify-content-center">
+            <div class="flex-lg-fill flex-md-fill flex-sm-100 k1-animate-scale k1-stagger-1" style="flex:1;min-width:200px;">
                 <a href="#legal" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80" alt="Legal">
@@ -340,7 +340,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-2">
+            <div class="flex-lg-fill flex-md-fill flex-sm-100 k1-animate-scale k1-stagger-2" style="flex:1;min-width:200px;">
                 <a href="#research" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80" alt="Research">
@@ -354,7 +354,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-3">
+            <div class="flex-lg-fill flex-md-fill flex-sm-100 k1-animate-scale k1-stagger-3" style="flex:1;min-width:200px;">
                 <a href="#company" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Company">
@@ -368,7 +368,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-4">
+            <div class="flex-lg-fill flex-md-fill flex-sm-100 k1-animate-scale k1-stagger-4" style="flex:1;min-width:200px;">
                 <a href="#ngo" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80" alt="NGO">
@@ -382,7 +382,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 k1-animate-scale k1-stagger-5">
+            <div class="flex-lg-fill flex-md-fill flex-sm-100 k1-animate-scale k1-stagger-5" style="flex:1;min-width:200px;">
                 <a href="#company" class="text-decoration-none">
                     <div class="k1-iface-card">
                         <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="TRA">
