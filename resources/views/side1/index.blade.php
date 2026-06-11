@@ -210,10 +210,30 @@
         <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80');">
             <div class="container k1-hero-content">
                 <div class="col-lg-7 col-md-12 ms-auto text-end">
-                    <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company Management</span>
+                    <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company &amp; Org. Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
-                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">BRELA, TIN, NGO/CSO, CRB, microfinance registration, tax compliance and full organizational structuring — all handled expertly from start to finish.</p>
-                    <a href="#contact" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Start Registration Journey</a>
+                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Company registration, organizational structuring, construction company setup, and microfinance institution registration — comprehensive business formation services.</p>
+                    <a href="#company" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80');">
+            <div class="container k1-hero-content">
+                <div class="col-lg-7 col-md-12">
+                    <span class="k1-hero-badge"><i class="bi bi-people-fill me-2"></i>NGOs, Societies &amp; Trusts</span>
+                    <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register Your <span style="color:var(--gold);">Organization.</span></h1>
+                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">NGO, CBO, CSO, Charity, Foundation, Society, and Trust registration — complete compliance setup for non-governmental organizations and charitable entities.</p>
+                    <a href="#ngo" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Register NGO</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80');">
+            <div class="container k1-hero-content text-center">
+                <div class="col-lg-8 col-md-12 mx-auto">
+                    <span class="k1-hero-badge"><i class="bi bi-receipt me-2"></i>TRA &amp; TAX Compliances</span>
+                    <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Tax Compliance <span style="color:var(--gold);">Made Simple.</span></h1>
+                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">TIN registration, VAT registration, tax returns filing, tax advisory, compliance audits, and dispute resolution — complete TRA compliance services.</p>
+                    <a href="#company" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Get Tax Help</a>
                 </div>
             </div>
         </div>
