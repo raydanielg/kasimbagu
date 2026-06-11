@@ -685,6 +685,50 @@
     </div>
 </section>
 
+{{-- ═══ TARGET CLIENTS ═══ --}}
+<section class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(140deg,#0a1c38 0%,#112644 60%,#0e2040 100%);">
+    <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+    <div class="container py-4 position-relative" style="z-index:1;">
+        <div class="text-center mb-5">
+            <span class="k1-section-badge"><i class="bi bi-people-fill me-2"></i>Who We Serve</span>
+            <h2 class="display-4 fw-bold text-white mt-2" style="font-family:'EB Garamond',serif;">Our <span style="color:var(--gold);">Target Clients</span></h2>
+            <p style="color:#94a3b8;margin:12px auto 0;max-width:600px;">We serve a diverse range of clients across various sectors, providing tailored legal and consultancy solutions.</p>
+        </div>
+        <div class="row g-4">
+            @foreach([
+                ['icon'=>'bi-building-fill-add','color'=>'#7c3aed','title'=>'Joint Venture Companies','desc'=>'Whether local or international, joint ventures often face complex registration and compliance challenges. We can help partners align legally, draft clear agreements, and navigate multi-party obligations with confidence.'],
+                ['icon'=>'bi-handshake-fill','color'=>'#f59e0b','title'=>'General Partnerships','desc'=>'Many partnerships operate informally and risk legal exposure. We can support you in formalizing structure, registering with BRELA, and setting up tax compliance—so you can focus on growing together.'],
+                ['icon'=>'bi-file-earmark-text-fill','color'=>'#10b981','title'=>'Limited Liability Partnerships (LLPs)','desc'=>'These hybrid entities need careful documentation and legal clarity. Our expertise in contract drafting and regulatory compliance makes us the ideal advisor for LLPs seeking structure and protection.'],
+                ['icon'=>'bi-globe-fill','color'=>'#3b82f6','title'=>'International Collaborations','desc'=>'Cross-border partnerships often struggle with local legal frameworks. We can bridge the gap by offering tailored legal aid, registration services, and compliance support for foreign entities working in Tanzania.'],
+                ['icon'=>'bi-houses-fill','color'=>'#ef4444','title'=>'Construction & Real Estate Partnerships','desc'=>'These ventures require strong legal foundations to manage risk and investment. Our services in contract drafting, tax setup, and business licensing are essential for smooth operations.'],
+                ['icon'=>'bi-lightbulb-fill','color'=>'#8b5cf6','title'=>'Research & Innovation Collaboratives','desc'=>'Universities, NGOs, and private firms often team up for joint research or pilot programs. We can support you with MoUs, concept notes, and legal frameworks that protect intellectual property and clarify roles.'],
+                ['icon'=>'bi-people-circle-fill','color'=>'#06b6d4','title'=>'Community-Based Organizations (CBOs)','desc'=>'CBOs are bound to navigate registration, compliance, and governance structures. Our tailored support will empower your organization to formalize work and access funding.'],
+                ['icon'=>'bi-bank-fill','color'=>'#dc2626','title'=>'Government Institutions','desc'=>'With the dynamic changes the country is having on its legal sphere, government institutions are also bound to ensure strictly compliance. Our Firm will always be ready to offer assistance whenever being engaged.'],
+                ['icon'=>'bi-mortarboard-fill','color'=>'#059669','title'=>'Academic Researchers & Graduate Students','desc'=>'Whether you\'re drafting proposals, concept notes, or business plans, our research and writing services are a lifeline for scholars aiming to publish, apply for grants, or launch initiatives.'],
+                ['icon'=>'bi-rocket-fill','color'=>'#d97706','title'=>'Startups & Small Business Owners','desc'=>'From company registration to tax compliance and business licensing, we\'re the go-to partner for entrepreneurs who want to build legally sound and scalable ventures.'],
+                ['icon'=>'bi-airplane-fill','color'=>'#0891b2','title'=>'Tourism Operators & Travel Startups','desc'=>'With our expertise in securing TALA licenses, BRELA registration, and tax setup, we\'re perfectly positioned to support Tanzania\'s growing tourism sector.'],
+                ['icon'=>'bi-globe-americas-fill','color'=>'#7c3aed','title'=>'International Development Partners','desc'=>'Organizations working in Tanzania need local legal insight and gender-responsive frameworks. Our consultancy bridges the gap between global goals and local realities.'],
+                ['icon'=>'bi-box-seam-fill','color'=>'#2563eb','title'=>'Import/Export & Logistics Companies','desc'=>'Navigating TRA, BRELA, and licensing requirements can be a maze. We\'re the guide you need to stay compliant and competitive in cross-border trade.'],
+                ['icon'=>'bi-flower1-fill','color'=>'#16a34a','title'=>'Agribusiness & Food Processing Companies','desc'=>'From cooperatives to private processors, these businesses benefit from our support in registration, compliance, and business planning—especially when scaling or seeking funding.'],
+                ['icon'=>'bi-cart-fill','color'=>'#ea580c','title'=>'Retail & Wholesale Traders','desc'=>'From small shops to large distributors, many traders struggle with business licensing and tax setup. We can help you formalize operations and grow sustainably.']
+            ] as $i => $client)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-why-card h-100" style="background:rgba(255,255,255,0.04);border:1px solid rgba(201,153,58,0.12);">
+                    <div style="width:52px;height:52px;background:{{ $client['color'] }}22;border:1px solid {{ $client['color'] }}44;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="bi {{ $client['icon'] }}" style="color:{{ $client['color'] }};font-size:1.4rem;"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-3" style="font-size:1.05rem;">{{ $client['title'] }}</h5>
+                    <p style="color:#94a3b8;line-height:1.75;font-size:0.87rem;">{{ $client['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="text-center mt-5">
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Work With Us <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
 {{-- ═══ WHY CHOOSE US ═══ --}}
 <section id="why-us" class="py-5 position-relative overflow-hidden" style="background:linear-gradient(140deg,#061d1a 0%,#0c2c26 50%,#0a231e 100%);">
     <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
