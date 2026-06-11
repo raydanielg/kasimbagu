@@ -787,6 +787,76 @@
     </div>
 </section>
 
+{{-- ═══ TRAVEL SERVICES ═══ --}}
+<section id="travel" class="py-5 position-relative overflow-hidden" style="background:linear-gradient(155deg,#0a1c38 0%,#162c56 100%);">
+    <div style="position:absolute;top:-50px;right:-50px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,153,58,0.1),transparent);border-radius:50%;filter:blur(60px);pointer-events:none;"></div>
+    <div class="container py-4 position-relative" style="z-index:1;">
+        <div class="text-center mb-5">
+            <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-airplane-engined me-2"></i>Fortune Travel</span>
+            <h2 class="display-4 fw-bold text-white mt-2" style="font-family:'EB Garamond',serif;">We Love Helping Our <span style="color:var(--gold);">Customers</span></h2>
+            <p class="text-white mt-3" style="opacity:0.85;font-size:1.05rem;line-height:1.7;">The services we provide for your travel needs</p>
+        </div>
+        <div class="row g-4">
+            {{-- Airline Ticketing --}}
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(201,153,58,0.2),rgba(201,153,58,0.1));border:2px solid rgba(201,153,58,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="bi bi-airplane" style="font-size:1.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-3" style="font-family:'EB Garamond',serif;">Airline Ticketing</h5>
+                    <p class="text-white mb-4" style="opacity:0.8;font-size:0.9rem;line-height:1.6;">Fortune Travel is a registered IATA member since 1997. We offer air tickets for all major airlines around the world both international and domestic.</p>
+                    <a href="#contact" class="fw-bold text-decoration-none small" style="color:var(--gold);">Contact Us <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            {{-- Tour Packages --}}
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(201,153,58,0.2),rgba(201,153,58,0.1));border:2px solid rgba(201,153,58,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="bi bi-suitcase" style="font-size:1.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-3" style="font-family:'EB Garamond',serif;">Tour Packages</h5>
+                    <p class="text-white mb-4" style="opacity:0.8;font-size:0.9rem;line-height:1.6;">From Safaris in Tanzania, Relaxing Zanzibar Beaches or International Locations, we perfectly plan everything for you.</p>
+                    <a href="#contact" class="fw-bold text-decoration-none small" style="color:var(--gold);">Write to us <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            {{-- Pilgrimage Packages --}}
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(201,153,58,0.2),rgba(201,153,58,0.1));border:2px solid rgba(201,153,58,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="bi bi-stars" style="font-size:1.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-3" style="font-family:'EB Garamond',serif;">Pilgrimage Packages</h5>
+                    <p class="text-white mb-4" style="opacity:0.8;font-size:0.9rem;line-height:1.6;">Give us the opportunity to facilitate your spiritual journeys to all of the holy places around the world.</p>
+                    <a href="#contact" class="fw-bold text-decoration-none small" style="color:var(--gold);">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            {{-- Visa Services --}}
+            <div class="col-lg-3 col-md-6">
+                <div class="p-4 rounded-4 h-100" style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,153,58,0.2);transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="width:56px;height:56px;background:linear-gradient(135deg,rgba(201,153,58,0.2),rgba(201,153,58,0.1));border:2px solid rgba(201,153,58,0.3);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="bi bi-passport" style="font-size:1.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h5 class="fw-bold text-white mb-3" style="font-family:'EB Garamond',serif;">Visa Services</h5>
+                    <p class="text-white mb-4" style="opacity:0.8;font-size:0.9rem;line-height:1.6;">We assist and facilitate the process of obtaining Visa for Dubai, Tanzania, Thailand, Turkey, India, Egypt and many more.</p>
+                    <a href="#contact" class="fw-bold text-decoration-none small" style="color:var(--gold);">Contact Us <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <div class="d-inline-flex align-items-center gap-3 p-4 rounded-4" style="background:rgba(201,153,58,0.1);border:1px solid rgba(201,153,58,0.3);">
+                <div class="text-start">
+                    <div class="fw-bold text-white" style="font-size:1.1rem;">Fortune Travel and Tours Ltd</div>
+                    <div class="text-white" style="opacity:0.7;font-size:0.9rem;">Your trusted travel partner since 1997</div>
+                </div>
+                <div class="d-flex flex-column gap-2 ms-3" style="font-size:0.88rem;">
+                    <a href="tel:+255688418090" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-telephone-fill" style="color:var(--gold);"></i>+255 688 418 090</a>
+                    <a href="mailto:info@fortune.co.tz" class="text-decoration-none text-white d-flex gap-2"><i class="bi bi-envelope-fill" style="color:var(--gold);"></i>info@fortune.co.tz</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- ═══ CONTACT ═══ --}}
 <section id="contact" class="py-5" style="background:#f8f5ef;">
     <div class="container py-4">
