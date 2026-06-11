@@ -46,6 +46,17 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
+        if ($request->ajax()) {
+            $redirect = $user->role === 'admin' 
+                ? route('admin.dashboard') 
+                : route('redirecting', ['to' => redirect()->intended($this->redirectTo)->getTargetUrl()]);
+            
+            return response()->json([
+                'success' => true,
+                'redirect' => $redirect
+            ]);
+        }
+
         if ($user->role === 'admin') {
             session(['admin_welcome' => true]);
             return redirect()->route('admin.dashboard');
@@ -53,6 +64,25 @@ class LoginController extends Controller
 
         $intended = redirect()->intended($this->redirectTo)->getTargetUrl();
         return redirect()->route('redirecting', ['to' => $intended]);
+    }
+
+    /**
+     * Handle failed login attempt.
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        if ($request->ajax()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Invalid credentials. Please check your email and password.'
+            ]);
+        }
+
+        return redirect()->back()
+            ->withInput($request->only('email', 'remember'))
+            ->withErrors([
+                'email' => 'Invalid credentials.',
+            ]);
     }
 
     /**
