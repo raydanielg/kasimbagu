@@ -125,7 +125,11 @@ class PageController extends Controller
             ['q'=>'We needed urgent NGO registration for a donor-funded project. Kasimbagu delivered within two weeks, including all compliance documentation. Exceptional service.','name'=>'John Kimani','role'=>'Program Director, Hope Foundation Kenya','init'=>'JK'],
         ];
 
-        $blogs = Blog::where('is_published', true)->orderBy('published_at', 'desc')->take(3)->get();
+        $blogs = Blog::where('is_published', true)
+            ->whereIn('category', ['Safari', 'Adventure', 'Beach', 'Wildlife'])
+            ->orderBy('published_at', 'desc')
+            ->take(3)
+            ->get();
         $upcomingEvents = Event::where('is_published', true)->where('event_date', '>=', now())->orderBy('event_date', 'asc')->take(3)->get();
 
         return view('side1.index', compact('values', 'legal', 'additionalLegal', 'research', 'company', 'ngoServices', 'traServices', 'whys', 'testi', 'blogs', 'upcomingEvents'));
