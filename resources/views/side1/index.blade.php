@@ -212,7 +212,7 @@
                 <div class="col-lg-7 col-md-12 ms-auto text-end">
                     <span class="k1-hero-badge"><i class="bi bi-building-fill me-2"></i>Company &amp; Org. Management</span>
                     <h1 class="display-2 fw-bold text-white mb-4" style="line-height:1.1;font-family:'EB Garamond',serif;">Register. Comply. <span style="color:var(--gold);">Thrive.</span></h1>
-                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Company registration, organizational structuring, construction company setup, and microfinance institution registration — comprehensive business formation services.</p>
+                    <p class="lead text-white mb-5" style="opacity:0.85;font-size:1.15rem;">Company registration, organizational structuring, construction company setup, and SACCO's registration — comprehensive business formation services.</p>
                     <a href="#company" class="btn btn-lg px-4 px-md-5 rounded-0 fw-bold text-dark shadow flex-1" style="background:var(--gold);">Get Started</a>
                 </div>
             </div>
@@ -362,7 +362,7 @@
                         <div class="card-content">
                             <div class="card-icon" style="background:rgba(29,78,216,0.25);border:1px solid rgba(29,78,216,0.4);color:#60a5fa;"><i class="bi bi-building-fill"></i></div>
                             <h4 class="text-white fw-bold mb-2" style="font-family:'EB Garamond',serif;">Company &amp; Org. Management</h4>
-                            <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-bottom:12px;">BRELA · NGO/CSO · Tax Compliance · Microfinance · Org. Structuring</p>
+                            <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-bottom:12px;">BRELA · NGO/CSO · Tax Compliance · SACCO's · Org. Structuring</p>
                             <span style="color:#60a5fa;font-size:0.82rem;font-weight:700;">6 Services &rarr;</span>
                         </div>
                     </div>
