@@ -127,6 +127,9 @@
                     ['city'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
                     ['city'=>'Beijing','country'=>'China','img'=>'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80','visa'=>'China Visa'],
                     ['city'=>'New Delhi','country'=>'India','img'=>'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80','visa'=>'E-Visa'],
+                    ['city'=>'Paris','country'=>'France','img'=>'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80','visa'=>'Schengen Visa'],
+                    ['city'=>'Tokyo','country'=>'Japan','img'=>'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80','visa'=>'E-Visa'],
+                    ['city'=>'Sydney','country'=>'Australia','img'=>'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&q=80','visa'=>'Visitor Visa'],
                 ];
                 @endphp
                 @foreach($dests as $d)
