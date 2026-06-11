@@ -151,7 +151,7 @@
                         <li><a class="dropdown-item" href="#legal"><i class="bi bi-journal-richtext text-gold"></i>Legal Activities</a></li>
                         <li><a class="dropdown-item" href="#research"><i class="bi bi-search text-gold"></i>Research &amp; Consultancy</a></li>
                         <li><a class="dropdown-item" href="#company"><i class="bi bi-building-fill text-gold"></i>Company &amp; Org. Management</a></li>
-                        <li><a class="dropdown-item" href="#company"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts Registration</a></li>
+                        <li><a class="dropdown-item" href="#ngo"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts Registration</a></li>
                         <li><a class="dropdown-item" href="#company"><i class="bi bi-receipt text-gold"></i>TRA &amp; TAX Compliances</a></li>
                     </ul>
                 </li>
@@ -188,7 +188,7 @@
                 <a href="#legal" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-journal-richtext text-gold"></i>Legal Activities</a>
                 <a href="#research" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-search text-gold"></i>Research &amp; Consultancy</a>
                 <a href="#company" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-building-fill text-gold"></i>Company Management</a>
-                <a href="#company" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts</a>
+                <a href="#ngo" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts</a>
                 <a href="#company" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-receipt text-gold"></i>TRA &amp; TAX Compliances</a>
             </li>
             <li><a href="{{ route('events.index') }}" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Events</a></li>
