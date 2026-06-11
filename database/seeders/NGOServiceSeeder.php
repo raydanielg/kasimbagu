@@ -16,7 +16,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'NGO Registration',
                 'slug' => 'ngo-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-people-fill',
                 'icon_color' => '#10b981',
                 'short_description' => 'Full registration of Non-Governmental Organizations with complete compliance setup and regulatory requirements.',
@@ -37,7 +37,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'CBO Registration',
                 'slug' => 'cbo-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-house-heart-fill',
                 'icon_color' => '#059669',
                 'short_description' => 'Registration of Community-Based Organizations for grassroots development and community initiatives.',
@@ -58,7 +58,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'CSO Registration',
                 'slug' => 'cso-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-globe2',
                 'icon_color' => '#047857',
                 'short_description' => 'Registration of Civil Society Organizations for advocacy, civic engagement, and social development.',
@@ -79,7 +79,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'Charity Registration',
                 'slug' => 'charity-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-heart-fill',
                 'icon_color' => '#0d9488',
                 'short_description' => 'Registration of charitable organizations for philanthropic activities and social welfare programs.',
@@ -100,7 +100,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'Foundation Registration',
                 'slug' => 'foundation-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-building-exclamation',
                 'icon_color' => '#0f766e',
                 'short_description' => 'Registration of foundations for grant-making, charitable endowments, and institutional philanthropy.',
@@ -121,7 +121,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'Society Registration',
                 'slug' => 'society-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-people',
                 'icon_color' => '#115e59',
                 'short_description' => 'Registration of societies and membership organizations for cultural, educational, and recreational purposes.',
@@ -142,7 +142,7 @@ class NGOServiceSeeder extends Seeder
             [
                 'name' => 'Trust Registration',
                 'slug' => 'trust-registration',
-                'category' => 'NGO',
+                'category' => 'registration',
                 'icon' => 'bi-shield-lock-fill',
                 'icon_color' => '#065f46',
                 'short_description' => 'Registration of trusts for asset protection, estate planning, and fiduciary management.',
