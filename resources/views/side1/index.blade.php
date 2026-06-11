@@ -116,13 +116,26 @@
     .k1-svc-card::before { content:''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), #e8b84b); transform: scaleX(0); transition: transform 0.4s ease; }
     .k1-svc-card:hover::before { transform: scaleX(1); }
     .k1-svc-card:hover { transform:translateY(-10px); box-shadow:0 25px 60px rgba(201,153,58,0.2); border-color:var(--gold); }
-    .k1-svc-card h5 { color: #000 !important; font-weight: 700; font-size: 1.2rem !important; }
-    .k1-svc-card p { color: #000 !important; font-size: 0.95rem; line-height: 1.7; }
-    .k1-svc-card * { color: #000 !important; }
+    .k1-svc-card h5 { color: #000000 !important; font-weight: 700; font-size: 1.2rem !important; }
+    .k1-svc-card p { color: #000000 !important; font-size: 0.95rem; line-height: 1.7; }
+    .k1-svc-card * { color: #000000 !important; }
     .k1-svc-card .k1-svc-icon { color: white !important; }
-    .k1-svc-card a { color: #000 !important; }
+    .k1-svc-card a { color: #000000 !important; }
     .k1-svc-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.25rem; transition: all 0.4s ease; }
     .k1-svc-card:hover .k1-svc-icon { transform: scale(1.1) rotate(-5deg); }
+    
+    /* Force black text on legal section cards */
+    #legal .k1-svc-card,
+    #legal .k1-svc-card h5,
+    #legal .k1-svc-card p,
+    #legal .k1-svc-card a,
+    #legal .k1-svc-card span,
+    #legal .k1-svc-card div {
+        color: #000000 !important;
+    }
+    #legal .k1-svc-card .k1-svc-icon {
+        color: #ffffff !important;
+    }
     
     /* ── Section divider ── */
     .k1-section-divider { height:4px; background:linear-gradient(90deg,var(--gold),transparent); border-radius:2px; width:60px; margin:16px auto 0; }
