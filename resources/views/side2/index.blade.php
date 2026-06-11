@@ -95,7 +95,7 @@
         <div class="row g-4">
             @if(isset($destinations) && $destinations->count() > 0)
                 @foreach($destinations as $d)
-                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', '{{ $d->visa_required ? 'visa' : 'flight' }}')">
+                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d->name }}', '{{ $d->visa_required ? 'visa' : 'safari' }}')">
                     <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
                         @if($d->image_url)
                             <img src="{{ $d->image_url }}" alt="{{ $d->name }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
@@ -110,7 +110,7 @@
                                     <h5 class="text-white fw-bold mb-0">{{ $d->name }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d->country }}</div>
                                 </div>
-                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">
+                                <span class="badge rounded-0 px-3 py-2" style="background:{{ $d->visa_required ? 'rgba(56,189,248,0.25)' : 'rgba(34,197,94,0.25)' }};border:1px solid {{ $d->visa_required ? 'rgba(56,189,248,0.4)' : 'rgba(34,197,94,0.4)' }};color:{{ $d->visa_required ? '#7dd3fc' : '#22c55e' }};font-size:0.7rem;">
                                     {{ $d->visa_required ? ($d->visa_type ?? 'Visa Required') : 'No Visa Required' }}
                                 </span>
                             </div>
@@ -119,37 +119,9 @@
                 </div>
                 @endforeach
             @else
-                @php
-                $dests = [
-                    ['city'=>'Dubai','destination'=>'Dubai','country'=>'UAE','img'=>'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80','visa'=>'Tourist/Visit Visa'],
-                    ['city'=>'Serengeti National Park','destination'=>'Serengeti National Park','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80','visa'=>'No Visa Required'],
-                    ['city'=>'London','destination'=>'London','country'=>'United Kingdom','img'=>'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80','visa'=>'UK Standard Visitor Visa'],
-                    ['city'=>'Ngorongoro Crater','destination'=>'Ngorongoro Crater','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=600&q=80','visa'=>'No Visa Required'],
-                    ['city'=>'Istanbul','destination'=>'Istanbul','country'=>'Turkey','img'=>'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80','visa'=>'E-Visa'],
-                    ['city'=>'New York','destination'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
-                    ['city'=>'Zanzibar','destination'=>'Zanzibar Beach','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80','visa'=>'No Visa Required'],
-                    ['city'=>'Paris','destination'=>'Paris','country'=>'France','img'=>'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80','visa'=>'Schengen Visa'],
-                    ['city'=>'Mount Kilimanjaro','destination'=>'Mount Kilimanjaro','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1609766857071-0e0b3a9f4c19?w=600&q=80','visa'=>'No Visa Required'],
-                ];
-                @endphp
-                @foreach($dests as $d)
-                <div class="col-lg-4 col-md-6" onclick="openBookingModal('{{ $d['destination'] }}', 'visa')">
-                    <div class="k2-dest-card rounded-4 overflow-hidden position-relative shadow-sm" style="height:260px;">
-                        <img src="{{ $d['img'] }}" alt="{{ $d['destination'] }}" class="w-100 h-100 k2-dest-img" style="object-fit:cover;transition:transform 0.5s ease;">
-                        <div class="position-absolute inset-0 top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(1,12,28,0.85) 0%,rgba(1,12,28,0.1) 60%);"></div>
-                        <div class="position-absolute bottom-0 start-0 p-4 w-100">
-                            <div class="d-flex align-items-end justify-content-between">
-                                <div>
-                                    <div style="margin-bottom:8px;"><i class="bi bi-geo-alt-fill text-info" style="font-size:1.4rem;"></i></div>
-                                    <h5 class="text-white fw-bold mb-0">{{ $d['destination'] }}</h5>
-                                    <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
-                                </div>
-                                <span class="badge rounded-0 px-3 py-2" style="background:{{ $d['visa'] === 'No Visa Required' ? 'rgba(34,197,94,0.25)' : 'rgba(56,189,248,0.25)' }};border:1px solid {{ $d['visa'] === 'No Visa Required' ? 'rgba(34,197,94,0.4)' : 'rgba(56,189,248,0.4)' }};color:{{ $d['visa'] === 'No Visa Required' ? '#22c55e' : '#7dd3fc' }};font-size:0.7rem;">{{ $d['visa'] }}</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12 text-center py-5">
+                    <p class="text-secondary">No destinations available yet.</p>
                 </div>
-                @endforeach
             @endif
         </div>
     </div>
