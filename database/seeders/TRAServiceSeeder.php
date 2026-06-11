@@ -100,7 +100,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'Tax Compliance Audit',
                 'slug' => 'tax-compliance-audit',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-shield-check',
                 'icon_color' => '#34d399',
                 'short_description' => 'Comprehensive tax compliance audits to ensure full adherence to TRA regulations and requirements.',
@@ -121,7 +121,7 @@ class TRAServiceSeeder extends Seeder
             [
                 'name' => 'Tax Dispute Resolution',
                 'slug' => 'tax-dispute-resolution',
-                'category' => 'TRA',
+                'category' => 'legal',
                 'icon' => 'bi-graph-up',
                 'icon_color' => '#f87171',
                 'short_description' => 'Expert representation and resolution services for tax disputes, assessments, and negotiations with TRA.',
