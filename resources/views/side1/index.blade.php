@@ -345,6 +345,18 @@
             </div>
         </div>
         <div class="row g-4">
+            @foreach($legal as $i => $l)
+            <div class="col-lg-6 col-md-12 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:{{ $l['bg'] ?? 'rgba(201,153,58,0.1)' }};color:{{ $l['color'] ?? 'var(--gold)' }};">
+                        <i class="bi {{ $l['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">{{ $l['title'] }}</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $l['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:var(--gold);">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            @endforeach
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
@@ -373,7 +385,35 @@
             </div>
             @endforeach
         </div>
+    </div>
+</section>
+
+{{-- ═══ INTERFACE 2: RESEARCH & CONSULTANCY ═══ --}}
+<section id="research" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#061826 0%,#0a2440 60%,#0d2a4a 100%);"><div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;"></div>
+    <div class="container py-4">
+        <div class="row align-items-center g-5 mb-5">
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
+                <span class="k1-section-badge" style="background:rgba(13,148,136,0.15);border-color:rgba(13,148,136,0.3);color:#2dd4bf;"><i class="bi bi-search me-2"></i>Interface Two</span>
+                <h2 class="display-4 fw-bold text-white mt-2 mb-3" style="font-family:'EB Garamond',serif;">Research &amp; <span style="color:#2dd4bf;">Consultancy</span></h2>
+                <p style="color:#94a3b8;font-size:1.05rem;line-height:1.85;max-width:580px;">We bridge academic knowledge with real-world impact. Our research and consultancy services help NGOs, institutions, and researchers turn ideas into funded, implemented projects.</p>
+            </div>
+            <div class="col-lg-5 col-md-12 k1-animate-right k1-stagger-2">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=700&q=80" alt="Research" class="img-fluid rounded-4 shadow-lg">
+            </div>
+        </div>
         <div class="row g-4">
+            @foreach($research as $i => $r)
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:{{ $r['bg'] }};color:{{ $r['color'] }};">
+                        <i class="bi {{ $r['icon'] }}"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">{{ $r['title'] }}</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $r['desc'] }}</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            @endforeach
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0d9488;">Submit Research Request <i class="bi bi-arrow-right ms-2"></i></a>
