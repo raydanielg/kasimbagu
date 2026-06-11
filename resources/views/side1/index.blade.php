@@ -686,6 +686,9 @@
             <a href="{{ route('company-profile') }}" target="_blank" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">
                 <i class="bi bi-file-earmark-pdf-fill me-2"></i>View Company Profile
             </a>
+            <a href="{{ asset('kasimbagu-company-profile.pdf') }}" download class="btn btn-lg rounded-0 px-5 fw-bold text-dark ms-3" style="background:rgba(201,153,58,0.15);border:1px solid rgba(201,153,58,0.4);color:var(--gold);">
+                <i class="bi bi-download me-2"></i>Download
+            </a>
         </div>
     </div>
 </section>
