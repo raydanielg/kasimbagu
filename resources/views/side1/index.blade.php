@@ -522,6 +522,48 @@
             </div>
             @endforeach
         </div>
+        <div class="row g-4 mt-4">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-1">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
+                        <i class="bi bi-file-earmark-person"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Professional CV Writing</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">Expert CV and resume writing services tailored to your industry and career goals.</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-2">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Project Plan</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">Comprehensive project planning and development for successful implementation and funding.</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-3">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Scholarship Application</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">Professional scholarship application assistance for local and international opportunities.</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-4">
+                <div class="k1-svc-card">
+                    <div class="k1-svc-icon" style="background:rgba(13,148,136,0.15);color:#0d9488;">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h5 class="fw-bold mb-2">Research Methodology Guidance</h5>
+                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">Expert guidance on research methodology design and implementation for academic and professional research.</p>
+                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+                </div>
+            </div>
+        </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0d9488;">Submit Research Request <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
