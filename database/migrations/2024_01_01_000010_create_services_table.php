@@ -10,7 +10,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
-            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict']);
+            $table->enum('category', ['travel', 'legal', 'research', 'registration', 'ict', 'company', 'TRA', 'ngo']);
             $table->string('icon')->default('bi-briefcase');
             $table->string('icon_color')->default('#004a99');
             $table->text('short_description');
