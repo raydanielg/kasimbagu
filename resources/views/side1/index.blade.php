@@ -322,7 +322,7 @@
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="k1-section-badge"><i class="bi bi-grid-fill me-2"></i>Our Expertise</span>
-            <h2 class="display-4 fw-bold mt-2">Three Pillars of Service</h2>
+            <h2 class="display-4 fw-bold mt-2">Five Pillars of Service</h2>
             <p class="text-secondary mx-auto mt-3" style="max-width:580px;">Click to explore each area of specialisation in depth.</p>
         </div>
         <div class="row g-4">
