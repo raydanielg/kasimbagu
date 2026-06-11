@@ -715,41 +715,52 @@
 </section>
 
 {{-- ═══ EVENTS ═══ --}}
-<section id="events" class="py-5 bg-white">
-    <div class="container py-4">
+<section id="events" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#ffffff 0%,#f8f9fa 100%);">
+    <div style="position:absolute;bottom:-50px;left:-50px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,153,58,0.08),transparent);border-radius:50%;filter:blur(40px);pointer-events:none;"></div>
+    <div class="container py-4 position-relative" style="z-index:1;">
         <div class="row align-items-end mb-5">
-            <div class="col-lg-7 col-md-12">
-                <span class="k1-section-badge"><i class="bi bi-calendar-event me-2"></i>Events</span>
-                <h2 class="display-4 fw-bold mt-2">Upcoming <span style="color:var(--gold);">Events</span></h2>
-                <p class="text-secondary mt-3">Join us for workshops, seminars, and networking events.</p>
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
+                <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-calendar-event me-2"></i>Events</span>
+                <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">Upcoming <span style="color:var(--gold);">Events</span></h2>
+                <p class="text-secondary mt-3" style="font-size:1.05rem;line-height:1.7;">Join us for workshops, seminars, and networking events.</p>
             </div>
-            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
-                <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Events</a>
+            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0 k1-animate-right k1-stagger-2">
+                <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);box-shadow:0 4px 20px rgba(201,153,58,0.3);">View All Events <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
         </div>
         <div class="row g-4">
             @forelse($upcomingEvents ?? [] as $event)
-            <div class="col-lg-4 col-md-6">
-                <div class="k1-blog-card">
-                    <div style="overflow:hidden;">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-blog-card h-100" style="border-radius:16px;overflow:hidden;border:1px solid #e8d9b8;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);background:#fff;">
+                    <div style="overflow:hidden;position:relative;">
                         @if($event->image)
-                        <img src="{{ $event->image }}" alt="{{ $event->title }}">
+                        <img src="{{ $event->image }}" alt="{{ $event->title }}" style="width:100%;height:220px;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
                         @else
-                        <div style="height: 200px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
-                            <i class="bi bi-calendar-event text-white" style="font-size: 3rem; opacity: 0.5;"></i>
+                        <div style="height:220px;background:linear-gradient(135deg,#0a1c38,#162c56);display:flex;align-items:center;justify-content:center;">
+                            <i class="bi bi-calendar-event text-white" style="font-size:3rem;opacity:0.5;"></i>
                         </div>
                         @endif
+                        <div style="position:absolute;top:12px;right:12px;background:rgba(201,153,58,0.95);color:white;padding:6px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;">
+                            <i class="bi bi-calendar3 me-1"></i>{{ $event->event_date ? $event->event_date->format('M d') : '' }}
+                        </div>
                     </div>
                     <div class="p-4">
-                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $event->title }}</h5>
-                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;"><i class="bi bi-geo-alt me-1"></i>{{ $event->location }}</p>
-                        <a href="{{ route('events.show', $event->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);">View Details <i class="bi bi-arrow-right ms-1"></i></a>
+                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.25rem;line-height:1.4;color:#1a202c;">{{ $event->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;color:#475569;"><i class="bi bi-geo-alt me-1" style="color:var(--gold);"></i>{{ $event->location }}</p>
+                        <a href="{{ route('events.show', $event->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);font-size:0.9rem;">View Details <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
             @empty
-            <div class="col-12 text-center py-5">
-                <p class="text-secondary">No upcoming events scheduled.</p>
+            <div class="col-12">
+                <div class="p-5 rounded-4 text-center" style="background:linear-gradient(135deg,rgba(201,153,58,0.05),rgba(201,153,58,0.02));border:2px dashed rgba(201,153,58,0.2);">
+                    <div style="width:80px;height:80px;background:rgba(201,153,58,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                        <i class="bi bi-calendar-event" style="font-size:2.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h4 style="font-family:'EB Garamond',serif;font-size:1.8rem;color:#1a202c;margin-bottom:12px;">Coming Soon</h4>
+                    <p style="color:#64748b;font-size:1rem;line-height:1.6;max-width:500px;margin:0 auto 20px;">We're planning exciting workshops, seminars, and networking events. Stay tuned for upcoming opportunities!</p>
+                    <a href="{{ route('events.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Explore Past Events <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
             </div>
             @endforelse
         </div>
