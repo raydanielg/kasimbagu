@@ -65,7 +65,7 @@
 <div style="background:#020c1d;border-bottom:1px solid rgba(255,255,255,0.06);">
     <div class="container py-4">
         <div class="row g-3 text-center">
-            @foreach([['50+','Destinations'],['500+','Safari na Tour Guests'],['100%','Visa Success Rate'],['24/7','Support']] as $s)
+            @foreach([['50+','Destinations'],['500+','Safaris and Tour Guests'],['100%','Visa Success Rate'],['24/7','Support']] as $s)
             <div class="col-6 col-md-3">
                 <div class="py-2">
                     <div class="fw-bold" style="font-size:2rem;color:#38bdf8;line-height:1;">{{ $s[0] }}</div>
@@ -219,7 +219,7 @@
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHAT WE OFFER</span>
-            <h2 class="display-5 fw-bold mb-3">Complete Safari na Tour Services</h2>
+            <h2 class="display-5 fw-bold mb-3">Complete Safaris and Tour Services</h2>
             <p class="text-secondary mx-auto" style="max-width:560px;">Everything you need for a perfect trip — from booking to landing.</p>
         </div>
         <div class="row g-4 justify-content-center">
@@ -261,9 +261,9 @@
     <div class="container py-4 position-relative" style="z-index:1;">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY SAFARI NA TOUR WITH US</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(56,189,248,0.12);color:#7dd3fc;border:1px solid rgba(56,189,248,0.25);font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHY SAFARIS AND TOUR WITH US</span>
                 <h2 class="display-4 fw-bold text-white mb-4">Your Trip. <span style="background:linear-gradient(90deg,#38bdf8,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Our Promise.</span></h2>
-                <p style="color:#94a3b8;font-size:1rem;line-height:1.8;margin-bottom:2rem;">We don't just book trips. We craft seamless safari na tour experiences backed by expertise, speed, and personal service from first inquiry to safe return.</p>
+                <p style="color:#94a3b8;font-size:1rem;line-height:1.8;margin-bottom:2rem;">We don't just book trips. We craft seamless safaris and tour experiences backed by expertise, speed, and personal service from first inquiry to safe return.</p>
                 <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:#38bdf8;">Plan My Trip <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
             <div class="col-lg-7">
@@ -308,7 +308,7 @@
     <div class="container py-4">
         <div class="text-center mb-5">
             <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">TESTIMONIALS</span>
-            <h2 class="display-5 fw-bold mb-3">What Our Safari na Tour Guests Say</h2>
+            <h2 class="display-5 fw-bold mb-3">What Our Safaris and Tour Guests Say</h2>
         </div>
         <div class="swiper k2-testi pb-5">
             <div class="swiper-wrapper">
@@ -345,15 +345,15 @@
 </section>
 
 {{-- ══════════════════════════════════════════
-     SAFARI NA TOUR BLOG / INSIGHTS
+     SAFARIS AND TOUR BLOG / INSIGHTS
 ═══════════════════════════════════════════ --}}
 <section class="py-5 bg-white" id="blog">
     <div class="container py-4">
         <div class="row align-items-end mb-5">
             <div class="col-lg-7">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">SAFARI NA TOUR INSIGHTS</span>
-                <h2 class="display-5 fw-bold mb-3">Safari na Tour Tips & <span style="color:#0284c7;">Stories</span></h2>
-                <p class="text-secondary lead">Expert safari na tour advice, destination guides, and visa tips.</p>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">SAFARIS AND TOUR INSIGHTS</span>
+                <h2 class="display-5 fw-bold mb-3">Safaris and Tour Tips & <span style="color:#0284c7;">Stories</span></h2>
+                <p class="text-secondary lead">Expert safaris and tour advice, destination guides, and visa tips.</p>
             </div>
             <div class="col-lg-5 text-lg-end">
                 <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0284c7;">View All Blogs <i class="bi bi-arrow-right ms-2"></i></a>
@@ -439,7 +439,7 @@
     <div class="container py-4">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
-                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR SAFARI NA TOUR</span>
+                <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">BOOK YOUR SAFARIS AND TOUR</span>
                 <h2 class="display-5 fw-bold mb-4">Ready to <br><span style="color:#0284c7;">Take Off?</span></h2>
                 <p class="text-secondary lead mb-5">Tell us your destination, dates, and requirements. We'll get back to you with a full quote within a few hours.</p>
                 <div class="d-flex flex-column gap-3">
