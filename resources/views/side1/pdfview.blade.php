@@ -12,20 +12,11 @@
         <div class="col-12">
             <div class="rounded-4 overflow-hidden" style="background:rgba(255,255,255,0.03);border:1px solid rgba(201,153,58,0.2);box-shadow:0 20px 60px rgba(0,0,0,0.4);">
                 <div style="height:calc(100vh - 100px);">
-                    <iframe src="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}"
-                            style="width:100%;height:100%;border:none;"
-                            title="Kasimbagu Company Profile"
-                            loading="lazy">
-                        <div style="padding:40px;text-align:center;color:#94a3b8;">
-                            <i class="bi bi-file-earmark-pdf-fill" style="font-size:3rem;color:var(--gold);margin-bottom:20px;display:block;"></i>
-                            <p style="font-size:1.1rem;margin-bottom:20px;">Your browser does not support PDF viewing.</p>
-                            <a href="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}" download
-                               class="btn btn-lg rounded-0 px-5 fw-bold text-dark"
-                               style="background:var(--gold);">
-                                <i class="bi bi-download me-2"></i>Download PDF
-                            </a>
-                        </div>
-                    </iframe>
+                    <embed src="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}"
+                           type="application/pdf"
+                           width="100%"
+                           height="100%"
+                           style="border:none;">
                 </div>
             </div>
             <div class="text-center mt-4">
