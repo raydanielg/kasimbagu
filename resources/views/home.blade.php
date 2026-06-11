@@ -3,6 +3,7 @@
 @section('content')
 @include('partials.home.hero_top')
 @include('partials.home.services')
+@include('partials.home.target_clients')
 @include('partials.home.countries')
 @include('partials.home.why')
 @include('partials.home.testimonials')
