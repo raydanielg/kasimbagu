@@ -144,7 +144,7 @@
                                     <h5 class="text-white fw-bold mb-0">{{ $d['destination'] }}</h5>
                                     <div style="color:rgba(255,255,255,0.65);font-size:0.8rem;">{{ $d['country'] }}</div>
                                 </div>
-                                <span class="badge rounded-0 px-3 py-2" style="background:rgba(56,189,248,0.25);border:1px solid rgba(56,189,248,0.4);color:#7dd3fc;font-size:0.7rem;">{{ $d['visa'] }}</span>
+                                <span class="badge rounded-0 px-3 py-2" style="background:{{ $d['visa'] === 'No Visa Required' ? 'rgba(34,197,94,0.25)' : 'rgba(56,189,248,0.25)' }};border:1px solid {{ $d['visa'] === 'No Visa Required' ? 'rgba(34,197,94,0.4)' : 'rgba(56,189,248,0.4)' }};color:{{ $d['visa'] === 'No Visa Required' ? '#22c55e' : '#7dd3fc' }};font-size:0.7rem;">{{ $d['visa'] }}</span>
                             </div>
                         </div>
                     </div>
