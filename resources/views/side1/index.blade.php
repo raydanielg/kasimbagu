@@ -671,7 +671,7 @@
                 ['icon'=>'bi-building-fill-add','color'=>'#7c3aed','title'=>'Joint Ventures','desc'=>'Whether local or international, joint ventures often face complex registration and compliance challenges. We can help partners align legally, draft clear agreements, and navigate multi-party obligations with confidence.'],
                 ['icon'=>'bi-airplane-fill','color'=>'#0891b2','title'=>'Tourism Operators','desc'=>'With our expertise in securing TALA licenses, BRELA registration, and tax setup, we\'re perfectly positioned to support Tanzania\'s growing tourism sector.'],
                 ['icon'=>'bi-flower1-fill','color'=>'#16a34a','title'=>'Agribusinesses','desc'=>'From cooperatives to private processors, these businesses benefit from our support in registration, compliance, and business planning—especially when scaling or seeking funding.'],
-                ['icon'=>'bi-cash-coin','color'=>'#8b5cf6','title'=>'SACCO\'s Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, SACCO, and savings group institutions.']
+                ['icon'=>'bi-cash-coin','color'=>'#8b5cf6','title'=>'SACCO\'s Microfinance Institution Registration','desc'=>'Full regulatory registration and compliance advisory for microfinance, 'SACCO's', and savings group institutions.']
             ] as $i => $client)
             <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
                 <div class="k1-svc-card h-100">
