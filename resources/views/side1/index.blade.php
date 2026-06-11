@@ -345,9 +345,6 @@
             </div>
         </div>
         <div class="row g-4">
-                </div>
-            </div>
-            @endforeach
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
@@ -373,20 +370,10 @@
                     <h6 class="fw-bold mb-2" style="color:#1a202c;font-size:0.95rem;">{{ $al['title'] }}</h6>
                     <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.5;">{{ $al['desc'] }}</p>
                 </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="row g-4">
-                    <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
-                        <i class="bi {{ $sv['icon'] }}"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2">{{ $sv['title'] }}</h5>
-                    <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;">{{ $sv['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#0d9488;">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
             </div>
             @endforeach
+        </div>
+        <div class="row g-4">
         </div>
         <div class="text-center mt-5">
             <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#0d9488;">Submit Research Request <i class="bi bi-arrow-right ms-2"></i></a>
@@ -424,25 +411,41 @@
             @endforeach
         </div>
         <div class="text-center mt-5">
-        <div class="text-center mb-5">
-            <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
-            <h2 class="display-4 fw-bold mt-2 text-white" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
-            <p style="color:#cbd5e1;font-size:1.05rem;line-height:1.85;max-width:680px;margin:16px auto 0;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
+            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Request Legal Support <i class="bi bi-arrow-right ms-2"></i></a>
         </div>
-        <div class="row g-4">
-            @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
-                    <div class="tra-service-icon">
-                        <i class="bi {{ $traIcons[$i] }}"></i>
-                    </div>
-                    <h5 class="fw-bold mb-2 tra-service-title">{{ $ts }}</h5>
-                    <p class="tra-service-desc">{{ $traDescs[$i] }}</p>
-                </div>
+    </div>
+</section>
+
+{{-- ═══ TRA COMPLIANCE SERVICES ═══ --}}
+<div class="text-center mb-5 mt-5">
+    <span class="k1-section-badge" style="background:rgba(251,146,60,0.15);border-color:rgba(251,146,60,0.3);color:#fb923c;"><i class="bi bi-receipt me-2"></i>Tax Compliance</span>
+    <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">TRA <span style="color:#fb923c;">Compliance Services</span></h2>
+    <p class="text-secondary mx-auto mt-3" style="max-width:680px;">Complete tax registration and compliance services with Tanzania Revenue Authority for individuals and businesses.</p>
+</div>
+<div class="row g-4">
+    @foreach(['TIN Registration','VAT Registration','Tax Returns Filling'] as $i => $ts)
+    <?php
+    $traIcons = ['bi-receipt-cutoff','bi-percent','bi-file-earmark-text'];
+    $traDescs = [
+        'Registration of Tax Identification Number (TIN) with Tanzania Revenue Authority for individuals and businesses.',
+        'Registration of Value Added Tax (VAT) Number for businesses meeting the annual turnover threshold.',
+        'Professional tax returns filing services ensuring timely and accurate submission to Tanzania Revenue Authority.'
+    ];
+    ?>
+    <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+        <div class="tra-service-card p-4 rounded-4 h-100 text-center">
+            <div class="tra-service-icon">
+                <i class="bi {{ $traIcons[$i] }}"></i>
             </div>
-            @endforeach
+            <h5 class="fw-bold mb-2 tra-service-title">{{ $ts }}</h5>
+            <p class="tra-service-desc">{{ $traDescs[$i] }}</p>
         </div>
-        <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#fb923c;">Get TRA Compliance Help <i class="bi bi-arrow-right ms-2"></i></a>
-        </div>
+    </div>
+    @endforeach
+</div>
+<div class="text-center mt-5">
+    <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#fb923c;">Get TRA Compliance Help <i class="bi bi-arrow-right ms-2"></i></a>
+</div>
     </div>
 </section>
 
