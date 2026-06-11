@@ -59,12 +59,14 @@
         box-shadow: 0 4px 12px rgba(16,185,129,0.25);
     }
     .ngo-service-title {
-        color: #065f46;
-        font-size: 1.05rem;
+        color: #064e3b;
+        font-size: 1.1rem;
+        font-weight: 700;
     }
     .ngo-service-desc {
-        font-size: 0.88rem;
+        font-size: 0.9rem;
         line-height: 1.6;
+        color: #065f46;
     }
     
     /* ── TRA Service Cards ── */
@@ -87,13 +89,14 @@
         color: #fb923c;
     }
     .tra-service-title {
-        color: white;
-        font-size: 1.05rem;
+        color: #fed7aa;
+        font-size: 1.1rem;
+        font-weight: 700;
     }
     .tra-service-desc {
-        font-size: 0.88rem;
+        font-size: 0.9rem;
         line-height: 1.6;
-        opacity: 0.85;
+        color: #fdba74;
     }
     
     /* ── Interface cards ── */
