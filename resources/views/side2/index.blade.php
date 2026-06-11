@@ -262,14 +262,14 @@
 </style>
 
 {{-- ══════════════════════════════════════════
-     WHO WE SERVE
+     KASIMBAGU
 ══════════════════════════════════════════ --}}
-<section class="py-5" style="background:#f0f9ff;" id="who-we-serve">
+<section class="py-5" style="background:#f0f9ff;" id="kasimbagu">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">WHO WE SERVE</span>
-            <h2 class="display-5 fw-bold mb-3">Trusted by <span style="color:#0284c7;">Diverse Clients</span></h2>
-            <p class="text-secondary mx-auto" style="max-width:560px;">We serve a wide range of clients with tailored travel and visa solutions.</p>
+            <span class="badge rounded-0 px-3 py-2 mb-3" style="background:rgba(2,132,199,0.1);color:#0284c7;font-size:0.73rem;letter-spacing:1px;font-weight:700;">KASIMBAGU</span>
+            <h2 class="display-5 fw-bold mb-3">Serving <span style="color:#0284c7;">Diverse Clients</span></h2>
+            <p class="text-secondary mx-auto" style="max-width:560px;">Kasimbagu serves a wide range of clients with tailored travel and visa solutions.</p>
         </div>
         <div class="row g-4">
             @php
@@ -284,7 +284,7 @@
                     'icon'=>'bi-bank-fill',
                     'color'=>'#7c3aed',
                     'title'=>'Government Sectors',
-                    'desc':'Official travel arrangements, diplomatic visa processing, and government delegation management.'
+                    'desc'=>'Official travel arrangements, diplomatic visa processing, and government delegation management.'
                 ],
                 [
                     'icon'=>'bi-graph-up-arrow',
@@ -321,7 +321,7 @@
     </div>
 </section>
 <style>
-    #who-we-serve .rounded-4:hover { transform: translateY(-5px); border-color: rgba(2,132,199,0.3) !important; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+    #kasimbagu .rounded-4:hover { transform: translateY(-5px); border-color: rgba(2,132,199,0.3) !important; box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
 </style>
 
 {{-- ══════════════════════════════════════════
