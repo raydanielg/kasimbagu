@@ -220,6 +220,14 @@
                     'highlights'=>['Corporate Booking','Business Visa','Conference Registration','Expense Management']
                 ],
                 [
+                    'icon'=>'bi-people-fill',
+                    'color'=>'#059669',
+                    'bg'=>'rgba(5,150,105,0.08)',
+                    'title'=>'Meetings & Conferences',
+                    'desc'=>'Complete event management for international meetings, conferences, and seminars. Venue booking, delegate travel, accommodation, and logistics.',
+                    'highlights'=>['Venue Booking','Delegate Travel','Accommodation','Event Logistics']
+                ],
+                [
                     'icon'=>'bi-cart-fill',
                     'color'=>'#d97706',
                     'bg'=>'rgba(217,119,6,0.08)',
