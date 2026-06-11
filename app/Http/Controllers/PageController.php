@@ -133,7 +133,7 @@ class PageController extends Controller
         ];
 
         $blogs = Blog::where('is_published', true)
-            ->whereIn('category', ['Safari', 'Adventure', 'Beach', 'Wildlife'])
+            ->whereIn('category', ['Consultancy', 'Legal', 'Business', 'Research', 'Tax', 'NGO'])
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
