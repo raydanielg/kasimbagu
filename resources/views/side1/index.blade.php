@@ -667,37 +667,47 @@
 </section>
 
 {{-- ═══ BLOG / INSIGHTS ═══ --}}
-<section id="blog" class="py-5 bg-white">
-    <div class="container py-4">
+<section id="blog" class="py-5 position-relative overflow-hidden k1-animate-on-scroll" style="background:linear-gradient(155deg,#f8f9fa 0%,#ffffff 100%);">
+    <div style="position:absolute;top:-50px;right:-50px;width:300px;height:300px;background:radial-gradient(circle,rgba(201,153,58,0.08),transparent);border-radius:50%;filter:blur(40px);pointer-events:none;"></div>
+    <div class="container py-4 position-relative" style="z-index:1;">
         <div class="row align-items-end mb-5">
-            <div class="col-lg-7 col-md-12">
-                <span class="k1-section-badge"><i class="bi bi-newspaper me-2"></i>Insights</span>
-                <h2 class="display-4 fw-bold mt-2">Blog &amp; <span style="color:var(--gold);">Updates</span></h2>
-                <p class="text-secondary mt-3">Latest insights on Tanzanian law, business compliance, and research trends.</p>
+            <div class="col-lg-7 col-md-12 k1-animate-left k1-stagger-1">
+                <span class="k1-section-badge" style="background:rgba(201,153,58,0.1);border-color:rgba(201,153,58,0.3);color:var(--gold);"><i class="bi bi-newspaper me-2"></i>Insights</span>
+                <h2 class="display-4 fw-bold mt-2" style="font-family:'EB Garamond',serif;">Blog &amp; <span style="color:var(--gold);">Updates</span></h2>
+                <p class="text-secondary mt-3" style="font-size:1.05rem;line-height:1.7;">Latest insights on Tanzanian law, business compliance, and research trends.</p>
             </div>
-            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0">
-                <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">View All Blogs</a>
+            <div class="col-lg-5 col-md-12 text-lg-end text-center mt-3 mt-lg-0 k1-animate-right k1-stagger-2">
+                <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);box-shadow:0 4px 20px rgba(201,153,58,0.3);">View All Blogs <i class="bi bi-arrow-right ms-2"></i></a>
             </div>
         </div>
         <div class="row g-4">
             @forelse($blogs ?? [] as $blog)
-            <div class="col-lg-4 col-md-6">
-                <div class="k1-blog-card h-100">
-                    <img src="{{ $blog->image ?? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80' }}" alt="{{ $blog->title }}">
+            <div class="col-lg-4 col-md-6 k1-animate-scale k1-stagger-{{ $i + 1 }}">
+                <div class="k1-blog-card h-100" style="border-radius:16px;overflow:hidden;border:1px solid #e8d9b8;transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);background:#fff;">
+                    <div style="overflow:hidden;position:relative;">
+                        <img src="{{ $blog->image ?? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=80' }}" alt="{{ $blog->title }}" style="width:100%;height:220px;object-fit:cover;transition:transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <div style="position:absolute;top:12px;left:12px;background:rgba(201,153,58,0.95);color:white;padding:6px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;">{{ $blog->category }}</div>
+                    </div>
                     <div class="p-4">
                         <div class="d-flex align-items-center gap-2 mb-3">
-                            <span class="badge rounded-0 px-2 py-1" style="background:rgba(201,153,58,0.1);color:var(--gold);font-size:0.72rem;">{{ $blog->category }}</span>
-                            <span class="text-secondary small">{{ $blog->published_at ? $blog->published_at->format('M Y') : '' }}</span>
+                            <span style="color:#64748b;font-size:0.8rem;"><i class="bi bi-calendar3 me-1"></i>{{ $blog->published_at ? $blog->published_at->format('M d, Y') : '' }}</span>
                         </div>
-                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.15rem;line-height:1.4;">{{ $blog->title }}</h5>
-                        <p class="text-secondary mb-3" style="font-size:0.88rem;line-height:1.7;">{{ Str::limit($blog->excerpt, 100) }}</p>
-                        <a href="{{ route('blog.show', $blog->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+                        <h5 class="fw-bold mb-2" style="font-family:'EB Garamond',serif;font-size:1.25rem;line-height:1.4;color:#1a202c;">{{ $blog->title }}</h5>
+                        <p class="text-secondary mb-3" style="font-size:0.9rem;line-height:1.7;color:#475569;">{{ Str::limit($blog->excerpt, 100) }}</p>
+                        <a href="{{ route('blog.show', $blog->slug) }}" class="fw-bold text-decoration-none small" style="color:var(--gold);font-size:0.9rem;">Read More <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
                 </div>
             </div>
             @empty
-            <div class="col-12 text-center py-5">
-                <p class="text-secondary">No blog posts available yet.</p>
+            <div class="col-12">
+                <div class="p-5 rounded-4 text-center" style="background:linear-gradient(135deg,rgba(201,153,58,0.05),rgba(201,153,58,0.02));border:2px dashed rgba(201,153,58,0.2);">
+                    <div style="width:80px;height:80px;background:rgba(201,153,58,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                        <i class="bi bi-newspaper" style="font-size:2.5rem;color:var(--gold);"></i>
+                    </div>
+                    <h4 style="font-family:'EB Garamond',serif;font-size:1.8rem;color:#1a202c;margin-bottom:12px;">Coming Soon</h4>
+                    <p style="color:#64748b;font-size:1rem;line-height:1.6;max-width:500px;margin:0 auto 20px;">We're preparing insightful articles on Tanzanian law, business compliance, and research trends. Stay tuned!</p>
+                    <a href="{{ route('blog.index') }}" class="btn btn-lg rounded-0 px-5 fw-bold text-dark" style="background:var(--gold);">Explore All Topics <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
             </div>
             @endforelse
         </div>
