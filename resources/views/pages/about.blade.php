@@ -235,45 +235,7 @@
     .col-lg-4:hover .rounded-4 { border-color:rgba(124,58,237,0.3) !important; transform:translateY(-5px); box-shadow:0 20px 50px rgba(0,0,0,0.35); }
 </style>
 
-{{-- ── COMPANY PROFILE PDF VIEWER ── }}
-<section style="background:#030c1e;border-top:1px solid rgba(255,255,255,0.05);">
-    <div class="container py-5">
-        <div class="text-center mb-5">
-            <span style="display:inline-flex;align-items:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;padding:5px 18px;border-radius:50px;font-size:0.73rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;" class="mb-3 d-inline-flex">
-                <i class="bi bi-file-earmark-pdf-fill me-2"></i>Company Profile
-            </span>
-            <h2 class="text-white fw-bold" style="font-size:2rem;">View Our <span style="color:#fbbf24;">Company Profile</span></h2>
-            <p style="color:#64748b;max-width:500px;margin:10px auto 0;font-size:0.93rem;line-height:1.7;">Learn more about Kasimbagu Consultancy Agency by viewing our complete company profile document below.</p>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="rounded-4 overflow-hidden" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);">
-                    <div style="height:700px;">
-                        <iframe src="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}"
-                                style="width:100%;height:100%;border:none;"
-                                title="Kasimbagu Company Profile"
-                                loading="lazy">
-                            <p style="padding:20px;text-align:center;color:#94a3b8;">
-                                Your browser does not support PDF viewing.
-                                <a href="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}" download style="color:#fbbf24;">Click here to download the PDF</a>.
-                            </p>
-                        </iframe>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="{{ asset('KASIMBAGU COMPANY PROFILE.pdf') }}" download
-                       class="btn btn-lg px-5 rounded-0 fw-bold"
-                       style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);color:#fbbf24;">
-                        <i class="bi bi-download me-2"></i>Download Company Profile
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- ── CTA ── --}}
+{{-- ── CTA ── }}--}}
 <section class="py-5" style="background:#040d1e;border-top:1px solid rgba(255,255,255,0.05);">
     <div class="container py-3 text-center">
         <h3 class="text-white fw-bold mb-2">Ready to work with us?</h3>
