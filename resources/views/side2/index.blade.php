@@ -121,15 +121,15 @@
             @else
                 @php
                 $dests = [
-                    ['city'=>'Dubai','country'=>'United Arab Emirates','img'=>'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80','visa'=>'Visa on Arrival'],
-                    ['city'=>'Istanbul','country'=>'Turkey','img'=>'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80','visa'=>'E-Visa'],
-                    ['city'=>'London','country'=>'United Kingdom','img'=>'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80','visa'=>'UK Visa Required'],
-                    ['city'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
-                    ['city'=>'Beijing','country'=>'China','img'=>'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80','visa'=>'China Visa'],
-                    ['city'=>'New Delhi','country'=>'India','img'=>'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80','visa'=>'E-Visa'],
-                    ['city'=>'Paris','country'=>'France','img'=>'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80','visa'=>'Schengen Visa'],
-                    ['city'=>'Tokyo','country'=>'Japan','img'=>'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80','visa'=>'E-Visa'],
-                    ['city'=>'Sydney','country'=>'Australia','img'=>'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&q=80','visa'=>'Visitor Visa'],
+                    ['city'=>'Dubai','destination'=>'Dubai','country'=>'UAE','img'=>'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80','visa'=>'Tourist/Visit Visa'],
+                    ['city'=>'Serengeti National Park','destination'=>'Serengeti National Park','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80','visa'=>'No Visa Required'],
+                    ['city'=>'London','destination'=>'London','country'=>'United Kingdom','img'=>'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80','visa'=>'UK Standard Visitor Visa'],
+                    ['city'=>'Ngorongoro Crater','destination'=>'Ngorongoro Crater','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=600&q=80','visa'=>'No Visa Required'],
+                    ['city'=>'Istanbul','destination'=>'Istanbul','country'=>'Turkey','img'=>'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&q=80','visa'=>'E-Visa'],
+                    ['city'=>'New York','destination'=>'New York','country'=>'United States','img'=>'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80','visa'=>'B1/B2 Visa'],
+                    ['city'=>'Zanzibar','destination'=>'Zanzibar Beach','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80','visa'=>'No Visa Required'],
+                    ['city'=>'Paris','destination'=>'Paris','country'=>'France','img'=>'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80','visa'=>'Schengen Visa'],
+                    ['city'=>'Mount Kilimanjaro','destination'=>'Mount Kilimanjaro','country'=>'Tanzania','img'=>'https://images.unsplash.com/photo-1609766857071-0e0b3a9f4c19?w=600&q=80','visa'=>'No Visa Required'],
                 ];
                 @endphp
                 @foreach($dests as $d)
