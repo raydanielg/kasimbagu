@@ -52,7 +52,7 @@
             </div>
             <div style="line-height:1.1;">
                 <div class="fw-bold" style="color:#fff;font-size:1rem;">Kasim<span style="color:#38bdf8;">bagu</span></div>
-                <div style="font-size:0.58rem;letter-spacing:2.5px;color:#7dd3fc;font-weight:700;text-transform:uppercase;">Travelling Agency</div>
+                <div style="font-size:0.58rem;letter-spacing:2.5px;color:#7dd3fc;font-weight:700;text-transform:uppercase;">Safari na Tour Agency</div>
             </div>
         </a>
         <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#k2Offcanvas">
@@ -85,7 +85,7 @@
             </div>
             <div style="line-height:1.1;">
                 <div class="fw-bold text-white" style="font-size:0.95rem;">Kasim<span style="color:#38bdf8;">bagu</span></div>
-                <div style="font-size:0.56rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">TRAVEL</div>
+                <div style="font-size:0.56rem;letter-spacing:2px;color:#7dd3fc;font-weight:700;">SAFARI NA TOUR</div>
             </div>
         </div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
