@@ -546,24 +546,6 @@
     </div>
 </section>
 
-{{-- ═══ INTERFACE 3: COMPANY & ORG MANAGEMENT ═══ --}}
-                <div class="k1-svc-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
-                    <div class="k1-svc-icon" style="background:{{ $sv['bg'] }};color:{{ $sv['color'] }};">
-                        <i class="bi {{ $sv['icon'] }}"></i>
-                    </div>
-                    <h5 class="fw-bold text-white mb-2">{!! $sv['title'] !!}</h5>
-                    <p style="color:#94a3b8;font-size:0.9rem;line-height:1.7;margin-bottom:16px;">{{ $sv['desc'] }}</p>
-                    <a href="#contact" class="text-decoration-none fw-bold small" style="color:#60a5fa;">Start Now <i class="bi bi-arrow-right ms-1"></i></a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <div class="text-center mt-5">
-            <a href="#contact" class="btn btn-lg rounded-0 px-5 fw-bold text-white" style="background:#1d4ed8;border-color:#1d4ed8;">Start Your Registration Journey <i class="bi bi-arrow-right ms-2"></i></a>
-        </div>
-    </div>
-</section>
-
 {{-- ═══ COMPANY PROFILE VISUAL ═══ --}}
 <section class="py-5 overflow-hidden position-relative k1-animate-on-scroll" style="background:linear-gradient(140deg,#1e1300 0%,#2e1e06 45%,#1a1102 100%);">
     <div style="position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(201,153,58,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(201,153,58,0.07) 1px,transparent 1px);background-size:38px 38px;pointer-events:none;"></div>
