@@ -56,6 +56,7 @@ Route::get('/destinations', [App\Http\Controllers\PageController::class, 'destin
 Route::get('/about',        [App\Http\Controllers\PageController::class, 'about'])->name('about');
 Route::get('/contact',      [App\Http\Controllers\PageController::class, 'contact'])->name('contact');
 Route::post('/contact',     [App\Http\Controllers\PageController::class, 'submitContact'])->name('contact.submit');
+Route::get('/our-team',     function () { return view('side1.team'); })->name('team');
 
 // ─── Blog Routes (Public) ────────────────────────────────
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'index'])->name('blog.index');

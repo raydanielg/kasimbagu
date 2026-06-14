@@ -158,6 +158,7 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('events.index') }}">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('team') }}">Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="#why-us">Why Choose Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -192,9 +193,9 @@
                 <a href="#company" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-building-fill text-gold"></i>Company Management</a>
                 <a href="#ngo" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-people-fill text-gold"></i>NGOs, Societies &amp; Trusts</a>
                 <a href="#company" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-receipt text-gold"></i>TRA &amp; TAX Compliances</a>
-                <a href="#travel" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-airplane-engined text-gold"></i>Fortune Travel</a>
             </li>
             <li><a href="{{ route('events.index') }}" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Events</a></li>
+            <li><a href="{{ route('team') }}" class="d-flex align-items-center gap-2 py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas"><i class="bi bi-people-fill text-gold"></i>Our Team</a></li>
             <li><a href="#why-us" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Why Choose Us</a></li>
             <li><a href="#blog" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Blog</a></li>
             <li><a href="#contact" class="d-block py-2 px-3 rounded-3 mb-1 text-decoration-none" style="color:rgba(255,255,255,0.8);" data-bs-dismiss="offcanvas">Contact</a></li>
