@@ -132,7 +132,7 @@ class EventController extends Controller
 
         if ($request->hasFile('image')) {
             if ($event->image) {
-                \Illuminate\Support\Facades\Storage::disk('public')->delete($event->image);
+                Storage::disk('public')->delete($event->image);
             }
             $validated['image'] = $request->file('image')->store('images/events', 'public');
         } else {
@@ -149,7 +149,7 @@ class EventController extends Controller
     {
         $event = Event::findOrFail($id);
         if ($event->image) {
-            \Illuminate\Support\Facades\Storage::disk('public')->delete($event->image);
+            Storage::disk('public')->delete($event->image);
         }
         $event->delete();
         return redirect()->route('admin.events')->with('success', 'Event deleted successfully.');
