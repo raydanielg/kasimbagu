@@ -124,6 +124,25 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+        .compact-toast {
+            font-size: 0.85rem !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 999px !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+        }
+        .compact-toast .swal2-title {
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            line-height: 1.4 !important;
+        }
+        .compact-toast .swal2-icon {
+            width: 1.25rem !important;
+            height: 1.25rem !important;
+            margin-right: 0.5rem !important;
+            margin-left: 0 !important;
+        }
     </style>
 </head>
 <body>
@@ -145,10 +164,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const Toast = Swal.mixin({
                 toast: true,
-                position: 'top-end',
+                position: 'top',
                 showConfirmButton: false,
                 timer: 3500,
                 timerProgressBar: true,
+                customClass: {
+                    popup: 'compact-toast'
+                },
                 didOpen: (toast) => {
                     toast.addEventListener('mouseenter', Swal.stopTimer);
                     toast.addEventListener('mouseleave', Swal.resumeTimer);
