@@ -7,69 +7,63 @@
 <!-- Dynamic Database KPI Stats (Single Row) -->
 <div class="row g-3 mb-5">
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #e0f2fe; color: #0284c7;">
-                <i class="bi bi-people-fill"></i>
+        <div class="kpi-card kpi-card-1">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Total Users</span>
+                <div class="kpi-card-icon"><i class="bi bi-people-fill"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\User::count() }}</div>
-                <div class="dashboard-stat-label">Total Users</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\User::count() }}</div>
+            <div class="kpi-card-sub">Registered accounts</div>
         </div>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #fef3c7; color: #d97706;">
-                <i class="bi bi-envelope-open-fill"></i>
+        <div class="kpi-card kpi-card-2">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Inquiries</span>
+                <div class="kpi-card-icon"><i class="bi bi-envelope-open-fill"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\Inquiry::count() }}</div>
-                <div class="dashboard-stat-label">Total Inquiries</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\Inquiry::count() }}</div>
+            <div class="kpi-card-sub">All time messages</div>
         </div>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #e0e7ff; color: #4f46e5;">
-                <i class="bi bi-calendar2-check-fill"></i>
+        <div class="kpi-card kpi-card-3">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Bookings</span>
+                <div class="kpi-card-icon"><i class="bi bi-calendar2-check-fill"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\Booking::count() }}</div>
-                <div class="dashboard-stat-label">Bookings</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\Booking::count() }}</div>
+            <div class="kpi-card-sub">Travel reservations</div>
         </div>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #ecfdf5; color: #059669;">
-                <i class="bi bi-pin-map-fill"></i>
+        <div class="kpi-card kpi-card-4">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Destinations</span>
+                <div class="kpi-card-icon"><i class="bi bi-pin-map-fill"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\Destination::count() }}</div>
-                <div class="dashboard-stat-label">Destinations</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\Destination::count() }}</div>
+            <div class="kpi-card-sub">Active locations</div>
         </div>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #fce7f3; color: #db2777;">
-                <i class="bi bi-newspaper"></i>
+        <div class="kpi-card kpi-card-5">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Subscribers</span>
+                <div class="kpi-card-icon"><i class="bi bi-newspaper"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\Newsletter::count() }}</div>
-                <div class="dashboard-stat-label">Subscribers</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\Newsletter::count() }}</div>
+            <div class="kpi-card-sub">Newsletter list</div>
         </div>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
-        <div class="dashboard-stat-card">
-            <div class="dashboard-stat-icon-wrapper" style="background: #f3e8ff; color: #7c3aed;">
-                <i class="bi bi-gear-fill"></i>
+        <div class="kpi-card kpi-card-6">
+            <div class="kpi-card-header">
+                <span class="kpi-card-label">Services</span>
+                <div class="kpi-card-icon"><i class="bi bi-gear-fill"></i></div>
             </div>
-            <div>
-                <div class="dashboard-stat-value">{{ App\Models\Service::count() }}</div>
-                <div class="dashboard-stat-label">Active Services</div>
-            </div>
+            <div class="kpi-card-value">{{ App\Models\Service::count() }}</div>
+            <div class="kpi-card-sub">Active services</div>
         </div>
     </div>
 </div>
