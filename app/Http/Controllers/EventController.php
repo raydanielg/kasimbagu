@@ -147,6 +147,9 @@ class EventController extends Controller
     public function destroy($id)
     {
         $event = Event::findOrFail($id);
+        if ($event->image) {
+            \Illuminate\Support\Facades\Storage::disk('public')->delete($event->image);
+        }
         $event->delete();
         return redirect()->route('admin.events')->with('success', 'Event deleted successfully.');
     }
