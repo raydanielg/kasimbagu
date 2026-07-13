@@ -16,7 +16,7 @@
 </div>
 
 <div class="dashboard-panel-card">
-    <form action="{{ route('admin.events.store') }}" method="POST">
+    <form action="{{ route('admin.events.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row g-4">
             <div class="col-md-8">
