@@ -215,7 +215,7 @@
         .user-name {
             font-size: 0.85rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
         }
         .user-role {
             font-size: 0.72rem;
@@ -234,7 +234,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
             overflow: hidden;
             transition: all 0.3s ease;
         }
@@ -311,7 +311,7 @@
         .dashboard-stat-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
             border-radius: 12px;
             padding: 24px;
             display: flex;
@@ -322,7 +322,7 @@
         }
         .dashboard-stat-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 12px 30px rgba(148, 163, 184, 0.22);
             border-color: var(--primary);
         }
         .dashboard-stat-icon-wrapper {
@@ -342,7 +342,7 @@
         .dashboard-stat-value {
             font-size: 1.75rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 4px;
             line-height: 1.1;
         }
@@ -356,20 +356,20 @@
         .dashboard-panel-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
             border-radius: 12px;
             padding: 24px;
             height: 100%;
             transition: all 0.3s ease;
         }
         .dashboard-panel-card:hover {
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 30px rgba(148, 163, 184, 0.2);
             border-color: var(--primary);
         }
         .dashboard-panel-title {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 20px;
         }
 
@@ -378,7 +378,7 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 20px rgba(148, 163, 184, 0.15);
             overflow: hidden;
             margin-top: 24px;
             transition: all 0.3s ease;
@@ -402,7 +402,7 @@
             margin: 0;
         }
         .dashboard-table th {
-            background: rgba(15, 23, 42, 0.5);
+            background: #f8fafc;
             border-bottom: 1px solid var(--border-color);
             padding: 14px 24px;
             font-size: 0.72rem;
@@ -436,24 +436,24 @@
             border: 1px solid transparent !important;
         }
         .badge-success {
-            background-color: rgba(52, 211, 153, 0.15) !important;
-            color: #34d399 !important;
-            border-color: rgba(52, 211, 153, 0.3) !important;
+            background-color: rgba(34, 197, 94, 0.12) !important;
+            color: #15803d !important;
+            border-color: rgba(34, 197, 94, 0.25) !important;
         }
         .badge-warning {
-            background-color: rgba(251, 191, 36, 0.15) !important;
-            color: #fbbf24 !important;
-            border-color: rgba(251, 191, 36, 0.3) !important;
+            background-color: rgba(245, 158, 11, 0.12) !important;
+            color: #b45309 !important;
+            border-color: rgba(245, 158, 11, 0.25) !important;
         }
         .badge-danger {
-            background-color: rgba(248, 113, 113, 0.15) !important;
-            color: #f87171 !important;
-            border-color: rgba(248, 113, 113, 0.3) !important;
+            background-color: rgba(239, 68, 68, 0.12) !important;
+            color: #b91c1c !important;
+            border-color: rgba(239, 68, 68, 0.25) !important;
         }
         .badge-info {
-            background-color: rgba(56, 189, 248, 0.15) !important;
-            color: #38bdf8 !important;
-            border-color: rgba(56, 189, 248, 0.3) !important;
+            background-color: rgba(14, 165, 233, 0.12) !important;
+            color: #0369a1 !important;
+            border-color: rgba(14, 165, 233, 0.25) !important;
         }
 
         /* Custom scrollbar */
