@@ -53,7 +53,7 @@
                     <input type="file" name="image" id="eventImage" class="form-control" accept="image/*">
                     <small class="text-secondary">Optional: Upload new image to replace current (JPG, PNG, GIF, WebP max 2MB)</small>
                     <div id="imagePreview" class="mt-3 {{ $event->image ? '' : 'd-none' }}">
-                        <img src="{{ $event->image ? asset('storage/' . $event->image) : '' }}" alt="Event image" class="img-fluid rounded border" style="max-height: 200px; object-fit: cover;">
+                        <img src="{{ $event->image_url }}" alt="Event image" class="img-fluid rounded border" style="max-height: 200px; object-fit: cover;">
                     </div>
                 </div>
                 <div class="mb-3">

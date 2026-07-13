@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     @if($event->image)
-                    <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}" class="img-fluid rounded-4 mb-4" style="width: 100%; max-height: 500px; object-fit: cover;">
+                    <img src="{{ $event->image_url }}" alt="{{ $event->title }}" class="img-fluid rounded-4 mb-4" style="width: 100%; max-height: 500px; object-fit: cover;">
                     @endif
                     
                     <div class="d-flex gap-4 mb-4">
@@ -144,7 +144,7 @@
                             @foreach($upcomingEvents as $upcoming)
                             <a href="{{ route('events.show', $upcoming->slug) }}" class="text-decoration-none related-card">
                                 @if($upcoming->image)
-                                <img src="{{ asset('storage/' . $upcoming->image) }}" alt="{{ $upcoming->title }}" style="height: 120px; width: 100%; object-fit: cover;">
+                                <img src="{{ $upcoming->image_url }}" alt="{{ $upcoming->title }}" style="height: 120px; width: 100%; object-fit: cover;">
                                 @else
                                 <div style="height: 120px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
                                     <i class="bi bi-calendar-event text-white" style="font-size: 2rem; opacity: 0.5;"></i>
