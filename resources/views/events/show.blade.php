@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     @if($event->image)
-                    <img src="{{ $event->image }}" alt="{{ $event->title }}" class="img-fluid rounded-4 mb-4" style="width: 100%; max-height: 500px; object-fit: cover;">
+                    <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}" class="img-fluid rounded-4 mb-4" style="width: 100%; max-height: 500px; object-fit: cover;">
                     @endif
                     
                     <div class="d-flex gap-4 mb-4">
