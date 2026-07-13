@@ -122,7 +122,7 @@
 
             @if($events->hasPages())
             <div class="mt-5">
-                {{ $events->links('pagination::bootstrap-5') }}
+                {{ $events->links('pagination::bootstrap-4') }}
             </div>
             @endif
         </div>

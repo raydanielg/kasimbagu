@@ -58,6 +58,6 @@
 </div>
 @if($inquiries->hasPages())
 <div class="p-4 border-top" style="border-color: var(--border-color);">
-    {{ $inquiries->links('pagination::bootstrap-5') }}
+    {{ $inquiries->links('pagination::bootstrap-4') }}
 </div>
 @endif

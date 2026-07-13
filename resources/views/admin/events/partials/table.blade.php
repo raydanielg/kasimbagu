@@ -65,7 +65,7 @@
 
 @if($events->hasPages())
 <div class="data-table-footer">
-    {{ $events->links('pagination::bootstrap-5') }}
+    {{ $events->links('pagination::bootstrap-4') }}
 </div>
 @endif
 

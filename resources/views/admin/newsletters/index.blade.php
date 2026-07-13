@@ -89,7 +89,7 @@
     </div>
     @if($newsletters->hasPages())
     <div class="p-4 border-top" style="border-color: var(--border-color);">
-        {{ $newsletters->links('pagination::bootstrap-5') }}
+        {{ $newsletters->links('pagination::bootstrap-4') }}
     </div>
     @endif
 </div>

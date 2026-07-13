@@ -65,6 +65,6 @@
 </div>
 @if($services->hasPages())
 <div class="p-4 border-top" style="border-color: var(--border-color);">
-    {{ $services->links('pagination::bootstrap-5') }}
+    {{ $services->links('pagination::bootstrap-4') }}
 </div>
 @endif

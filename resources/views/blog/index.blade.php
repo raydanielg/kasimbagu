@@ -105,7 +105,7 @@
 
             @if($blogs->hasPages())
             <div class="mt-5">
-                {{ $blogs->links('pagination::bootstrap-5') }}
+                {{ $blogs->links('pagination::bootstrap-4') }}
             </div>
             @endif
         </div>

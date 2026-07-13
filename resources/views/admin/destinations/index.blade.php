@@ -103,7 +103,7 @@
     </div>
     @if($destinations->hasPages())
     <div class="p-4 border-top" style="border-color: var(--border-color);">
-        {{ $destinations->links('pagination::bootstrap-5') }}
+        {{ $destinations->links('pagination::bootstrap-4') }}
     </div>
     @endif
 </div>
