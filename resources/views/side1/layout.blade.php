@@ -39,7 +39,7 @@
         "description": "Expert legal activities, research & consultancy, and company registration services in Tanzania.",
         "slogan": "Ora et Labora",
         "email": "info@kasimbagu.com",
-        "telephone": "+255700000000",
+        "telephone": "+255690075672",
         "areaServed": {"@type":"Country","name":"Tanzania"},
         "address": [
             {"@type":"PostalAddress","addressLocality":"Dar es Salaam","addressCountry":"TZ"},
@@ -253,8 +253,8 @@
             <div class="col-lg-4">
                 <h6 class="fw-bold mb-3 small text-uppercase" style="letter-spacing:1px;">Our Offices</h6>
                 <div class="k1f-contact">
-                    <p><i class="bi bi-building-fill text-gold flex-shrink-0"></i><div><strong style="color:#94a3b8;">Head Office — Dar es Salaam</strong><br>Dar es Salaam, Tanzania<br><a href="tel:+255700000000">+255 700 000 000</a> · <a href="mailto:info@kasimbagu.com">info@kasimbagu.com</a></div></p>
-                    <p><i class="bi bi-building text-gold flex-shrink-0"></i><div><strong style="color:#94a3b8;">Branch — Moshi, Kilimanjaro</strong><br>Moshi, Kilimanjaro, Tanzania<br><a href="tel:+255700000001">+255 700 000 001</a> · <a href="mailto:moshi@kasimbagu.com">moshi@kasimbagu.com</a></div></p>
+                    <p><i class="bi bi-building-fill text-gold flex-shrink-0"></i><div><strong style="color:#94a3b8;">Head Office — Dar es Salaam</strong><br>Dar es Salaam, Tanzania<br><a href="tel:+255690075672">+255 690 075 672</a> · <a href="mailto:info@kasimbagu.com">info@kasimbagu.com</a></div></p>
+                    <p><i class="bi bi-building text-gold flex-shrink-0"></i><div><strong style="color:#94a3b8;">Branch — Moshi, Kilimanjaro</strong><br>Moshi, Kilimanjaro, Tanzania<br><a href="tel:+255653291058">+255 653 291 058</a> · <a href="mailto:moshi@kasimbagu.com">moshi@kasimbagu.com</a></div></p>
                 </div>
             </div>
         </div>

@@ -3,80 +3,92 @@
 @section('title', 'Log in')
 
 @section('content')
-<div class="text-center mb-4">
-    <h2 class="h3 font-weight-bold">Welcome back</h2>
-    <p class="text-muted">Sign in to your account</p>
+<div class="text-center">
+    <img src="{{ asset('logo_kasimbagu_agency-removebg-preview.png') }}" alt="Kasimbagu Agency" class="mb-3" style="max-height: 70px;">
+    <h2 class="compact-title font-weight-bold">Welcome back</h2>
+    <p class="text-muted compact-subtitle">Sign in to your account</p>
 </div>
 
 <form id="loginForm" method="POST" action="{{ route('login') }}">
     @csrf
 
-    <div class="mb-3">
+    <div class="mb-2">
         <label for="email" class="form-label">Email</label>
-        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="you@example.com">
+        <div class="input-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+            </svg>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="you@example.com">
+        </div>
         @error('email')
             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
         @enderror
     </div>
 
-    <div class="mb-3">
+    <div class="mb-2">
         <label for="password" class="form-label">Password</label>
-        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter your password">
+        <div class="input-icon-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+            </svg>
+            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter your password">
+        </div>
         @error('password')
             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
         @enderror
     </div>
 
     @if (Route::has('password.request'))
-        <div class="mb-3 text-end">
+        <div class="mb-2 text-end">
             <a class="small text-decoration-none" href="{{ route('password.request') }}">Forgot your password?</a>
         </div>
     @endif
 
-    <div class="form-check mb-3">
+    <div class="form-check mb-2">
         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-        <label class="form-check-label" for="remember">
+        <label class="form-check-label small" for="remember">
             Remember me
         </label>
     </div>
 
-    <button type="submit" id="loginBtn" class="btn btn-primary w-100 mb-3">
+    <button type="submit" id="loginBtn" class="btn btn-primary w-100 mb-2 d-flex align-items-center justify-content-center gap-2">
         <span id="loginBtnText">Log in →</span>
         <span id="loginBtnSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
     </button>
-
-    <div class="divider">or</div>
-
-    <a href="{{ route('google.redirect') }}" class="btn btn-light social-btn w-100">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.5 544.3" width="20" height="20" class="me-2">
-            <path fill="#EA4335" d="M533.5 278.4c0-18.5-1.7-36.3-4.9-53.6H272v101.5h146.9c-6.3 34-25.2 62.7-53.9 82v68.1h87.2c51-47 81.3-116.2 81.3-198z"/>
-            <path fill="#34A853" d="M272 544.3c72.7 0 133.7-24 178.3-65.1l-87.2-68.1c-24.2 16.2-55.2 25.8-91.1 25.8-69.9 0-129.1-47.1-150.3-110.4H32.6v69.4C76.8 486.1 168.9 544.3 272 544.3z"/>
-            <path fill="#4A90E2" d="M121.7 326.5c-10.2-30-10.2-62.6 0-92.6v-69.4H32.6C11.7 214 0 242.6 0 272.1s11.7 58.1 32.6 107.6l89.1-53.2z"/>
-            <path fill="#FBBC05" d="M272 107.7c39.6-.6 77.7 14 106.7 41.5l79.7-79.7C407.6 25.3 344.6-.2 272 0 168.9 0 76.8 58.2 32.6 164.1l89.1 69.7C142.9 154.5 202.1 107.4 272 107.7z"/>
-        </svg>
-        Continue with Google
-    </a>
 </form>
 @endsection
 
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    
+
     const form = this;
     const submitBtn = document.getElementById('loginBtn');
     const btnText = document.getElementById('loginBtnText');
     const btnSpinner = document.getElementById('loginBtnSpinner');
-    
+    const loadingOverlay = document.getElementById('loadingOverlay');
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+    });
+
     // Show loading state
     submitBtn.disabled = true;
     btnText.classList.add('d-none');
     btnSpinner.classList.remove('d-none');
-    
+    if (loadingOverlay) loadingOverlay.classList.add('active');
+
     const formData = new FormData(form);
-    
+
     fetch(form.action, {
         method: 'POST',
         body: formData,
@@ -87,21 +99,17 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            Swal.fire({
+            Toast.fire({
                 icon: 'success',
-                title: 'Welcome Back!',
-                text: 'You have been logged in successfully.',
-                timer: 1500,
-                showConfirmButton: false
-            }).then(() => {
-                window.location.href = data.redirect || '/dashboard';
+                title: 'Logged in successfully'
             });
+            setTimeout(() => {
+                window.location.href = data.redirect || '/dashboard';
+            }, 1200);
         } else {
-            Swal.fire({
+            Toast.fire({
                 icon: 'error',
-                title: 'Login Failed',
-                text: data.message || 'Invalid credentials. Please try again.',
-                confirmButtonColor: '#dc3545'
+                title: data.message || 'Invalid credentials. Please try again.'
             });
         }
     })
@@ -113,6 +121,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         submitBtn.disabled = false;
         btnText.classList.remove('d-none');
         btnSpinner.classList.add('d-none');
+        if (loadingOverlay) loadingOverlay.classList.remove('active');
     });
 });
 </script>

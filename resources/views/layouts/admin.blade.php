@@ -11,18 +11,18 @@
     <style>
         :root {
             --sidebar-width: 260px;
-            --bg-dark: #0f172a;
-            --bg-card: #1e293b;
-            --sidebar-bg: #0f172a;
-            --border-color: #334155;
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
+            --bg-dark: #f1f5f9;
+            --bg-card: #ffffff;
+            --sidebar-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
             --primary: #c9993a;
-            --primary-light: rgba(201, 153, 58, 0.15);
+            --primary-light: rgba(201, 153, 58, 0.12);
             --primary-dark: #a07825;
-            --accent-blue: #38bdf8;
-            --accent-green: #34d399;
-            --accent-red: #f87171;
+            --accent-blue: #0ea5e9;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
         }
         body {
             background-color: var(--bg-dark);
@@ -37,13 +37,13 @@
             position: fixed;
             left: 0;
             top: 0;
-            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            background: var(--sidebar-bg);
             border-right: 1px solid var(--border-color);
             z-index: 1000;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            box-shadow: 4px 0 24px rgba(0,0,0,0.3);
+            box-shadow: 4px 0 24px rgba(148, 163, 184, 0.15);
         }
         .sidebar-brand {
             padding: 24px 20px;
@@ -61,7 +61,7 @@
             font-size: 1.15rem;
             font-weight: 700;
             margin: 0;
-            color: #f1f5f9;
+            color: var(--text-main);
             line-height: 1.1;
         }
         .sidebar-brand span {
@@ -92,7 +92,7 @@
             align-items: center;
             gap: 12px;
             padding: 12px 16px;
-            color: #cbd5e1;
+            color: #475569;
             text-decoration: none;
             border-radius: 10px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -150,14 +150,14 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 32px;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
         }
         .topbar-title {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin: 0;
         }
         .topbar-actions {
@@ -243,7 +243,7 @@
             color: var(--text-main);
         }
         .data-table .table th {
-            background: rgba(15, 23, 42, 0.5);
+            background: #f8fafc;
             border-bottom: 1px solid var(--border-color);
             padding: 16px 24px;
             font-size: 0.72rem;
@@ -298,7 +298,7 @@
         .page-header h1 {
             font-size: 1.75rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin-bottom: 6px;
         }
         .page-header p {
@@ -389,12 +389,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(15, 23, 42, 0.3);
+            background: #f8fafc;
         }
         .dashboard-table-title {
             font-size: 1rem;
             font-weight: 700;
-            color: #f1f5f9;
+            color: var(--text-main);
             margin: 0;
         }
         .dashboard-table {
@@ -461,10 +461,10 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
+            background: #e2e8f0;
         }
         ::-webkit-scrollbar-thumb {
-            background: var(--border-color);
+            background: #94a3b8;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
