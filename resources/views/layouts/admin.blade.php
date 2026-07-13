@@ -424,6 +424,95 @@
             background-color: rgba(201, 153, 58, 0.05);
         }
 
+        /* Salamapay-style gradient KPI cards */
+        .kpi-card {
+            border-radius: 1rem;
+            padding: 1.25rem;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+        }
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .kpi-card::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .kpi-card-1 { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .kpi-card-2 { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .kpi-card-3 { background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); }
+        .kpi-card-4 { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+        .kpi-card-5 { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); }
+        .kpi-card-6 { background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); }
+        .kpi-card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            position: relative;
+            z-index: 1;
+        }
+        .kpi-card-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .kpi-card-icon {
+            width: 2rem;
+            height: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .kpi-card-icon svg,
+        .kpi-card-icon i {
+            width: 1.25rem;
+            height: 1.25rem;
+            font-size: 1.25rem;
+        }
+        .kpi-card-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.25rem;
+            position: relative;
+            z-index: 1;
+        }
+        .kpi-card-sub {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.75);
+            position: relative;
+            z-index: 1;
+        }
+
         /* Modern Sleek Badges styling */
         .badge {
             padding: 6px 14px !important;
