@@ -76,13 +76,19 @@ class EventController extends Controller
             'google_maps_link' => 'nullable|url|max:500',
             'event_date' => 'required|date',
             'event_time' => 'nullable|string|max:50',
-            'image' => 'nullable|string|max:500',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'is_published' => 'boolean',
             'sort_order' => 'integer',
         ]);
 
         $validated['slug'] = Str::slug($validated['title']);
         $validated['is_published'] = $request->has('is_published');
+
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('images/events', 'public');
+        } else {
+            unset($validated['image']);
+        }
 
         Event::create($validated);
 
