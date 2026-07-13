@@ -77,3 +77,16 @@
     </form>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+document.getElementById('eventImage')?.addEventListener('change', function(e) {
+    const preview = document.getElementById('imagePreview');
+    const img = preview?.querySelector('img');
+    if (e.target.files && e.target.files[0] && img) {
+        img.src = URL.createObjectURL(e.target.files[0]);
+        preview.classList.remove('d-none');
+    }
+});
+</script>
+@endpush

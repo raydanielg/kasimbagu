@@ -16,7 +16,7 @@
 </div>
 
 <div class="dashboard-panel-card">
-    <form action="{{ route('admin.events.update', $event->id) }}" method="POST">
+    <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="row g-4">
