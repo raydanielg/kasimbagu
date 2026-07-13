@@ -88,7 +88,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="event-card h-100">
                         @if($event->image)
-                        <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}">
+                        <img src="{{ $event->image_url }}" alt="{{ $event->title }}">
                         @else
                         <div style="height: 200px; background: linear-gradient(135deg, #0a1c38, #162c56); display: flex; align-items: center; justify-content: center;">
                             <i class="bi bi-calendar-event text-white" style="font-size: 3rem; opacity: 0.5;"></i>

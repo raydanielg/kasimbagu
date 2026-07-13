@@ -25,7 +25,7 @@
         <div class="col-md-8">
             @if($event->image)
             <div class="mb-4">
-                <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->title }}" class="img-fluid rounded-3" style="max-height: 400px; width: 100%; object-fit: cover;">
+                <img src="{{ $event->image_url }}" alt="{{ $event->title }}" class="img-fluid rounded-3" style="max-height: 400px; width: 100%; object-fit: cover;">
             </div>
             @endif
             <h2 class="h4 mb-3">{{ $event->title }}</h2>
